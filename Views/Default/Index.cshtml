@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Default")
+
+<body class="index-page">
+
+    @Html.Action("PartialSidebar","Default")
+
+    <main class="main">
+
+        <!-- Hero Section -->
+
+        @Html.Action("PartialHeroSection", "Default")
+
+        <!-- /Hero Section -->
+
+        @Html.Action("PartialAbout","Default")
+        <!-- About Section -->
+        <!-- Stats Section -->
+        <!-- Skills Section -->
+        @Html.Action("PartialSkill","Default")
+        <!-- Resume Section -->
+        @Html.Action("PartialResumeSection","Default")
+        <!-- Portfolio Section -->
+        @Html.Action("PartialPortfolio","Default")
+        <!-- Services Section -->
+        <!-- Testimonials Section -->
+
+        @Html.Action("PartialTestimonial","Default")
+
+        <!-- Contact Section -->
+        @Html.Action("PartialContact","Default")
+    </main>
+
+   @Html.Action("PartialFooter","Default")
+
+   @Html.Action("PartialScripts","Default")
+
+</body>
+
+</html>
