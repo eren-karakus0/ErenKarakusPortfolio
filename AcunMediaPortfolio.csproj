@@ -211,6 +211,7 @@
     <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\mp3playerFoto2.png" />
     <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\sanalbellekFoto.jpg" />
     <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\sanalbellekFoto2.jpg" />
+    <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\site.png" />
     <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\todolistFoto1.jpg" />
     <Content Include="MyResume-1.0.0\assets\img\masonry-portfolio\todolistFoto2.jpg" />
     <Content Include="MyResume-1.0.0\assets\img\portfolio\app-1.jpg" />
