@@ -754,6 +754,10 @@ section,
   line-height: 1.6;
 }
 
+.resume .resume-item p em {
+  font-weight: 700;
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
