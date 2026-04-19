@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>PanoptesLabs — Chain Intelligence for Republic AI · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="Case study: PanoptesLabs — chain intelligence dashboard and official TypeScript SDK for Republic AI. Live at panoptes.cc with an active community validator on the network.">
+
+    <meta property="og:title" content="PanoptesLabs — Case Study">
+    <meta property="og:description"
+        content="Chain intelligence platform + TypeScript SDK for Republic AI.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/panoptes-hero.png">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/panoptes.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="case-study brand-panoptes">
+
+    <div class="side-ornament side-ornament-left" aria-hidden="true">
+        <span class="orn-dot sm"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot sm"></span>
+    </div>
+    <div class="side-ornament side-ornament-right" aria-hidden="true">
+        <svg class="wavy-rail" viewBox="0 0 24 1200"
+            preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0 Q 22 30 12 60 T 12 120 T 12 180 T 12 240 T 12 300 T 12 360 T 12 420 T 12 480 T 12 540 T 12 600 T 12 660 T 12 720 T 12 780 T 12 840 T 12 900 T 12 960 T 12 1020 T 12 1080 T 12 1140 T 12 1200"
+                stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.5" />
+            <circle cx="12" cy="180"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="420"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="660"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="900"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="1140" r="2.5" fill="currentColor" opacity="0.8"/>
+        </svg>
+    </div>
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">PanoptesLabs · Venture</div>
+        <h1>PanoptesLabs Ecosystem</h1>
+        <p class="case-subtitle" lang="en">
+            A two-part ecosystem I built for the <strong>Republic AI</strong>
+            network: <strong>Panoptes</strong> — a production chain-intelligence
+            dashboard for validator monitoring, endpoint health, anomaly
+            detection and analytics. <strong>republic-sdk</strong> — the
+            official TypeScript SDK on npm, powering the developer surface of
+            the network. Both live in production, maintained end-to-end by me.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            <strong>Republic AI</strong> ağı için inşa ettiğim iki parçalı
+            ekosistem: <strong>Panoptes</strong> — validator izleme, endpoint
+            sağlığı, anomali tespiti ve analitik için production'da çalışan bir
+            chain-intelligence dashboard'u. <strong>republic-sdk</strong> —
+            ağın geliştirici yüzeyini besleyen, npm'de yayınlanan resmi
+            TypeScript SDK. İkisi de production'da, uçtan uca benim tarafımdan
+            geliştirilip sürdürülüyor.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">TypeScript</span>
+            <span class="venture-badge">Next.js 16</span>
+            <span class="venture-badge">Prisma + PostgreSQL</span>
+            <span class="venture-badge">Cosmos SDK</span>
+            <span class="venture-badge">npm Published</span>
+            <span class="venture-badge">Active Validator</span>
+            <span class="venture-badge">Vercel</span>
+            <span class="venture-badge">VPS / Hetzner</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://panoptes.cc/" target="_blank" class="primary">
+                <i class="bi bi-globe2"></i>
+                <span lang="en">Visit Panoptes</span>
+                <span lang="tr">Panoptes'i Ziyaret Et</span>
+            </a>
+            <a href="https://app.panoptes.cc/" target="_blank" class="secondary">
+                <i class="bi bi-speedometer2"></i>
+                <span lang="en">Live Dashboard</span>
+                <span lang="tr">Canlı Dashboard</span>
+            </a>
+            <a href="https://www.npmjs.com/package/republic-sdk" target="_blank" class="secondary">
+                <i class="bi bi-box"></i> npm: republic-sdk
+            </a>
+            <a href="https://github.com/PanoptesLabs" target="_blank" class="secondary">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/panoptes-hero.png"
+            alt="Panoptes banner"
+            onerror="this.style.display='none';">
+    </div>
+
+    <div class="case-video" data-aos="fade-up">
+        <video controls preload="metadata" playsinline muted
+            poster="/MyResume-1.0.0/assets/img/ventures/panoptes-hero.png">
+            <source src="/MyResume-1.0.0/assets/video/panoptes-intro.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption" lang="en">Panoptes — product intro video</div>
+        <div class="video-caption" lang="tr">Panoptes — ürün tanıtım videosu</div>
+    </div>
+
+    <main class="case-body">
+
+        <section data-aos="fade-up">
+            <h2 lang="en">The Problem</h2>
+            <h2 lang="tr">Problem</h2>
+            <p lang="en">
+                Republic AI is a decentralized Cosmos-based network where
+                validators coordinate AI compute workloads. For the network to
+                be actually usable, three distinct audiences need tooling that
+                was missing on day one:
+            </p>
+            <p lang="tr">
+                Republic AI, validator'ların AI compute iş yüklerini koordine
+                ettiği, Cosmos tabanlı merkeziyetsiz bir ağ. Ağın gerçekten
+                kullanılabilir olması için ilk günden eksik olan üç ayrı
+                kitleye araçlar gerekiyordu:
+            </p>
+            <ul lang="en">
+                <li><strong>Validator operators</strong> needed real-time
+                    signal on uptime, missed blocks, commission changes and
+                    jailing risk — not just raw RPC responses.</li>
+                <li><strong>Delegators &amp; end-users</strong> needed a way to
+                    compare validators, watch delegation flows, and spot
+                    unhealthy endpoints before routing a workload.</li>
+                <li><strong>Developers</strong> needed a typed, batteries-included
+                    client to send transactions, submit compute jobs and read
+                    chain state — without hand-rolling protobuf and bech32.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Validator operatörlerinin</strong> uptime, kaçırılan
+                    blok, komisyon değişiklikleri ve jailing riski üzerine
+                    gerçek zamanlı sinyale ihtiyacı vardı — ham RPC cevaplarına
+                    değil.</li>
+                <li><strong>Delegator ve son kullanıcıların</strong> validator'ları
+                    karşılaştıracak, delegation akışlarını izleyecek ve bir iş
+                    göndermeden önce sağlıksız endpoint'leri tespit edecek bir
+                    yola ihtiyacı vardı.</li>
+                <li><strong>Geliştiricilerin</strong> protobuf ve bech32 ile
+                    uğraşmadan işlem gönderebileceği, compute iş'i submit
+                    edebileceği, chain state okuyabileceği tip-güvenli, hazır
+                    bataryalı bir istemciye ihtiyacı vardı.</li>
+            </ul>
+            <p lang="en">
+                PanoptesLabs fills both sides: <strong>Panoptes</strong> is the
+                human-facing surface, <strong>republic-sdk</strong> is the
+                machine-facing one — and they share the same underlying
+                chain-query layer.
+            </p>
+            <p lang="tr">
+                PanoptesLabs iki tarafı da kapatıyor: insanlar için
+                <strong>Panoptes</strong>, makineler için
+                <strong>republic-sdk</strong> — ve ikisi de aynı alt chain-query
+                katmanını paylaşıyor.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role</h2>
+            <h2 lang="tr">Rolüm</h2>
+            <p lang="en">
+                Founder, architect and sole maintainer. I own every layer —
+                product design, data model, frontend, API, indexer, CI/CD,
+                infrastructure, the SDK release pipeline and the community
+                validator that runs on our own hardware. The work spans:
+            </p>
+            <p lang="tr">
+                Kurucu, mimar ve tek sorumlu geliştirici. Her katman benim —
+                ürün tasarımı, veri modeli, frontend, API, indexer, CI/CD,
+                altyapı, SDK release pipeline'ı ve kendi donanımımızda çalışan
+                community validator. Kapsam:
+            </p>
+            <ul lang="en">
+                <li>Architected the two-project split so Panoptes and
+                    republic-sdk can evolve independently but share a single
+                    chain-query core.</li>
+                <li>Shipped and operate the SDK on npm (<code>republic-sdk</code>)
+                    with semver releases, typed exports (ESM + CJS + CLI) and
+                    a multi-node CI matrix.</li>
+                <li>Designed and deployed the dashboard at
+                    <a href="https://panoptes.cc" target="_blank">panoptes.cc</a>
+                    on Vercel with host-based routing to
+                    <a href="https://app.panoptes.cc" target="_blank">app.panoptes.cc</a>.</li>
+                <li>Migrated the production database from a managed provider
+                    to a self-hosted PostgreSQL cluster on Hetzner, including
+                    PgBouncer pooling and zero-downtime cutover.</li>
+                <li>Operate <strong>KNKCHN-validator</strong> — an active
+                    bonded validator on the Republic AI network, delegated to
+                    by the core Republic team.</li>
+                <li>Transferred the GitHub organization to
+                    <strong>PanoptesLabs</strong> as a permanent home for the
+                    ecosystem.</li>
+            </ul>
+            <ul lang="tr">
+                <li>İki projeyi bağımsız gelişecek ama tek bir chain-query
+                    çekirdeğini paylaşacak şekilde mimariledim.</li>
+                <li>SDK'yı npm'de (<code>republic-sdk</code>) semver
+                    release'leri, tip-güvenli export'lar (ESM + CJS + CLI) ve
+                    çoklu Node versiyon CI matrisi ile yayınladım ve
+                    işletiyorum.</li>
+                <li>Dashboard'u
+                    <a href="https://panoptes.cc" target="_blank">panoptes.cc</a>
+                    adresinde Vercel üzerinde, host-based routing ile
+                    <a href="https://app.panoptes.cc" target="_blank">app.panoptes.cc</a>
+                    alt alanına yönlendirerek deploy ettim.</li>
+                <li>Production veritabanını managed bir sağlayıcıdan Hetzner
+                    üzerinde self-hosted PostgreSQL cluster'a taşıdım —
+                    PgBouncer pooling ve sıfır-downtime geçiş dahil.</li>
+                <li>Republic AI ağında aktif bonded bir validator olan
+                    <strong>KNKCHN-validator</strong>'ı işletiyorum; çekirdek
+                    Republic ekibi delegasyon yaptı.</li>
+                <li>Ekosistemin kalıcı evi olarak GitHub organizasyonunu
+                    <strong>PanoptesLabs</strong>'a taşıdım.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">By the Numbers</h2>
+            <h2 lang="tr">Rakamlarla</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-check2-circle"></i></div>
+                    <h4 lang="en">1,300+ tests</h4>
+                    <h4 lang="tr">1,300+ test</h4>
+                    <p lang="en">Unit, integration and contract tests across
+                        both repos — all green on every push.</p>
+                    <p lang="tr">İki repo genelinde unit, integration ve
+                        contract testleri — her push'ta yeşil.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h4 lang="en">~90% coverage</h4>
+                    <h4 lang="tr">~%90 coverage</h4>
+                    <p lang="en">Enforced via CI with per-path coverage rules
+                        and typed Prisma mocks.</p>
+                    <p lang="tr">CI'da path-bazlı coverage kuralları ve
+                        tip-güvenli Prisma mock'larıyla zorunlu.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 lang="en">Active validator</h4>
+                    <h4 lang="tr">Aktif validator</h4>
+                    <p lang="en">KNKCHN-validator — bonded, signing blocks,
+                        backed by team-level delegations.</p>
+                    <p lang="tr">KNKCHN-validator — bonded, blok imzalıyor,
+                        ekip seviyesinde delegasyon aldı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-box-seam"></i></div>
+                    <h4 lang="en">npm package live</h4>
+                    <h4 lang="tr">npm paketi yayında</h4>
+                    <p lang="en"><code>republic-sdk</code> on npm with semver
+                        releases, typed exports, CLI binary and automated
+                        publishing.</p>
+                    <p lang="tr">npm'de <code>republic-sdk</code> — semver
+                        release'ler, tip-güvenli export'lar, CLI binary ve
+                        otomatik yayınlama ile.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h4 lang="en">Real-time data</h4>
+                    <h4 lang="tr">Gerçek zamanlı veri</h4>
+                    <p lang="en">Server-Sent Events for live alerts, cron
+                        pipelines for continuous indexing, tiered caching for
+                        read performance.</p>
+                    <p lang="tr">Canlı uyarılar için Server-Sent Events,
+                        sürekli indeksleme için cron pipeline'ları, okuma
+                        performansı için katmanlı cache.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-globe"></i></div>
+                    <h4 lang="en">Production-grade infra</h4>
+                    <h4 lang="tr">Production-kalibre altyapı</h4>
+                    <p lang="en">Vercel edge, self-hosted PostgreSQL on
+                        Hetzner, PgBouncer, GitHub Actions cron, encrypted
+                        webhook delivery.</p>
+                    <p lang="tr">Vercel edge, Hetzner üzerinde self-hosted
+                        PostgreSQL, PgBouncer, GitHub Actions cron, şifreli
+                        webhook teslimi.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Architecture</h2>
+            <h2 lang="tr">Mimari</h2>
+            <h3 lang="en">Panoptes (dashboard)</h3>
+            <h3 lang="tr">Panoptes (dashboard)</h3>
+            <ul lang="en">
+                <li><strong>Frontend:</strong> Next.js 16 App Router, React
+                    server components, streaming charts (Recharts), Tailwind,
+                    contextual help tooltips, scroll-spy navigation.</li>
+                <li><strong>API layer:</strong> Next.js route handlers with
+                    Zod-validated inputs, tiered <code>s-maxage</code> cache
+                    headers per domain (health / forecast / governance), and
+                    rate limiting on public endpoints.</li>
+                <li><strong>Data pipeline:</strong> custom indexer that polls
+                    Cosmos REST/RPC and decodes on-chain state into a
+                    relational Prisma model; governance, slashing, inflation,
+                    commission and supply tracked in background cron jobs.</li>
+                <li><strong>Storage:</strong> PostgreSQL 16 on Hetzner,
+                    PgBouncer for transaction pooling, self-signed SSL, direct
+                    connection for migrations.</li>
+                <li><strong>Analytics:</strong> integration with an external
+                    explorer API for historical TX / gas / block-time charts
+                    — so our own node can stay lean.</li>
+                <li><strong>Notifications:</strong> SSE notification bell +
+                    HMAC-signed webhook delivery with AES-256-GCM-encrypted
+                    secrets, retry queue and dead-letter handling.</li>
+                <li><strong>Multi-tenant:</strong> workspace system with
+                    token-based auth, policies, API keys and scoped webhooks.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Frontend:</strong> Next.js 16 App Router, React
+                    server component'ler, streaming grafikler (Recharts),
+                    Tailwind, contextual help tooltip'ları, scroll-spy
+                    navigation.</li>
+                <li><strong>API katmanı:</strong> Zod ile doğrulanmış
+                    input'lar, alan bazlı (health / forecast / governance)
+                    katmanlı <code>s-maxage</code> cache header'ları ve
+                    public endpoint'lerde rate limiting ile Next.js route
+                    handler'ları.</li>
+                <li><strong>Veri pipeline'ı:</strong> Cosmos REST/RPC'yi
+                    yoklayan ve on-chain state'i ilişkisel Prisma modeline
+                    çeviren özel indexer; governance, slashing, enflasyon,
+                    komisyon ve arz arka plan cron'larında takip ediliyor.</li>
+                <li><strong>Depolama:</strong> Hetzner üzerinde PostgreSQL 16,
+                    transaction pooling için PgBouncer, self-signed SSL,
+                    migration'lar için direkt bağlantı.</li>
+                <li><strong>Analitik:</strong> harici explorer API
+                    entegrasyonu — tarihsel TX / gas / blok-süresi grafikleri
+                    için; kendi node'umuz hafif kalabilsin diye.</li>
+                <li><strong>Bildirimler:</strong> SSE notification bell +
+                    AES-256-GCM ile şifrelenmiş secret'lar, retry kuyruğu ve
+                    dead-letter ile HMAC-imzalı webhook teslimi.</li>
+                <li><strong>Çok kiracılı:</strong> token-based auth,
+                    policy'ler, API key'ler ve scoped webhook'lar ile workspace
+                    sistemi.</li>
+            </ul>
+            <h3 lang="en">republic-sdk (npm package)</h3>
+            <h3 lang="tr">republic-sdk (npm paketi)</h3>
+            <ul lang="en">
+                <li><strong>Key management:</strong> mnemonic-based keypair
+                    generation, bech32 address derivation, secure storage
+                    abstractions.</li>
+                <li><strong>Transaction signing:</strong> canonical amino /
+                    proto serialization, sign-mode-direct signatures, fee
+                    estimation.</li>
+                <li><strong>Chain queries:</strong> typed clients for staking,
+                    distribution, slashing, bank and governance modules.</li>
+                <li><strong>Compute jobs:</strong> high-level API for
+                    dispatching AI compute workloads to the network and
+                    tracking their lifecycle.</li>
+                <li><strong>CLI:</strong> scripting-friendly binary for
+                    operators and CI — key import, balance checks, send,
+                    delegate, submit-job.</li>
+                <li><strong>Build:</strong> ESM + CJS + DTS + CLI, dual
+                    Node-version test matrix, branch-protected releases via
+                    release-please.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Anahtar yönetimi:</strong> mnemonic-based keypair
+                    üretimi, bech32 adres türetme, güvenli depolama
+                    soyutlamaları.</li>
+                <li><strong>İşlem imzalama:</strong> canonical amino / proto
+                    serializasyon, sign-mode-direct imzalar, fee tahmini.</li>
+                <li><strong>Chain sorguları:</strong> staking, distribution,
+                    slashing, bank ve governance modülleri için tip-güvenli
+                    istemciler.</li>
+                <li><strong>Compute iş'leri:</strong> ağa AI compute iş
+                    yüklerini göndermek ve yaşam döngülerini takip etmek için
+                    yüksek seviyeli API.</li>
+                <li><strong>CLI:</strong> operatörler ve CI için scripting-dostu
+                    binary — key import, bakiye kontrolü, send, delegate,
+                    submit-job.</li>
+                <li><strong>Build:</strong> ESM + CJS + DTS + CLI, çift Node
+                    versiyon test matrisi, release-please ile branch korumalı
+                    release'ler.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Key Features</h2>
+            <h2 lang="tr">Öne Çıkan Özellikler</h2>
+
+            <div class="case-video" style="margin: 6px 0 24px; padding: 0;" data-aos="fade-up">
+                <video controls preload="metadata" playsinline muted
+                    poster="/MyResume-1.0.0/assets/img/ventures/panoptes-hero.png">
+                    <source src="/MyResume-1.0.0/assets/video/panoptes-before-after.mp4" type="video/mp4">
+                </video>
+                <div class="video-caption" lang="en">Panoptes — before / after</div>
+                <div class="video-caption" lang="tr">Panoptes — öncesi / sonrası</div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-eye"></i></div>
+                    <h4 lang="en">Validator monitoring</h4>
+                    <h4 lang="tr">Validator izleme</h4>
+                    <p lang="en">Per-validator rank, voting power, commission,
+                        delegators, APY, uptime, missed blocks, signing stats
+                        and jailing timeline — with historical charts.</p>
+                    <p lang="tr">Validator başına sıralama, oy gücü, komisyon,
+                        delegator sayısı, APY, uptime, kaçırılan bloklar,
+                        imzalama istatistikleri ve jailing zaman çizelgesi —
+                        tarihsel grafiklerle.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-heart-pulse"></i></div>
+                    <h4 lang="en">Endpoint health</h4>
+                    <h4 lang="tr">Endpoint sağlığı</h4>
+                    <p lang="en">External probes verify what chain state
+                        reports. If a validator says it's up but can't respond
+                        to an RPC request, you see the gap immediately.</p>
+                    <p lang="tr">Dış prob'lar chain state'in raporunu doğrular.
+                        Bir validator "up" diyor ama bir RPC isteğine cevap
+                        veremiyorsa aradaki farkı anında görürsünüz.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-signpost-split"></i></div>
+                    <h4 lang="en">Smart routing</h4>
+                    <h4 lang="tr">Akıllı routing</h4>
+                    <p lang="en">Endpoints scored on latency, success rate and
+                        recent history — exposed as a "best endpoint"
+                        recommendation, consumable from the SDK or UI.</p>
+                    <p lang="tr">Endpoint'ler gecikme, başarı oranı ve yakın
+                        geçmişe göre skorlanır — SDK veya UI'dan tüketilebilen
+                        "en iyi endpoint" önerisi olarak sunulur.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-activity"></i></div>
+                    <h4 lang="en">Anomaly detection</h4>
+                    <h4 lang="tr">Anomali tespiti</h4>
+                    <p lang="en">Radar-based anomaly view highlights unusual
+                        behaviour (missed-block spikes, sudden commission
+                        changes, delegation shifts) before it becomes a
+                        problem.</p>
+                    <p lang="tr">Radar-tabanlı anomali görünümü, bir probleme
+                        dönüşmeden önce olağandışı davranışı (kaçırılan blok
+                        sıçramaları, ani komisyon değişiklikleri, delegation
+                        kaymaları) öne çıkarır.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
+                    <h4 lang="en">Forecasting &amp; accuracy</h4>
+                    <h4 lang="tr">Tahmin ve doğruluk</h4>
+                    <p lang="en">Forward-looking forecasts for downtime,
+                        unbonding, breach risk and jail risk — with a live
+                        accuracy dashboard that verifies each prediction
+                        against what actually happened.</p>
+                    <p lang="tr">Downtime, unbonding, breach riski ve jail
+                        riski için ileriye dönük tahminler — her tahmini
+                        gerçekte olanla karşılaştıran canlı bir doğruluk
+                        dashboard'u ile birlikte.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-bar-chart-line"></i></div>
+                    <h4 lang="en">Network analytics</h4>
+                    <h4 lang="tr">Ağ analitiği</h4>
+                    <p lang="en">Daily TX volume, message-type breakdown, gas
+                        distribution, block times, reward history, delegation
+                        flows and governance vote outcomes.</p>
+                    <p lang="tr">Günlük TX hacmi, mesaj-tipi kırılımı, gas
+                        dağılımı, blok süreleri, ödül geçmişi, delegation
+                        akışları ve governance oy sonuçları.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-bell"></i></div>
+                    <h4 lang="en">Alerts &amp; webhooks</h4>
+                    <h4 lang="tr">Uyarılar ve webhook'lar</h4>
+                    <p lang="en">In-app notification bell (SSE) plus outbound
+                        HMAC-signed webhooks with retry and dead-letter
+                        queues — integrate with Slack, Discord or your own
+                        ops pipeline.</p>
+                    <p lang="tr">Uygulama içi notification bell (SSE) artı
+                        retry ve dead-letter kuyruklu, HMAC-imzalı giden
+                        webhook'lar — Slack, Discord ya da kendi ops
+                        pipeline'ınızla entegre edin.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-people"></i></div>
+                    <h4 lang="en">Workspaces</h4>
+                    <h4 lang="tr">Workspace'ler</h4>
+                    <p lang="en">Multi-tenant model with token auth, scoped
+                        API keys, custom policies and per-workspace webhook
+                        endpoints — teams keep their configuration
+                        isolated.</p>
+                    <p lang="tr">Token auth, scoped API key'ler, özel
+                        policy'ler ve workspace başına webhook endpoint'leri
+                        ile çok-kiracılı model — ekipler kendi konfigürasyonunu
+                        izole tutar.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-box-seam"></i></div>
+                    <h4 lang="en">Official SDK on npm</h4>
+                    <h4 lang="tr">npm'de resmi SDK</h4>
+                    <p lang="en">One <code>npm install republic-sdk</code>
+                        gives you typed, batteries-included access — key
+                        management, signing, chain queries, job submission
+                        and a CLI binary.</p>
+                    <p lang="tr">Tek <code>npm install republic-sdk</code>
+                        size tip-güvenli, hazır bataryalı erişim sağlar —
+                        anahtar yönetimi, imzalama, chain sorguları, iş
+                        submit etme ve CLI binary'si.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Tech Stack</h2>
+            <h2 lang="tr">Teknoloji Yığını</h2>
+            <p lang="en">
+                Opinionated, boring-where-it-should-be, production-focused.
+            </p>
+            <p lang="tr">
+                Fikir sahibi, olması gerektiği yerde sıkıcı, production
+                odaklı.
+            </p>
+            <div class="case-badges">
+                <span class="venture-badge">TypeScript (strict)</span>
+                <span class="venture-badge">Next.js 16 App Router</span>
+                <span class="venture-badge">React Server Components</span>
+                <span class="venture-badge">Tailwind CSS</span>
+                <span class="venture-badge">Recharts</span>
+                <span class="venture-badge">Prisma ORM</span>
+                <span class="venture-badge">PostgreSQL 16</span>
+                <span class="venture-badge">PgBouncer</span>
+                <span class="venture-badge">Zod</span>
+                <span class="venture-badge">Vitest</span>
+                <span class="venture-badge">ESLint (custom rules)</span>
+                <span class="venture-badge">Cosmos SDK REST/RPC</span>
+                <span class="venture-badge">CometBFT</span>
+                <span class="venture-badge">Server-Sent Events</span>
+                <span class="venture-badge">AES-256-GCM</span>
+                <span class="venture-badge">HMAC-SHA256</span>
+                <span class="venture-badge">Vercel</span>
+                <span class="venture-badge">Hetzner Cloud</span>
+                <span class="venture-badge">GitHub Actions</span>
+                <span class="venture-badge">Dependabot</span>
+                <span class="venture-badge">release-please</span>
+                <span class="venture-badge">npm (semver)</span>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Engineering Practices</h2>
+            <h2 lang="tr">Mühendislik Pratikleri</h2>
+            <ul lang="en">
+                <li><strong>Contract-first testing:</strong> data contracts
+                    (uptime ratios, forecast scales, accuracy denominators)
+                    are explicit and enforced by tests so UI and indexer
+                    never disagree.</li>
+                <li><strong>Branch protection:</strong> both repos require
+                    green CI across a Node version matrix plus a review
+                    before merge — no exceptions.</li>
+                <li><strong>Typed, audited boundaries:</strong> every external
+                    API response validated with Zod; every user input
+                    validated; bech32 addresses verified with real checksum,
+                    not regex.</li>
+                <li><strong>Idempotent cron jobs:</strong> unique-constraint
+                    claims + compare-and-set cursors so retries are safe;
+                    webhook delivery queues have dead-letter semantics.</li>
+                <li><strong>Zero-downtime migrations:</strong> production DB
+                    moved from a managed provider to self-hosted PostgreSQL
+                    without interrupting the live dashboard.</li>
+                <li><strong>Security posture:</strong> __Host-prefixed
+                    cookies, encrypted webhook secrets at rest, rate-limited
+                    public endpoints, CSP-aware asset loading.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Contract-first test:</strong> data contract'lar
+                    (uptime oranları, forecast ölçekleri, doğruluk
+                    paydaları) açıkça tanımlı ve test'lerle zorlanıyor — UI
+                    ile indexer asla çelişmesin diye.</li>
+                <li><strong>Branch protection:</strong> iki repoda da merge
+                    öncesi Node versiyon matrisinde yeşil CI ve review
+                    zorunlu — istisnasız.</li>
+                <li><strong>Tip-güvenli, denetlenen sınırlar:</strong> her
+                    dış API cevabı Zod ile, her kullanıcı girdisi
+                    doğrulanıyor; bech32 adresler regex değil gerçek
+                    checksum ile doğrulanıyor.</li>
+                <li><strong>Idempotent cron'lar:</strong> unique-constraint
+                    claim'leri + compare-and-set cursor'lar ile retry'lar
+                    güvenli; webhook teslim kuyrukları dead-letter
+                    semantiğine sahip.</li>
+                <li><strong>Sıfır-downtime migration:</strong> canlı
+                    dashboard'u kesmeden production DB managed bir
+                    sağlayıcıdan self-hosted PostgreSQL'e taşındı.</li>
+                <li><strong>Güvenlik duruşu:</strong> __Host-prefixli
+                    cookie'ler, dinlenen webhook secret'ları şifreli,
+                    public endpoint'lerde rate limit, CSP-farkında asset
+                    yükleme.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Outcome</h2>
+            <h2 lang="tr">Sonuç</h2>
+            <p lang="en">
+                Panoptes is live at
+                <a href="https://panoptes.cc" target="_blank">panoptes.cc</a>
+                with its dashboard on
+                <a href="https://app.panoptes.cc" target="_blank">app.panoptes.cc</a>.
+                <code>republic-sdk</code> is published and installable from
+                npm. The KNKCHN-validator is bonded on the Republic AI network
+                and has received delegations from the core team — a direct
+                signal that the ecosystem has value to the people building
+                Republic itself.
+            </p>
+            <p lang="tr">
+                Panoptes
+                <a href="https://panoptes.cc" target="_blank">panoptes.cc</a>
+                adresinde, dashboard'u da
+                <a href="https://app.panoptes.cc" target="_blank">app.panoptes.cc</a>
+                adresinde canlı. <code>republic-sdk</code> npm'de yayında ve
+                yüklenebilir. KNKCHN-validator Republic AI ağında bonded
+                durumda ve çekirdek ekipten delegasyon aldı — ekosistemin
+                Republic'i inşa eden kişilere değer sağladığının doğrudan bir
+                işareti.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://panoptes.cc/" target="_blank">panoptes.cc — Landing</a></li>
+                <li><a href="https://app.panoptes.cc/" target="_blank">app.panoptes.cc — Dashboard</a></li>
+                <li><a href="https://www.npmjs.com/package/republic-sdk" target="_blank">npm: republic-sdk</a></li>
+                <li><a href="https://github.com/PanoptesLabs" target="_blank">GitHub: PanoptesLabs (organization)</a></li>
+                <li><a href="https://github.com/PanoptesLabs/panoptes" target="_blank">GitHub: PanoptesLabs/panoptes</a></li>
+                <li><a href="https://github.com/PanoptesLabs/republic-sdk" target="_blank">GitHub: PanoptesLabs/republic-sdk</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>

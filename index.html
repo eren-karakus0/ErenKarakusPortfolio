@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Portfolio Eren Karakus</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>Muhammet Eren Karakuş — Software Engineer</title>
+    <meta name="description"
+        content="Software Engineer building AI agents, distributed systems and automation tools. Founder of Forsety, PanoptesLabs, KiteID and ForjaTempo.">
+    <meta name="keywords"
+        content="Muhammet Eren Karakus, software engineer, AI agents, automation, distributed systems, Web3, blockchain, Solana, full-stack, portfolio">
+    <meta name="author" content="Muhammet Eren Karakuş">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Muhammet Eren Karakuş — Software Engineer">
+    <meta property="og:description"
+        content="Software Engineer building AI agents, distributed systems and automation tools.">
+    <meta property="og:image" content="https://merenkarakus.com/MyResume-1.0.0/assets/img/erenPortfolyoresmi.jpg">
+    <meta property="og:url" content="https://merenkarakus.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="alternate" hreflang="en" href="https://merenkarakus.com/">
+    <link rel="alternate" hreflang="tr" href="https://merenkarakus.com/?lang=tr">
 
     <!-- Favicons -->
     <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
@@ -26,16 +41,9 @@
     <link href="/MyResume-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="/MyResume-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
+    <!-- Main CSS + custom additions -->
     <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
-
-    <!-- =======================================================
-    * Template Name: MyResume
-    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-    * Updated: Jun 29 2024 with Bootstrap v5.3.3
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
 </head>
 
 
@@ -47,405 +55,620 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Ana Sayfa</span></a></li>
-                <li><a href="#about"><i class="bi bi-person navicon"></i><span>Hakkımda</span></a></li>
-                <li><a href="#skills"><i class="bi bi-code-slash navicon"></i><span>Çalıştığım Teknolojiler</span></a>
-                </li>
-                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Eğitim ve Deneyim</span></a>
-                </li>
-                <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolyo</span></a></li>
-                <li><a href="#testimonials"><i class="bi bi-people navicon"></i><span>Referanslar</span></a></li>
-                <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>İletişim</span></a></li>
+                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>
+                        <span lang="en">Home</span><span lang="tr">Ana Sayfa</span></a></li>
+                <li><a href="#about"><i class="bi bi-person navicon"></i>
+                        <span lang="en">About</span><span lang="tr">Hakkımda</span></a></li>
+                <li><a href="#skills"><i class="bi bi-code-slash navicon"></i>
+                        <span lang="en">Skills</span><span lang="tr">Yetkinlikler</span></a></li>
+                <li><a href="#experience"><i class="bi bi-briefcase navicon"></i>
+                        <span lang="en">Experience</span><span lang="tr">Deneyim</span></a></li>
+                <li><a href="#ventures"><i class="bi bi-rocket-takeoff navicon"></i>
+                        <span lang="en">Ventures</span><span lang="tr">Girişimler</span></a></li>
+                <li><a href="#projects"><i class="bi bi-kanban navicon"></i>
+                        <span lang="en">Projects</span><span lang="tr">Projeler</span></a></li>
+                <li><a href="#hackathons"><i class="bi bi-trophy navicon"></i>
+                        <span lang="en">Hackathons</span><span lang="tr">Hackathonlar</span></a></li>
+                <li><a href="#opensource"><i class="bi bi-git navicon"></i>
+                        <span lang="en">Open Source</span><span lang="tr">Açık Kaynak</span></a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i>
+                        <span lang="en">Contact</span><span lang="tr">İletişim</span></a></li>
             </ul>
         </nav>
+
+        <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
 
     </header>
 
 
     <main class="main">
 
-        <!-- Hero Section -->
-
+        <!-- ============== Hero Section ============== -->
         <section id="hero" class="hero section light-background">
 
-            <img src="/MyResume-1.0.0/assets/img/erenPortfolyoresmi.jpg" alt="">
+            <img src="/MyResume-1.0.0/assets/img/erenPortfolyoresmi.jpg" alt="Muhammet Eren Karakuş">
 
             <div class="container" data-aos="zoom-out">
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <h2>Muhammet Eren Karakuş</h2>
-                        <p><span class="typed"
-                                data-typed-items="Yazılım Geliştiricisi, Mühendis Adayı, Yenilikçi"></span><span
-                                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+                        <p>
+                            <span class="typed"
+                                data-typed-items-en="Software Engineer, AI &amp; Automation Builder"
+                                data-typed-items-tr="Yazılım Mühendisi, AI &amp; Otomasyon"></span>
+                            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+                        </p>
+
                         <div class="social-links">
-                            <a href="https://github.com/eren-karakus0" target="_blank"><i class="bi bi-github"></i></a>
-                            <a href="https://www.linkedin.com/in/muhammeterenkarakus" target="_blank"><i
-                                    class="bi bi-linkedin"></i></a>
+                            <a href="https://github.com/eren-karakus0" target="_blank" aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammeterenkarakus" target="_blank"
+                                aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <div class="hero-cta">
+                            <a class="btn-cv"
+                                href="/MyResume-1.0.0/assets/cv/Muhammet-Eren-Karakus-CV.pdf"
+                                download>
+                                <i class="bi bi-download"></i>
+                                <span lang="en">Download CV</span>
+                                <span lang="tr">CV İndir</span>
+                            </a>
+                            <a class="btn-cv btn-outline" href="#ventures">
+                                <span lang="en">See My Work</span>
+                                <span lang="tr">Çalışmalarımı Gör</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </section>
-
-
         <!-- /Hero Section -->
 
+
+        <!-- ============== About Section ============== -->
         <section id="about" class="about section">
 
-            <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Hakkımda</h2>
-                <p>Marmara Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Sistem seviyesi programlama ve
-                    production-grade yazılım geliştirme konularında uygulamalı deneyime sahibim. Ziraat Teknoloji ve
-                    Anadolu Isuzu gibi kurumsal ortamlarda edindiğim tecrübelerle, yenilikçi ve etkili çözümler
-                    geliştirmeyi hedefliyorum.</p>
-            </div><!-- End Section Title -->
+                <h2 lang="en">About</h2>
+                <h2 lang="tr">Hakkımda</h2>
+                <p lang="en">
+                    Software Engineer graduating from Marmara University (June 2026). I build production-grade
+                    systems at the intersection of AI, automation and decentralized infrastructure. Hands-on
+                    experience gained at Ziraat Teknoloji and Anadolu Isuzu, with a growing portfolio of
+                    ventures in AI-native tooling and Web3 ecosystems.
+                </p>
+                <p lang="tr">
+                    Marmara Üniversitesi Bilgisayar Mühendisliği'nden Haziran 2026'da mezun olan bir Yazılım
+                    Mühendisiyim. AI, otomasyon ve dağıtık sistemler kesişiminde production-grade sistemler
+                    geliştiriyorum. Ziraat Teknoloji ve Anadolu Isuzu'da edindiğim saha deneyiminin yanında;
+                    AI-native araçlar ve Web3 ekosistemlerinde büyüyen bir girişim portföyüne sahibim.
+                </p>
+            </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
-
                 <div class="row gy-4 justify-content-center">
                     <div class="col-lg-4">
                         <img src="/MyResume-1.0.0/assets/img/vesikalik.jpg" class="img-fluid"
                             alt="Muhammet Eren Karakuş">
                     </div>
                     <div class="col-lg-8 content">
-                        <h2>Bilgisayar Mühendisi Adayı</h2>
-                        <p class="fst-italic py-3">
-                            Bireysel ve ekip çalışmalarıyla çeşitli projelerde yer alarak hem teknik hem de kişisel
-                            becerilerimi geliştirmeye devam ediyorum. Teknolojiye olan tutkum, öğrenme isteğimle
-                            birleşerek her zaman daha ileriye gitmemi sağlıyor.
+                        <h2 lang="en">Software Engineer</h2>
+                        <h2 lang="tr">Yazılım Mühendisi</h2>
+                        <p class="fst-italic py-3" lang="en">
+                            I enjoy owning problems end-to-end — from low-level systems work to shipping
+                            polished products. Curiosity pulls me across stacks; execution keeps me focused
+                            on what actually matters.
+                        </p>
+                        <p class="fst-italic py-3" lang="tr">
+                            Problemleri uçtan uca sahiplenmeyi severim — düşük seviye sistem çalışmasından,
+                            tamamlanmış ürünleri yayına almaya kadar. Merakım beni farklı stack'ler arasında
+                            dolaştırır; ama iş teslimatında odaklı kalırım.
                         </p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Doğum Tarihi:</strong> <span>4 Ekim
-                                            2004</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Telefon Numarası:</strong> <span>+90
-                                            545 585 2445</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Şehir:</strong> <span>İstanbul,
-                                            Türkiye</span></li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong lang="en">Date of Birth:</strong><strong lang="tr">Doğum Tarihi:</strong>
+                                        <span>4 October 2004</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong lang="en">Phone:</strong><strong lang="tr">Telefon:</strong>
+                                        <span>+90 545 585 2445</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong lang="en">City:</strong><strong lang="tr">Şehir:</strong>
+                                        <span>Istanbul, Türkiye</span>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Yaş:</strong> <span>21</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Derece:</strong> <span>Lisans (Devam
-                                            Ediyor)</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a
-                                                href="mailto:erenkar950@gmail.com">erenkar950@gmail.com</a></span></li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong lang="en">Age:</strong><strong lang="tr">Yaş:</strong>
+                                        <span>21</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong lang="en">Degree:</strong><strong lang="tr">Derece:</strong>
+                                        <span lang="en">B.Sc. Computer Engineering (Graduating June 2026)</span>
+                                        <span lang="tr">Lisans Bilgisayar Müh. (Haziran 2026 Mezun)</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i>
+                                        <strong>Email:</strong>
+                                        <span><a href="mailto:erenkar950@gmail.com">erenkar950@gmail.com</a></span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <p class="py-3">
-                            Yazılım geliştirme, veri analitiği ve proje yönetimi gibi alanlarda uzmanlaşmayı
-                            hedefliyorum. Amacım, teknolojik yeniliklere adapte olarak yaratıcı ve etkili çözümler
-                            geliştirmek. Kişisel gelişimime katkı sağlayacak her türlü projede yer almaktan mutluluk
-                            duyarım.
+                        <p class="py-3" lang="en">
+                            My current focus is building AI agents, on-chain infrastructure and developer
+                            tooling — with a strong interest in the intersection of large language models and
+                            autonomous systems. Always open to collaborations on meaningful projects.
+                        </p>
+                        <p class="py-3" lang="tr">
+                            Güncel odağım AI agent'lar, on-chain altyapı ve geliştirici araçları inşa etmek —
+                            büyük dil modelleri ile otonom sistemlerin kesişimine özellikle ilgi duyuyorum.
+                            Anlamlı projelerde iş birliklerine her zaman açığım.
                         </p>
                     </div>
                 </div>
-
             </div>
 
-        </section><!-- /About Section -->
+        </section>
+        <!-- /About Section -->
 
-        <!-- About Section -->
-        <!-- Stats Section -->
-        <!-- Skills Section -->
+
+        <!-- ============== Skills Section ============== -->
         <section id="skills" class="skills section">
 
-            <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2 style="font-weight: bold; font-size: 36px;">Çalıştığım Teknolojiler</h2>
-                <p style="font-size: 18px;">Çalışma alanımda kullandığım teknolojiler ve bu teknolojilerle
-                    gerçekleştirdiğim projeler aşağıda yer almaktadır.</p>
-            </div><!-- End Section Title -->
+                <h2 lang="en">Skills &amp; Technologies</h2>
+                <h2 lang="tr">Yetkinlikler ve Teknolojiler</h2>
+                <p lang="en">Languages, frameworks and platforms I actively use across my work.</p>
+                <p lang="tr">Çalışmalarımda aktif olarak kullandığım diller, framework'ler ve platformlar.</p>
+            </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row skills-content skills-animation">
-                    <!-- İlk sütun -->
+
+                    <!-- COL 1 -->
                     <div class="col-lg-6">
+
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">Python</h4>
-                            <p style="font-size: 16px;">
-                                Finansal teknolojiler, veri analizi ve otomasyon sistemlerinde Python'un geniş
-                                ekosisteminden yararlanıyorum. Özellikle trading botları, blockchain veri analizi ve
-                                makine öğrenmesi projelerinde aktif olarak kullanıyorum:
+                            <h4>Python</h4>
+                            <p lang="en">
+                                Primary language for automation, data pipelines, trading systems and ML work.
+                                Used in production for financial analytics, on-chain intelligence and ML
+                                signal generation.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>Crypto Trading Bot:</strong> Binance Futures API entegrasyonu ile LightGBM
-                                    ve XGBoost gibi makine öğrenmesi modellerini kullanarak otomatik piyasa analizi,
-                                    teknik indikatör hesaplama ve risk yönetimli işlem yürütme sistemi. 20'den fazla
-                                    teknik indikatörle gerçek zamanlı sinyal üretimi sağlar.
-                                </li>
-                                <li>
-                                    <strong>Blockchain Veri Analizi:</strong> On-chain verilerin anlık takibi, cüzdan
-                                    hareketlerinin profillenmesi, balina aktivitelerinin tespiti ve piyasa trendlerinin
-                                    öngörülmesi için geliştirilen kapsamlı analitik araçlar ve dashboard sistemleri.
-                                </li>
-                                <li>
-                                    <strong>Polymarket CopyTrade Bot:</strong> Başarılı trader cüzdanlarının işlemlerini
-                                    milisaniyeler içinde tespit edip otomatik kopyalama yapan, Polygon ağı üzerinde
-                                    çalışan otomasyon sistemi.
-                                </li>
+                            <p lang="tr">
+                                Otomasyon, veri pipeline'ları, trading sistemleri ve ML çalışmalarında birincil
+                                dilim. Finansal analitik, on-chain intelligence ve ML sinyal üretiminde
+                                production ortamda kullanıyorum.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>Crypto Trading Systems:</strong> Binance Futures integration with
+                                    LightGBM/XGBoost models, 20+ technical indicators, dynamic risk management.</li>
+                                <li><strong>On-Chain Analytics:</strong> Real-time wallet profiling, whale
+                                    tracking, insider-pattern detection across EVM and Solana.</li>
+                                <li><strong>Polymarket CopyTrade:</strong> Sub-second detection &amp; mirroring
+                                    of successful trader wallets on the Polygon network.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>Kripto Trading Sistemleri:</strong> Binance Futures entegrasyonu,
+                                    LightGBM/XGBoost modelleri, 20+ teknik indikatör, dinamik risk yönetimi.</li>
+                                <li><strong>On-Chain Analitik:</strong> Gerçek zamanlı cüzdan profillemesi,
+                                    balina takibi, insider pattern tespiti (EVM + Solana).</li>
+                                <li><strong>Polymarket CopyTrade:</strong> Başarılı trader cüzdanlarının
+                                    milisaniye seviyesinde tespiti ve Polygon ağında kopyalanması.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">.NET / C#</h4>
-                            <p style="font-size: 16px;">
-                                Kurumsal sınıf web ve masaüstü uygulamaları geliştirmede .NET ekosistemini kullanıyorum.
-                                Katmanlı mimari, Entity Framework, LINQ ve modern tasarım desenleriyle production-grade
-                                sistemler inşa ediyorum:
+                            <h4>TypeScript / Node.js</h4>
+                            <p lang="en">
+                                Type-safe, scalable applications. Backend APIs, real-time systems, Web3
+                                front-ends and production bot infrastructure.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>Automotive Log Monitoring Platform:</strong> Anadolu Isuzu bünyesinde
-                                    geliştirilen, araçlardan gelen telemetri ve hata loglarını gerçek zamanlı izleyen,
-                                    AI destekli RAG sistemleri ve OTA (Over-the-Air) güncelleme yönetimi sunan kapsamlı
-                                    kurumsal platformdur. SignalR ile anlık bildirimler ve dashboard görselleştirmeleri
-                                    içerir.
-                                </li>
-                                <li>
-                                    <strong>MVC5 Portfolyo & Blog Sistemleri:</strong> Web tasarım ve backend pratikleri
-                                    kapsamında geliştirilmiş, dinamik içerik yönetimi, kullanıcı kimlik doğrulama ve rol
-                                    bazlı yetkilendirme sistemlerine sahip modern web uygulamaları.
-                                </li>
+                            <p lang="tr">
+                                Tip güvenli, ölçeklenebilir uygulamalar. Backend API'ler, real-time sistemler,
+                                Web3 frontend'leri ve production bot altyapısı.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>PolyHawk Tracker:</strong> Real-time Polymarket whale monitor with
+                                    insider detection, P&amp;L analytics and Telegram alerts.</li>
+                                <li><strong>republic-sdk:</strong> Published TypeScript SDK for Republic AI —
+                                    key management, signing, job submission and CLI.</li>
+                                <li><strong>Next.js Interfaces:</strong> Production dashboards, token toolkits
+                                    and analytics UIs for Forsety, Panoptes and Forja.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>PolyHawk Tracker:</strong> Real-time Polymarket balina izleyici —
+                                    insider tespiti, P&amp;L analizi ve Telegram bildirimleri.</li>
+                                <li><strong>republic-sdk:</strong> Republic AI için yayınlanan TypeScript SDK —
+                                    key management, imzalama, job submission, CLI.</li>
+                                <li><strong>Next.js Arayüzleri:</strong> Forsety, Panoptes ve Forja için
+                                    production dashboard'ları, token araç setleri ve analitik UI'ları.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">TypeScript / Node.js</h4>
-                            <p style="font-size: 16px;">
-                                Modern JavaScript ekosisteminde tip güvenli ve ölçeklenebilir uygulamalar
-                                geliştiriyorum. Backend API'ler, bot sistemleri ve real-time uygulamalarda aktif olarak
-                                kullanıyorum:
+                            <h4>.NET / C#</h4>
+                            <p lang="en">
+                                Enterprise-grade backend services and web applications with layered
+                                architecture, Entity Framework and clean design patterns.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>PolyHawk Tracker:</strong> Polymarket platformundaki balina hareketlerini
-                                    gerçek zamanlı izleyen, cüzdan bazlı kârlılık analizleri yapan ve insider trading
-                                    kalıplarını tespit eden ileri seviye bot sistemi. Telegram entegrasyonu ile anlık
-                                    sinyaller ve detaylı piyasa özetleri sunar.
-                                </li>
-                                <li>
-                                    <strong>AI Frontend Geliştirme:</strong> AIATUS AI stajında yapay zeka tabanlı
-                                    kullanıcı arayüzlerinin geliştirilmesi, RESTful API entegrasyonları ve modern
-                                    frontend framework'leri ile çalışma deneyimi.
-                                </li>
+                            <p lang="tr">
+                                Katmanlı mimari, Entity Framework ve temiz tasarım desenleri ile kurumsal
+                                seviyede backend servisleri ve web uygulamaları.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>Automotive Log Platform (Anadolu Isuzu):</strong> Real-time
+                                    telemetry monitoring with RAG-based assistants, SignalR push updates and
+                                    OTA update orchestration.</li>
+                                <li><strong>MVC Blog &amp; Portfolio Systems:</strong> Layered apps with role-based
+                                    auth, dynamic content management and optimized SQL queries.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>Automotive Log Platform (Anadolu Isuzu):</strong> Real-time
+                                    telemetri izleme, RAG tabanlı asistanlar, SignalR push güncellemeler ve
+                                    OTA güncelleme orkestrasyonu.</li>
+                                <li><strong>MVC Blog &amp; Portfolio Sistemleri:</strong> Rol bazlı
+                                    yetkilendirme, dinamik içerik yönetimi ve optimize SQL sorguları.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">SQL & Veritabanı Yönetimi</h4>
-                            <p style="font-size: 16px;">
-                                İlişkisel veritabanı tasarımı, sorgu optimizasyonu ve büyük veri kümeleri üzerinde ETL
-                                süreçleri yönetiminde deneyim sahibiyim:
+                            <h4>Go</h4>
+                            <p lang="en">
+                                High-performance, concurrent systems — market-making bots, low-latency order
+                                routing, small CLI utilities.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>Oracle & PL/SQL:</strong> Ziraat Teknoloji stajında Oracle Data Integrator
-                                    (ODI) kullanarak karmaşık ETL süreçleri tasarımı, veri ambarı modelleme ve büyük
-                                    ölçekli veri transformasyonları gerçekleştirdim.
-                                </li>
-                                <li>
-                                    <strong>MS SQL Server:</strong> .NET projelerinde Entity Framework Code
-                                    First/Database First yaklaşımları, stored procedure optimizasyonu ve performans
-                                    tuning çalışmaları.
-                                </li>
+                            <p lang="tr">
+                                Yüksek performanslı, concurrent sistemler — market-maker botları, düşük
+                                gecikmeli emir iletimi, CLI araçları.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>Polymarket Auto Trade:</strong> Market-making bot over the
+                                    Polymarket CLOB. Goroutines + channels for millisecond-level execution.</li>
+                                <li><strong>RugCheckLite:</strong> Lightweight Solana token risk analyzer.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>Polymarket Auto Trade:</strong> Polymarket CLOB üstünde
+                                    market-maker bot. Goroutine + channel ile milisaniye seviyesinde emir.</li>
+                                <li><strong>RugCheckLite:</strong> Hafif Solana token risk analizörü.</li>
                             </ul>
                         </div>
+
+                        <div class="skill-item">
+                            <h4>C &amp; Java</h4>
+                            <p lang="en">
+                                Low-level systems work and classic OOP. Built a virtual memory management
+                                simulator (paging, First Fit / Best Fit allocation) in C and several
+                                desktop applications in Java/Swing.
+                            </p>
+                            <p lang="tr">
+                                Düşük seviye sistem çalışması ve klasik OOP. C ile sanal bellek yönetimi
+                                simülatörü (paging, First Fit / Best Fit), Java/Swing ile birden fazla
+                                masaüstü uygulama geliştirdim.
+                            </p>
+                        </div>
+
                     </div>
 
-                    <!-- İkinci sütun -->
+                    <!-- COL 2 -->
                     <div class="col-lg-6">
+
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">Otomasyon & LLM Araçları</h4>
-                            <p style="font-size: 16px;">
-                                Modern AI agent'ları ve otomasyon platformlarını profesyonel iş akışlarında etkin
-                                şekilde kullanıyorum. Geliştirme süreçlerini hızlandırmak ve tekrarlayan görevleri
-                                otomatize etmek için bu araçları aktif olarak entegre ediyorum:
+                            <h4>AI Development Tooling</h4>
+                            <p lang="en">
+                                I use modern AI coding agents and LLM infrastructure as an integral part of
+                                my workflow — not just as assistants, but as first-class systems I build
+                                with and around.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>AI Coding Agents:</strong> Claude Code, OpenAI Codex ve GitHub Copilot gibi
-                                    yapay zeka destekli kod asistanlarını profesyonel geliştirme süreçlerinde aktif
-                                    olarak kullanıyorum. Kod üretimi, refactoring, debugging ve dokümantasyon oluşturma
-                                    süreçlerinde AI agent'larından maksimum verim alıyorum.
-                                </li>
-                                <li>
-                                    <strong>n8n Workflow Automation:</strong> İş süreçlerini otomatize etmek için n8n
-                                    platformu ile webhook entegrasyonları, API zincirleme ve scheduled task'lar
-                                    oluşturuyorum. Trading botları için bildirim sistemleri ve veri pipeline'ları
-                                    kuruyorum.
-                                </li>
-                                <li>
-                                    <strong>LLM Entegrasyonu:</strong> RAG (Retrieval-Augmented Generation) sistemleri,
-                                    prompt engineering ve LLM API entegrasyonları ile akıllı otomasyon çözümleri
-                                    geliştiriyorum.
-                                </li>
+                            <p lang="tr">
+                                Modern AI kod agent'larını ve LLM altyapılarını iş akışımın ayrılmaz bir
+                                parçası olarak kullanıyorum — sadece asistan olarak değil, çevresinde ve
+                                üstünde sistemler kurduğum birinci sınıf bileşenler olarak.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>AI Coding Agents:</strong> Daily use of Claude Code, Cursor,
+                                    OpenAI Codex and GitHub Copilot — code generation, refactoring, test
+                                    authoring, architecture reviews.</li>
+                                <li><strong>MCP (Model Context Protocol):</strong> Implemented and contributed
+                                    to MCP clients and servers (including native MCP support for NousResearch
+                                    hermes-agent).</li>
+                                <li><strong>Agent Frameworks:</strong> Hands-on with CrewAI, Flowise, Dify,
+                                    Eigent, OpenWebUI — both as user and as upstream contributor.</li>
+                                <li><strong>n8n Workflow Automation:</strong> Webhook integrations, scheduled
+                                    pipelines, notification stacks for trading and data ingestion.</li>
+                                <li><strong>LLM Integration:</strong> RAG systems, prompt engineering,
+                                    provider abstraction, cost-aware routing.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>AI Kod Agent'ları:</strong> Claude Code, Cursor, OpenAI Codex ve
+                                    GitHub Copilot'u günlük kullanıyorum — kod üretimi, refactoring, test
+                                    yazımı, mimari inceleme.</li>
+                                <li><strong>MCP (Model Context Protocol):</strong> MCP client ve server'larına
+                                    implementasyon ve katkı (NousResearch hermes-agent için native MCP dahil).</li>
+                                <li><strong>Agent Framework'leri:</strong> CrewAI, Flowise, Dify, Eigent,
+                                    OpenWebUI — hem kullanıcı hem upstream contributor olarak.</li>
+                                <li><strong>n8n Otomasyon:</strong> Webhook entegrasyonları, zamanlanmış
+                                    pipeline'lar, trading ve veri alım bildirim yığınları.</li>
+                                <li><strong>LLM Entegrasyonu:</strong> RAG sistemleri, prompt engineering,
+                                    provider soyutlaması, maliyet farkında routing.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">Go</h4>
-                            <p style="font-size: 16px;">
-                                Yüksek performans ve concurrent processing gerektiren sistemlerde Go dilinin
-                                avantajlarından yararlanıyorum:
+                            <h4>Infrastructure &amp; DevOps</h4>
+                            <p lang="en">
+                                I self-host my own stack. VPS management, containerized deployments, reverse
+                                proxies, TLS, and caching infrastructure — all operated in production.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>
-                                    <strong>Polymarket Auto Trade Bot:</strong> Polymarket CLOB üzerinden piyasa yapıcı
-                                    (market maker) stratejileri uygulayan, Go'nun goroutine ve channel yapılarıyla
-                                    milisaniye seviyesinde düşük gecikmeli işlem yürüten yüksek performanslı trading
-                                    sistemi. Concurrent veri akışı ve hızlı emir iletimi için optimize edilmiştir.
-                                </li>
+                            <p lang="tr">
+                                Kendi stack'imi self-host ediyorum. VPS yönetimi, containerized deployment'lar,
+                                reverse proxy'ler, TLS ve caching altyapısı — hepsi production'da.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>VPS &amp; Cloud:</strong> Linux VPS provisioning, hardening,
+                                    monitoring. Cloudflare (DNS, WAF, tunnels), systemd services.</li>
+                                <li><strong>Containers &amp; PaaS:</strong> Docker / Docker Compose, Dokploy
+                                    for multi-app self-hosted deployments with zero-downtime rollouts.</li>
+                                <li><strong>Reverse Proxy &amp; TLS:</strong> Nginx, Nginx Proxy Manager,
+                                    Let's Encrypt automation.</li>
+                                <li><strong>Caching &amp; Queues:</strong> Redis, DragonflyDB, pub/sub
+                                    pipelines for bot and analytics workloads.</li>
+                                <li><strong>CI/CD:</strong> GitHub Actions pipelines, container registry
+                                    workflows, automated deploy-on-merge setups.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>VPS &amp; Cloud:</strong> Linux VPS kurulum, hardening, monitoring.
+                                    Cloudflare (DNS, WAF, tunnel'ler), systemd servisleri.</li>
+                                <li><strong>Container &amp; PaaS:</strong> Docker / Docker Compose, Dokploy
+                                    ile self-host çoklu uygulama deployment — zero-downtime rollout.</li>
+                                <li><strong>Reverse Proxy &amp; TLS:</strong> Nginx, Nginx Proxy Manager,
+                                    Let's Encrypt otomasyonu.</li>
+                                <li><strong>Cache &amp; Kuyruk:</strong> Redis, DragonflyDB — bot ve analitik
+                                    yükleri için pub/sub pipeline'ları.</li>
+                                <li><strong>CI/CD:</strong> GitHub Actions pipeline'ları, container registry
+                                    workflow'ları, merge'de otomatik deploy.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">AI / Machine Learning</h4>
-                            <p style="font-size: 16px;">
-                                Veriden değer üretme süreçlerinde makine öğrenmesi ve yapay zeka teknolojilerini
-                                uyguluyorum. Trading sistemlerinde tahminleme, otomotiv sektöründe log analizi ve doğal
-                                dil işleme projelerinde deneyim sahibiyim:
+                            <h4>AI / Machine Learning</h4>
+                            <p lang="en">
+                                Applying ML where it actually moves the needle — predictive modeling in
+                                trading, anomaly detection in automotive logs, RAG systems for knowledge
+                                retrieval.
                             </p>
-                            <ul style="font-size: 16px; margin-left: 20px;">
-                                <li>LightGBM, XGBoost gibi gradient boosting modelleri ile finansal tahminleme</li>
-                                <li>RAG (Retrieval-Augmented Generation) mimarileri ile akıllı soru-cevap sistemleri
-                                </li>
-                                <li>Otomotiv log verilerinden anomali tespiti ve predictive maintenance</li>
+                            <p lang="tr">
+                                ML'i gerçekten fark yarattığı yerlerde uyguluyorum — trading'de tahminleme,
+                                otomotiv log'larında anomali tespiti, bilgi erişimi için RAG sistemleri.
+                            </p>
+                            <ul lang="en">
+                                <li>Gradient boosting (LightGBM, XGBoost) for financial signal generation.</li>
+                                <li>Retrieval-Augmented Generation pipelines for domain-specific Q&amp;A.</li>
+                                <li>Anomaly detection &amp; predictive maintenance on automotive telemetry.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li>Gradient boosting (LightGBM, XGBoost) ile finansal sinyal üretimi.</li>
+                                <li>Domain-özel Q&amp;A için Retrieval-Augmented Generation pipeline'ları.</li>
+                                <li>Otomotiv telemetrisinde anomali tespiti ve predictive maintenance.</li>
                             </ul>
                         </div>
 
                         <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">C (Sistem Programlama)</h4>
-                            <p style="font-size: 16px;">
-                                Düşük seviyeli sistem programlama ve bellek yönetimi projelerinde C dilini kullandım.
-                                <strong>Sanal Bellek Yönetimi</strong> projemde işletim sistemi seviyesinde bellek
-                                tahsisi, sayfalama algoritmaları ve verimlilik optimizasyonları üzerinde çalıştım.
+                            <h4 lang="en">Databases &amp; Data Engineering</h4>
+                            <h4 lang="tr">Veritabanı &amp; Veri Mühendisliği</h4>
+                            <p lang="en">
+                                Relational modeling, query optimization and enterprise ETL. Experience ranges
+                                from bank-scale Oracle data warehouses to lightweight Postgres &amp; SQLite
+                                in product code.
                             </p>
+                            <p lang="tr">
+                                İlişkisel modelleme, sorgu optimizasyonu ve kurumsal ETL. Banka ölçeğindeki
+                                Oracle veri ambarlarından ürün kodundaki hafif Postgres/SQLite'a kadar
+                                deneyim.
+                            </p>
+                            <ul lang="en">
+                                <li><strong>Oracle / PL/SQL / ODI:</strong> Warehouse modeling and ETL at
+                                    Ziraat Teknoloji (İstanbul Finans Merkezi).</li>
+                                <li><strong>MS SQL Server + EF Core:</strong> Code-First / Database-First,
+                                    stored procedure tuning, index &amp; plan analysis.</li>
+                                <li><strong>Postgres &amp; SQLite:</strong> Day-to-day product work.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li><strong>Oracle / PL/SQL / ODI:</strong> Ziraat Teknoloji İFM'de veri
+                                    ambarı modelleme ve ETL.</li>
+                                <li><strong>MS SQL Server + EF Core:</strong> Code-First / Database-First,
+                                    stored procedure tuning, index &amp; plan analizi.</li>
+                                <li><strong>Postgres &amp; SQLite:</strong> Günlük ürün geliştirme.</li>
+                            </ul>
                         </div>
 
-                        <div class="skill-item">
-                            <h4 style="font-size: 24px; font-weight: bold;">Java</h4>
-                            <p style="font-size: 16px;">
-                                Nesne yönelimli programlama prensipleriyle masaüstü uygulamaları geliştirdim. Swing ile
-                                MP3 Player ve bağış yönetim sistemleri gibi projeler tamamladım.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
-                <div class="additional-info" style="margin-top: 30px; text-align: center; font-size: 16px;">
-                    <p>
-                        Daha fazla teknik detay için:
+                <div class="additional-info"
+                    style="margin-top: 30px; text-align: center; font-size: 16px;">
+                    <p lang="en">
+                        For deeper technical context, see my
                         <a href="https://github.com/eren-karakus0" target="_blank"
-                            style="color: var(--accent-color); font-weight: bold;">GitHub Hesabım</a>
+                            style="color: var(--accent-color); font-weight: bold;">GitHub</a>
+                        or scroll down to <a href="#ventures"
+                            style="color: var(--accent-color); font-weight: bold;">Ventures</a>
+                        and <a href="#opensource"
+                            style="color: var(--accent-color); font-weight: bold;">Open Source
+                            Contributions</a>.
+                    </p>
+                    <p lang="tr">
+                        Daha fazla teknik detay için
+                        <a href="https://github.com/eren-karakus0" target="_blank"
+                            style="color: var(--accent-color); font-weight: bold;">GitHub</a>
+                        sayfama bakabilir veya aşağıdaki
+                        <a href="#ventures"
+                            style="color: var(--accent-color); font-weight: bold;">Girişimler</a>
+                        ve <a href="#opensource"
+                            style="color: var(--accent-color); font-weight: bold;">Açık Kaynak
+                            Katkıları</a> bölümlerine geçebilirsiniz.
                     </p>
                 </div>
 
             </div>
 
-        </section><!-- /Skills Section -->
+        </section>
+        <!-- /Skills Section -->
 
-        <!-- Resume Section -->
-        <section id="resume" class="resume section">
+
+        <!-- ============== Experience Section ============== -->
+        <section id="experience" class="resume section">
 
             <div class="container section-title" data-aos="fade-up">
-                <h2>Eğitim ve Deneyim</h2>
-                <p>Profesyonel gelişim ve akademik yolculuğumun özeti.</p>
+                <h2 lang="en">Education &amp; Experience</h2>
+                <h2 lang="tr">Eğitim ve Deneyim</h2>
+                <p lang="en">A summary of my academic path and professional stops so far.</p>
+                <p lang="tr">Akademik yolum ve şimdiye kadarki profesyonel duraklarım.</p>
             </div>
 
             <div class="container">
                 <div class="row">
 
-                    <!-- Sol Kolon: Eğitim ve Özet -->
+                    <!-- Education -->
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Özet</h3>
+                        <h3 class="resume-title" lang="en">Summary</h3>
+                        <h3 class="resume-title" lang="tr">Özet</h3>
                         <div class="resume-item pb-0">
                             <h4>Muhammet Eren Karakuş</h4>
-                            <p><em>Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisi. Sistem seviyesi
-                                    programlama, AI entegrasyonu ve kurumsal yazılım mimarisi konularında
-                                    deneyimli.</em>
-                            </p>
+                            <p lang="en"><em>Software Engineer — system-level programming, AI integration,
+                                    distributed/Web3 infrastructure and enterprise architecture.</em></p>
+                            <p lang="tr"><em>Yazılım Mühendisi — sistem programlama, AI entegrasyonu,
+                                    dağıtık/Web3 altyapı ve kurumsal mimari.</em></p>
                             <ul>
-                                <li>Maltepe, İstanbul, Türkiye</li>
-                                <li>+90(545) 585 2445</li>
+                                <li>Maltepe, Istanbul, Türkiye</li>
+                                <li>+90 (545) 585 2445</li>
                                 <li>erenkar950@gmail.com</li>
                             </ul>
                         </div>
 
-                        <h3 class="resume-title">Eğitim</h3>
+                        <h3 class="resume-title" lang="en">Education</h3>
+                        <h3 class="resume-title" lang="tr">Eğitim</h3>
                         <div class="resume-item">
-                            <h4>Bilgisayar Mühendisliği</h4>
-                            <h5>2022 - Halen</h5>
-                            <p><em>Marmara Üniversitesi, İstanbul</em></p>
-                            <p>Teknolojik yeniliklere odaklı, sürekli öğrenme ve gelişim prensibiyle akademik kariyerime
-                                devam ediyorum.</p>
+                            <h4 lang="en">B.Sc. Computer Engineering</h4>
+                            <h4 lang="tr">Bilgisayar Mühendisliği Lisans</h4>
+                            <h5 lang="en">2022 – June 2026 (Graduating)</h5>
+                            <h5 lang="tr">2022 – Haziran 2026 (Mezun Oluyor)</h5>
+                            <p><em lang="en">Marmara University, Istanbul</em>
+                                <em lang="tr">Marmara Üniversitesi, İstanbul</em></p>
+                            <p lang="en">
+                                Coursework spanning systems programming, data structures, OS internals,
+                                networks, databases and software engineering — paired with continuous
+                                self-driven learning in AI and distributed systems.
+                            </p>
+                            <p lang="tr">
+                                Sistem programlama, veri yapıları, işletim sistemleri, ağlar, veritabanları
+                                ve yazılım mühendisliği derslerinin yanında AI ve dağıtık sistemlerde
+                                sürekli self-driven öğrenme.
+                            </p>
                         </div>
 
                         <div class="resume-item">
-                            <h4>QNB 101 Online Staj</h4>
+                            <h4 lang="en">QNB 101 Online Internship</h4>
+                            <h4 lang="tr">QNB 101 Online Staj</h4>
                             <h5>2025</h5>
-                            <p><em>Bankacılık Teknolojileri ve Finansal Yazılım Sistemleri Eğitimi.</em></p>
+                            <p lang="en"><em>Banking technologies and financial software systems program.</em></p>
+                            <p lang="tr"><em>Bankacılık teknolojileri ve finansal yazılım sistemleri programı.</em></p>
                         </div>
                     </div>
 
-                    <!-- Sağ Kolon: Profesyonel Deneyimler -->
+                    <!-- Experience -->
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="resume-title">Deneyim</h3>
+                        <h3 class="resume-title" lang="en">Experience</h3>
+                        <h3 class="resume-title" lang="tr">Deneyim</h3>
 
                         <div class="resume-item">
-                            <h4>Gömülü Sistemler ve Dijital Çözümler Stajı</h4>
-                            <h5>Eylül 2025 - Ocak 2026</h5>
+                            <h4 lang="en">Embedded Systems &amp; Digital Solutions Intern</h4>
+                            <h4 lang="tr">Gömülü Sistemler ve Dijital Çözümler Stajyeri</h4>
+                            <h5 lang="en">September 2025 – January 2026</h5>
+                            <h5 lang="tr">Eylül 2025 – Ocak 2026</h5>
                             <p><em>Anadolu Isuzu Otomotiv Sanayi</em></p>
-                            <ul>
-                                <li>Otomotiv sektöründe dijital dönüşüm projeleri kapsamında, araçlardan toplanan büyük
-                                    veri setlerinin (loglar) gerçek zamanlı izlenmesi, analizi ve görselleştirilmesi
-                                    süreçlerinde görev aldım.</li>
-                                <li>AI destekli RAG mimarileri kullanarak akıllı öneri sistemleri ve OTA (Over-the-Air)
-                                    yazılım güncelleme yönetim platformlarının geliştirilmesine teknik katkı sağladım.
-                                </li>
+                            <ul lang="en">
+                                <li>Contributed to digital-transformation initiatives: real-time monitoring,
+                                    analysis and visualization of large-scale vehicle telemetry &amp; error logs.</li>
+                                <li>Delivered technical work on AI-powered RAG assistants and an
+                                    Over-the-Air (OTA) software update management platform.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li>Dijital dönüşüm projeleri: araçlardan toplanan büyük telemetri ve hata
+                                    log'larının gerçek zamanlı izlenmesi, analizi ve görselleştirilmesi.</li>
+                                <li>AI tabanlı RAG asistanlarının ve Over-the-Air (OTA) yazılım güncelleme
+                                    yönetim platformunun teknik geliştirmesine katkı.</li>
                             </ul>
                         </div>
 
                         <div class="resume-item">
-                            <h4>AI & Data Engineering Stajı</h4>
-                            <h5>Ağustos 2025 - Eylül 2025</h5>
+                            <h4 lang="en">AI &amp; Data Engineering Intern</h4>
+                            <h4 lang="tr">AI ve Veri Mühendisliği Stajyeri</h4>
+                            <h5 lang="en">August 2025 – September 2025</h5>
+                            <h5 lang="tr">Ağustos 2025 – Eylül 2025</h5>
                             <p><em>AIATUS AI</em></p>
-                            <ul>
-                                <li>Büyük dil modelleri (LLM) ve yapay zeka çözümleri üzerine araştırma yaparak,
-                                    operasyonel süreçlerin AI ile otomatize edilmesi projelerinde yer aldım.</li>
-                                <li>Node.js ve modern frontend teknolojileriyle yapay zeka tabanlı kullanıcı
-                                    arayüzlerinin geliştirilmesi ve API entegrasyonlarının yapılması süreçlerini
-                                    yürüttüm.</li>
+                            <ul lang="en">
+                                <li>Research and implementation on LLM-driven automation of operational
+                                    workflows.</li>
+                                <li>Built AI-facing UIs and API integrations using Node.js and modern
+                                    frontend tooling.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li>Operasyonel iş akışlarının LLM tabanlı otomasyonu üzerine araştırma ve
+                                    implementasyon.</li>
+                                <li>Node.js ve modern frontend araçları ile AI-odaklı arayüzler ve API
+                                    entegrasyonları.</li>
                             </ul>
                         </div>
 
                         <div class="resume-item">
-                            <h4>Veri Ambarı Yönetimi Stajı</h4>
-                            <h5>Temmuz 2024 - Eylül 2024</h5>
-                            <p><em>Ziraat Teknoloji, İstanbul Finans Merkezi (İFM)</em></p>
-                            <ul>
-                                <li>Oracle Data Integrator (ODI) kullanarak karmaşık ETL süreçleri tasarımı, veri
-                                    aktarımı ve transformasyon operasyonlarını gerçekleştirdim.</li>
-                                <li>PL/SQL ile veri ambarı sorgu optimizasyonu, performans iyileştirme ve büyük veri
-                                    kümelerinin yönetimi konularında deneyim kazandım.</li>
+                            <h4 lang="en">Data Warehouse Intern</h4>
+                            <h4 lang="tr">Veri Ambarı Stajyeri</h4>
+                            <h5 lang="en">July 2024 – September 2024</h5>
+                            <h5 lang="tr">Temmuz 2024 – Eylül 2024</h5>
+                            <p><em>Ziraat Teknoloji — Istanbul Finance Center</em></p>
+                            <ul lang="en">
+                                <li>Designed ETL pipelines and transformation jobs using Oracle Data
+                                    Integrator (ODI).</li>
+                                <li>PL/SQL tuning on bank-scale warehouses: query optimization, performance
+                                    improvement, large-dataset ops.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li>Oracle Data Integrator (ODI) ile ETL pipeline'ları ve transformation
+                                    job'ları tasarımı.</li>
+                                <li>Banka ölçeğindeki veri ambarlarında PL/SQL tuning — sorgu optimizasyonu,
+                                    performans iyileştirme, büyük veri operasyonları.</li>
                             </ul>
                         </div>
 
                         <div class="resume-item">
-                            <h4>Yazılım Geliştirme Eğitimi</h4>
-                            <h5>Ekim 2024 - Şubat 2025</h5>
-                            <p><em>Acunmedya Akademi</em></p>
-                            <ul>
-                                <li>Full-stack yazılım geliştirme metodolojileri ile .NET ve C# programlama dili
-                                    odağında, katmanlı mimari ve kurumsal tasarım desenleri kullanarak projeler
-                                    geliştirdim.</li>
+                            <h4 lang="en">Software Development Program</h4>
+                            <h4 lang="tr">Yazılım Geliştirme Programı</h4>
+                            <h5 lang="en">October 2024 – February 2025</h5>
+                            <h5 lang="tr">Ekim 2024 – Şubat 2025</h5>
+                            <p><em>Acunmedya Academy</em></p>
+                            <ul lang="en">
+                                <li>Full-stack development with .NET / C#, layered architecture and
+                                    enterprise design patterns.</li>
+                            </ul>
+                            <ul lang="tr">
+                                <li>.NET / C# ile full-stack geliştirme, katmanlı mimari ve kurumsal tasarım
+                                    desenleri.</li>
                             </ul>
                         </div>
                     </div>
@@ -453,203 +676,1039 @@
                 </div>
             </div>
 
-        </section><!-- /Resume Section -->
+        </section>
+        <!-- /Experience Section -->
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio section">
+
+        <!-- ============== Ventures & Labs Section ============== -->
+        <section id="ventures" class="ventures section light-background">
 
             <div class="container section-title" data-aos="fade-up">
-                <h2>Portfolyo</h2>
-                <p>Projelerim arasından öne çıkanlar ve teknik başarılarım.</p>
+                <h2 lang="en">Ventures &amp; Labs</h2>
+                <h2 lang="tr">Girişimler ve Laboratuvarlar</h2>
+                <p lang="en">
+                    Organizations I founded and projects I own end-to-end — designed, built, deployed
+                    and maintained in production.
+                </p>
+                <p lang="tr">
+                    Kurduğum organizasyonlar ve uçtan uca sahiplendiğim projeler — tasarım, geliştirme,
+                    deployment ve production'da bakım hepsi bana ait.
+                </p>
             </div>
 
-            <div class="container portfolio-zigzag">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="ventures-grid">
 
-                <!-- 1. Proje: Automotive Log Platform -->
-                <div class="row portfolio-zigzag-item" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/LogMonitoring.png"
-                                alt="Log Monitoring">
+                    <!-- Forsety -->
+                    <article class="venture-card">
+                        <div class="venture-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/ventures/forsety-hero.png"
+                                alt="Forsety"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder" style="display:none;">FORSETY</div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-start">
-                            <h3>Automotive Log Platform</h3>
-                            <p>Anadolu Isuzu bünyesinde, araçlardan gelen telemetri ve hata loglarını gerçek zamanlı
-                                olarak izlemek için geliştirilen kapsamlı bir dashboard ve yönetim panelidir. Proje,
-                                AI/RAG entegrasyonu ile hata analizi yapabildiği gibi OTA (Over-the-Air) altyapısı
-                                sayesinde araçlara uzaktan yazılım güncellemeleri gönderilmesini de yönetmektedir.
-                                Kurumsal standartlarda geliştirilmiş bir production sistemidir.</p>
-                            <div class="portfolio-zigzag-links">
-                                <span style="font-style: italic; color: #888;">Kurumsal & Gizli Proje</span>
+                        <div class="venture-card-body">
+                            <div class="venture-tag">Forsetyxyz</div>
+                            <h3>Forsety</h3>
+                            <p lang="en">
+                                Evidence layer for licensed AI data access. Built on Shelby Protocol —
+                                creates verifiable, auditable trails for dataset access so AI developers
+                                can prove provenance and compliance.
+                            </p>
+                            <p lang="tr">
+                                Lisanslı AI veri erişimi için evidence layer. Shelby Protocol üzerine
+                                kurulu — AI geliştiricilerin veri kökeni ve uyumluluğunu ispatlayabilmesi
+                                için denetlenebilir kanıt izleri üretir.
+                            </p>
+                            <div class="venture-badges">
+                                <span class="venture-badge">TypeScript</span>
+                                <span class="venture-badge">Shelby</span>
+                                <span class="venture-badge">Solana</span>
+                                <span class="venture-badge">Evidence Layer</span>
+                            </div>
+                            <div class="venture-card-actions">
+                                <a class="btn-case" href="/ventures/forsety.html">
+                                    <span lang="en">Case Study →</span>
+                                    <span lang="tr">İncele →</span>
+                                </a>
+                                <a class="btn-live" href="https://forsety.xyz/" target="_blank">
+                                    <i class="bi bi-globe2"></i> Live
+                                </a>
+                                <a class="btn-gh" href="https://github.com/Forsetyxyz" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 2. Proje: PolyHawk Tracker -->
-                <div class="row portfolio-zigzag-item flex-row-reverse" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/PolyHawk.png" alt="PolyHawk">
+                    <!-- PanoptesLabs -->
+                    <article class="venture-card">
+                        <div class="venture-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/ventures/panoptes-hero.png"
+                                alt="PanoptesLabs"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder" style="display:none;">PANOPTES LABS</div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-end">
-                            <h3>PolyHawk Tracker</h3>
-                            <p>TypeScript tabanlı geliştirilen ve Polymarket platformundaki balina hareketlerini gerçek
-                                zamanlı izleyen bir analiz yazılımıdır. Insider trading tespiti, cüzdan bazlı kârlılık
-                                analizleri ve piyasa duyarlılığını ölçen algoritmalar içermektedir. Telegram üzerinden
-                                anlık sinyaller ve derinlemesine piyasa özetleri sunmaktadır.</p>
-                            <div class="portfolio-zigzag-links" style="justify-content: flex-end;">
-                                <a href="https://t.me/polyhawktracker" target="_blank">Telegram</a>
+                        <div class="venture-card-body">
+                            <div class="venture-tag">PanoptesLabs</div>
+                            <h3>PanoptesLabs Ecosystem</h3>
+                            <p lang="en">
+                                Two-part ecosystem for Republic AI: <strong>Panoptes</strong> — a chain
+                                intelligence platform for validator monitoring, endpoint health and
+                                smart routing. <strong>republic-sdk</strong> — the official TypeScript
+                                SDK (npm) for interacting with the network.
+                            </p>
+                            <p lang="tr">
+                                Republic AI için iki parçalı ekosistem: <strong>Panoptes</strong> —
+                                validator izleme, endpoint sağlığı ve akıllı routing için chain
+                                intelligence platformu. <strong>republic-sdk</strong> — ağ ile etkileşim
+                                için resmi TypeScript SDK (npm).
+                            </p>
+                            <div class="venture-badges">
+                                <span class="venture-badge">TypeScript</span>
+                                <span class="venture-badge">Republic AI</span>
+                                <span class="venture-badge">Validator Monitoring</span>
+                                <span class="venture-badge">npm SDK</span>
+                            </div>
+                            <div class="venture-card-actions">
+                                <a class="btn-case" href="/ventures/panoptes.html">
+                                    <span lang="en">Case Study →</span>
+                                    <span lang="tr">İncele →</span>
+                                </a>
+                                <a class="btn-live" href="https://panoptes.cc/" target="_blank">
+                                    <i class="bi bi-globe2"></i> Live
+                                </a>
+                                <a class="btn-live" href="https://www.npmjs.com/package/republic-sdk"
+                                    target="_blank">
+                                    <i class="bi bi-box"></i> npm
+                                </a>
+                                <a class="btn-gh" href="https://github.com/PanoptesLabs" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 3. Proje: Sanal Bellek Yönetimi -->
-                <div class="row portfolio-zigzag-item" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/VirtualMemory.png"
-                                alt="VM Management">
+                    <!-- KiteID -->
+                    <article class="venture-card">
+                        <div class="venture-card-media contain kiteid-bg">
+                            <img src="/MyResume-1.0.0/assets/img/ventures/kiteid/banner.svg"
+                                alt="KiteID"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder" style="display:none;">KITEID</div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-start">
-                            <h3>Sanal Bellek Yönetimi</h3>
-                            <p>C dili kullanılarak geliştirilen ve işletim sistemlerinin bellek yönetim birimini (MMU)
-                                simüle eden bir projedir. Sayfalama (paging), segmentasyon ve çeşitli bellek tahsis
-                                algoritmalarının (First Fit, Best Fit vb.) verimliliğini test etmek amacıyla
-                                tasarlanmıştır. Düşük seviyeli programlama ve kaynak yönetimi becerilerini kanıtlayan
-                                teknik bir simülasyondur.</p>
-                            <div class="portfolio-zigzag-links">
-                                <a href="https://github.com/eren-karakus0/VirtualMemoryManagement" target="_blank"
-                                    class="github">GitHub</a>
+                        <div class="venture-card-body">
+                            <div class="venture-tag">KiteID</div>
+                            <h3>KiteID</h3>
+                            <p lang="en">
+                                Identity layer for the AI-agentic economy. Designed so AI agents can
+                                assume, verify and operate under first-class identities — with
+                                research, architecture ADRs and a live product.
+                            </p>
+                            <p lang="tr">
+                                AI-agentic ekonomi için kimlik katmanı. AI agent'ların birinci sınıf
+                                kimliklere bürünmesi, doğrulaması ve operasyon yapmasına olanak veren
+                                bir sistem — araştırma, mimari ADR'ler ve canlı ürün ile.
+                            </p>
+                            <div class="venture-badges">
+                                <span class="venture-badge">Identity</span>
+                                <span class="venture-badge">AI Agents</span>
+                                <span class="venture-badge">DID</span>
+                                <span class="venture-badge">Kite</span>
+                            </div>
+                            <div class="venture-card-actions">
+                                <a class="btn-case" href="/ventures/kiteid.html">
+                                    <span lang="en">Case Study →</span>
+                                    <span lang="tr">İncele →</span>
+                                </a>
+                                <a class="btn-live" href="https://kiteid.xyz" target="_blank">
+                                    <i class="bi bi-globe2"></i> Live
+                                </a>
+                                <a class="btn-gh" href="https://github.com/KiteID" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 4. Proje: Crypto Trading Bot -->
-                <div class="row portfolio-zigzag-item flex-row-reverse" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/KriptoTrade.png" alt="Crypto Bot">
+                    <!-- ForjaTempo -->
+                    <article class="venture-card">
+                        <div class="venture-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/ventures/forja-card.png"
+                                alt="ForjaTempo"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="placeholder" style="display:none;">FORJA</div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-end">
-                            <h3>Crypto Trading Bot</h3>
-                            <p>Binance Futures borsasında otomatik olarak işlem yapan, Python tabanlı bir trading
-                                sistemidir. LightGBM gibi makine öğrenmesi modelleri ve 20'den fazla teknik indikatör
-                                kullanarak piyasayı analiz eder. Dinamik risk yönetimi, özelleştirilebilir stop-loss ve
-                                kâr al mekanizmaları ile optimize edilmiştir.</p>
-                            <div class="portfolio-zigzag-links" style="justify-content: flex-end;">
-                                <span style="font-style: italic; color: #888;">Özel Yazılım</span>
+                        <div class="venture-card-body">
+                            <div class="venture-tag">ForjaTempo</div>
+                            <h3>Forja</h3>
+                            <p lang="en">
+                                Token toolkit for the Tempo blockchain — create, send, lock. A practical
+                                surface for launching and operating tokens on Tempo, with a polished
+                                swap &amp; analytics UI.
+                            </p>
+                            <p lang="tr">
+                                Tempo blockchain için token araç seti — oluştur, gönder, kilitle.
+                                Tempo üzerinde token çıkarmak ve yönetmek için pratik bir arayüz;
+                                swap ve analitik UI'ı ile.
+                            </p>
+                            <div class="venture-badges">
+                                <span class="venture-badge">TypeScript</span>
+                                <span class="venture-badge">Tempo</span>
+                                <span class="venture-badge">Token Tooling</span>
+                                <span class="venture-badge">Swap / Lock</span>
+                            </div>
+                            <div class="venture-card-actions">
+                                <a class="btn-case" href="/ventures/forja.html">
+                                    <span lang="en">Case Study →</span>
+                                    <span lang="tr">İncele →</span>
+                                </a>
+                                <a class="btn-live" href="https://forja.fun/" target="_blank">
+                                    <i class="bi bi-globe2"></i> Live
+                                </a>
+                                <a class="btn-gh" href="https://github.com/ForjaTempo" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 5. Proje: AI Model Eğitimleri & SQL Server Yönetimi -->
-                <div class="row portfolio-zigzag-item" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/aimodel.png" alt="AI Model Training">
+                </div>
+            </div>
+
+        </section>
+        <!-- /Ventures Section -->
+
+
+        <!-- ============== Personal Projects Section ============== -->
+        <section id="projects" class="portfolio section">
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2 lang="en">Personal Projects</h2>
+                <h2 lang="tr">Kişisel Projeler</h2>
+                <p lang="en">Selected individual and academic work across trading, AI, automotive and
+                    systems programming.</p>
+                <p lang="tr">Trading, AI, otomotiv ve sistem programlama alanlarında seçili bireysel
+                    ve akademik çalışmalar.</p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Category: Quantitative Trading & Automation -->
+                <h3 class="project-category-title" lang="en">Quantitative Trading &amp; Automation</h3>
+                <h3 class="project-category-title" lang="tr">Kantitatif Trading &amp; Otomasyon</h3>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/PolyHawk.png"
+                                alt="PolyHawk Tracker">
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-start">
-                            <h3>AI Model Eğitimleri & Veri Yönetimi</h3>
-                            <p>Otomotiv, tıp ve doküman işleme alanlarında görüntü işleme odaklı yapay zeka modelleri
-                                eğittim. Veri hazırlama, model optimizasyonu ve deployment süreçlerinde aktif görev
-                                aldım. Ayrıca SQL Server ve Oracle Data Integrator (ODI) kullanarak kurumsal veri ambarı
-                                yönetimi, ETL süreçleri tasarımı ve büyük ölçekli veri transformasyonları
-                                gerçekleştirdim.</p>
-                            <div class="portfolio-zigzag-links">
-                                <span style="font-style: italic; color: #888;">Kurumsal & Eğitim Projeleri</span>
+                        <div class="project-card-body">
+                            <h4>PolyHawk Tracker</h4>
+                            <p lang="en">
+                                TypeScript whale-tracker for Polymarket — real-time insider-pattern
+                                detection, wallet P&amp;L and Telegram alerts.
+                            </p>
+                            <p lang="tr">
+                                Polymarket için TypeScript balina izleyici — real-time insider
+                                pattern tespiti, cüzdan P&amp;L, Telegram bildirimleri.
+                            </p>
+                            <div class="project-card-actions">
+                                <a href="https://t.me/polyhawktracker" target="_blank">
+                                    <i class="bi bi-telegram"></i> Telegram
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 6. Proje: Blockchain CopyTrade Bot -->
-                <div class="row portfolio-zigzag-item flex-row-reverse" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
-                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/CopyTrade.png" alt="CopyTrade">
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/KriptoTrade.png"
+                                alt="Crypto Trading Bot">
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-end">
-                            <h3>Blockchain CopyTrade Bot</h3>
-                            <p>Hedeflenen başarılı kripto cüzdanlarının on-chain hareketlerini milisaniyeler içerisinde
-                                tespit edip, aynı işlemleri kullanıcı için kopyalayan Python tabanlı bir otomasyon
-                                botudur. Ethereum ve Polygon ağları üzerinde akıllı sözleşme etkileşimlerini yüksek
-                                hızda yönetir.</p>
-                            <div class="portfolio-zigzag-links" style="justify-content: flex-end;">
-                                <span style="font-style: italic; color: #888;">Özel Çözüm</span>
+                        <div class="project-card-body">
+                            <h4>Crypto Trading Bot
+                                <span class="project-badge private" lang="en">Private</span>
+                                <span class="project-badge private" lang="tr">Özel</span>
+                            </h4>
+                            <p lang="en">
+                                Python automated trader on Binance Futures — LightGBM + 20 technical
+                                indicators, dynamic risk management, configurable SL/TP.
+                            </p>
+                            <p lang="tr">
+                                Binance Futures üzerinde Python otomatik trader — LightGBM + 20
+                                teknik indikatör, dinamik risk yönetimi, özelleştirilebilir SL/TP.
+                            </p>
+                            <div class="project-card-actions">
+                                <span class="muted" lang="en">Personal use</span>
+                                <span class="muted" lang="tr">Bireysel kullanım</span>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- 7. Proje: Polymarket Auto Trade -->
-                <div class="row portfolio-zigzag-item" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
+                    <article class="project-card">
+                        <div class="project-card-media">
                             <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/polyOtoTrade.png"
-                                alt="Polymarket Go">
+                                alt="Polymarket Auto Trade">
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-start">
-                            <h3>Polymarket Auto Trade</h3>
-                            <p>Go dili kullanılarak geliştirilen, yüksek performanslı bir otomatik işlem botudur.
-                                Polymarket CLOB üzerinden piyasa yapıcı (market maker) stratejileri uygular. Go'nun
-                                concurrent yapısı sayesinde anlık fiyat değişimlerini çok hızlı işleyerek arbitraj
-                                fırsatlarını değerlendirir.</p>
-                            <div class="portfolio-zigzag-links">
-                                <span style="font-style: italic; color: #888;">Özel Proje</span>
+                        <div class="project-card-body">
+                            <h4>Polymarket Auto Trade
+                                <span class="project-badge private" lang="en">Private</span>
+                                <span class="project-badge private" lang="tr">Özel</span>
+                            </h4>
+                            <p lang="en">
+                                Go market-maker on the Polymarket CLOB. Goroutines &amp; channels
+                                drive millisecond-level execution and arbitrage capture.
+                            </p>
+                            <p lang="tr">
+                                Polymarket CLOB üzerinde Go market-maker. Goroutine ve channel'lar
+                                ile milisaniye seviyesinde işlem ve arbitraj yakalama.
+                            </p>
+                            <div class="project-card-actions">
+                                <span class="muted" lang="en">Personal use</span>
+                                <span class="muted" lang="tr">Bireysel kullanım</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/CopyTrade.png"
+                                alt="Additional Trading Suite">
+                        </div>
+                        <div class="project-card-body">
+                            <h4 lang="en">Additional Trading Suite
+                                <span class="project-badge private">Private</span>
+                            </h4>
+                            <h4 lang="tr">Ek Trading Araçları
+                                <span class="project-badge private">Özel</span>
+                            </h4>
+                            <p lang="en">
+                                Private EVM &amp; Solana tools — <strong>Temple</strong>,
+                                <strong>5minPoly</strong>, <strong>Solana-Copy-Trade</strong>
+                                and an Ethereum/Polygon <strong>CopyTrade Bot</strong>.
+                            </p>
+                            <p lang="tr">
+                                Özel EVM &amp; Solana araçları — <strong>Temple</strong>,
+                                <strong>5minPoly</strong>, <strong>Solana-Copy-Trade</strong>
+                                ve Ethereum/Polygon <strong>CopyTrade Bot</strong>.
+                            </p>
+                            <div class="project-card-actions">
+                                <span class="muted" lang="en">Personal use</span>
+                                <span class="muted" lang="tr">Bireysel kullanım</span>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
 
-                <!-- 8. Proje: MP3 Player -->
-                <div class="row portfolio-zigzag-item flex-row-reverse" data-aos="fade-up">
-                    <div class="col-lg-7">
-                        <div class="portfolio-zigzag-img">
+
+                <!-- Category: Enterprise & AI -->
+                <h3 class="project-category-title" lang="en">Enterprise &amp; AI</h3>
+                <h3 class="project-category-title" lang="tr">Kurumsal &amp; AI</h3>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/LogMonitoring.png"
+                                alt="Automotive Log Platform">
+                        </div>
+                        <div class="project-card-body">
+                            <h4>Automotive Log Platform
+                                <span class="project-badge private" lang="en">Enterprise</span>
+                                <span class="project-badge private" lang="tr">Kurumsal</span>
+                            </h4>
+                            <p lang="en">
+                                Built inside Anadolu Isuzu — real-time telemetry dashboard, AI/RAG
+                                failure analysis and OTA (over-the-air) update pipeline.
+                            </p>
+                            <p lang="tr">
+                                Anadolu Isuzu bünyesinde — real-time telemetri dashboard'u, AI/RAG
+                                arıza analizi ve OTA güncelleme pipeline'ı.
+                            </p>
+                            <div class="project-card-actions">
+                                <span class="muted" lang="en">Enterprise &amp; private</span>
+                                <span class="muted" lang="tr">Kurumsal &amp; özel</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-media contain">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/personal-ai.png"
+                                alt="personal-ai"
+                                onerror="this.src='/MyResume-1.0.0/assets/img/masonry-portfolio/aimodel.png';">
+                        </div>
+                        <div class="project-card-body">
+                            <h4>personal-ai
+                                <span class="project-badge" lang="en">Graduation · In Progress</span>
+                                <span class="project-badge" lang="tr">Bitirme · Devam</span>
+                            </h4>
+                            <p lang="en">
+                                Privacy-first mobile AI assistant running an on-device LLM. B.Sc.
+                                graduation project — zero data leaves the device.
+                            </p>
+                            <p lang="tr">
+                                Cihaz üstünde LLM çalıştıran gizlilik öncelikli mobil AI asistanı.
+                                Bitirme projem — veri cihazı terk etmez.
+                            </p>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/eren-karakus0/personal-ai" target="_blank">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/aimodel.png"
+                                alt="AI Model Training">
+                        </div>
+                        <div class="project-card-body">
+                            <h4 lang="en">AI Model Training &amp; Data Engineering</h4>
+                            <h4 lang="tr">AI Model Eğitimi &amp; Veri Mühendisliği</h4>
+                            <p lang="en">
+                                Computer-vision models across automotive, medical and document
+                                domains — plus SQL Server / ODI warehouse work (ETL, transformation).
+                            </p>
+                            <p lang="tr">
+                                Otomotiv, tıp ve doküman alanlarında computer-vision modelleri —
+                                ek olarak SQL Server / ODI veri ambarı çalışmaları (ETL,
+                                transformation).
+                            </p>
+                            <div class="project-card-actions">
+                                <span class="muted" lang="en">Mixed / enterprise</span>
+                                <span class="muted" lang="tr">Karışık / kurumsal</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <!-- Category: Systems & Academic -->
+                <h3 class="project-category-title" lang="en">Systems &amp; Academic</h3>
+                <h3 class="project-category-title" lang="tr">Sistem &amp; Akademik</h3>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/VirtualMemory.png"
+                                alt="Virtual Memory Management">
+                        </div>
+                        <div class="project-card-body">
+                            <h4 lang="en">Virtual Memory Management</h4>
+                            <h4 lang="tr">Sanal Bellek Yönetimi</h4>
+                            <p lang="en">
+                                C simulator of an OS MMU — paging, segmentation and allocation
+                                benchmarks (First Fit, Best Fit, etc.).
+                            </p>
+                            <p lang="tr">
+                                İşletim sistemi MMU'sunu simüle eden C simülatörü — paging,
+                                segmentasyon, tahsis algoritmaları (First Fit, Best Fit, vb.).
+                            </p>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/eren-karakus0/VirtualMemoryManagement"
+                                    target="_blank">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card-media">
                             <img src="/MyResume-1.0.0/assets/img/masonry-portfolio/MP3.png" alt="MP3 Player">
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="portfolio-zigzag-content text-end">
-                            <h3>MP3 Player</h3>
-                            <p>Java ve Swing kütüphanesi kullanılarak geliştirilen, modern ve kullanıcı dostu arayüze
-                                sahip bir medya oynatıcıdır. Özelleştirilebilir çalma listeleri, gelişmiş medya
-                                kontrolleri ve dosya sistemi entegrasyonu ile tam kapsamlı bir masaüstü uygulamasıdır.
+                        <div class="project-card-body">
+                            <h4>MP3 Player</h4>
+                            <p lang="en">
+                                Java / Swing desktop media player with custom playlists, advanced
+                                controls and filesystem integration.
                             </p>
-                            <div class="portfolio-zigzag-links" style="justify-content: flex-end;">
-                                <a href="https://github.com/eren-karakus0/MP3-Player" target="_blank"
-                                    class="github">GitHub</a>
+                            <p lang="tr">
+                                Java / Swing ile masaüstü medya oynatıcı — özel çalma listeleri,
+                                gelişmiş kontroller, dosya sistemi entegrasyonu.
+                            </p>
+                            <div class="project-card-actions">
+                                <a href="https://github.com/Eren-Emre-s-Team/MP3Player" target="_blank">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
                 </div>
 
             </div>
 
-        </section><!-- /Portfolio Section -->
+        </section>
+        <!-- /Personal Projects Section -->
 
-        <!-- Testimonials Section -->
+
+        <!-- ============== Hackathons Section ============== -->
+        <section id="hackathons" class="hackathons section">
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2 lang="en">Hackathons</h2>
+                <h2 lang="tr">Hackathonlar</h2>
+                <p lang="en">
+                    Solo participations across AI-agent, identity and blockchain hackathons — all
+                    built, shipped and submitted independently.
+                </p>
+                <p lang="tr">
+                    AI-agent, kimlik ve blockchain hackathonlarına solo katılımlar — hepsi bağımsız
+                    şekilde geliştirildi, yayınlandı ve submit edildi.
+                </p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="hack-grid">
+
+                    <!-- CryptoGotchi / OpenWallet -->
+                    <div class="hack-card">
+                        <div class="hack-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/hackathons/cryptogotchi.svg" alt="CryptoGotchi">
+                        </div>
+                        <div class="hack-card-inner">
+                            <div class="hack-card-header">
+                                <span class="hack-meta" lang="en">April 2026 · Solo</span>
+                                <span class="hack-meta" lang="tr">Nisan 2026 · Solo</span>
+                                <span class="hack-badge solo" lang="en">Ongoing</span>
+                                <span class="hack-badge solo" lang="tr">Devam Ediyor</span>
+                            </div>
+                            <h3>CryptoGotchi</h3>
+                            <div class="hack-host">OpenWallet Hackathon</div>
+                            <p lang="en">
+                                AI-powered virtual pet that earns crypto via x402 payments — an experiment
+                                in agentic micropayments and playful consumer Web3.
+                            </p>
+                            <p lang="tr">
+                                x402 ödemeleri üzerinden kripto kazanan AI destekli sanal evcil hayvan —
+                                agentic mikro ödemeler ve oyunlu tüketici Web3'ü üzerine bir deney.
+                            </p>
+                            <div class="hack-links">
+                                <a href="https://hackathon.openwallet.sh/" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> Hackathon
+                                </a>
+                                <a href="https://github.com/CryptoGotchiOWS" target="_blank">
+                                    <i class="bi bi-github"></i> Repo
+                                </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- KiteID / Encode Club -->
+                    <div class="hack-card">
+                        <div class="hack-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/hackathons/kiteid.svg" alt="KiteID">
+                        </div>
+                        <div class="hack-card-inner">
+                            <div class="hack-card-header">
+                                <span class="hack-meta" lang="en">April 2026 · Solo</span>
+                                <span class="hack-meta" lang="tr">Nisan 2026 · Solo</span>
+                                <span class="hack-badge solo" lang="en">Ongoing</span>
+                                <span class="hack-badge solo" lang="tr">Devam Ediyor</span>
+                            </div>
+                            <h3>KiteID</h3>
+                            <div class="hack-host">Encode Club — Kites: AI Agentic Economy</div>
+                            <p lang="en">
+                                Identity layer for the AI agentic economy. My hackathon entry grew into a
+                                standalone venture with its own organization &amp; product roadmap (see
+                                <a href="#ventures">Ventures</a>).
+                            </p>
+                            <p lang="tr">
+                                AI agentic ekonomi için kimlik katmanı. Hackathon katılımım kendi
+                                organizasyonu ve ürün yol haritası olan bağımsız bir girişime dönüştü
+                                (bkz. <a href="#ventures">Girişimler</a>).
+                            </p>
+                            <div class="hack-links">
+                                <a href="https://www.encodeclub.com/" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> Encode Club
+                                </a>
+                                <a href="https://github.com/KiteID" target="_blank">
+                                    <i class="bi bi-github"></i> Repo
+                                </a>
+                                <a href="https://kiteid.xyz" target="_blank">
+                                    <i class="bi bi-globe2"></i> Live
+                                </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Canton Control Tower -->
+                    <div class="hack-card">
+                        <div class="hack-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/hackathons/canton.png" alt="Canton Control Tower">
+                        </div>
+                        <div class="hack-card-inner">
+                            <div class="hack-card-header">
+                                <span class="hack-meta" lang="en">April 2026 · Solo</span>
+                                <span class="hack-meta" lang="tr">Nisan 2026 · Solo</span>
+                                <span class="hack-badge solo" lang="en">Ongoing</span>
+                                <span class="hack-badge solo" lang="tr">Devam Ediyor</span>
+                            </div>
+                            <h3>Canton Control Tower</h3>
+                            <div class="hack-host">AppsFactory Hackathon · Canton Network</div>
+                            <p lang="en">
+                                AI-powered operations cockpit for tokenized repo &amp; collateral workflows
+                                on the Canton Network. Built for institutional-grade DLT settlement.
+                            </p>
+                            <p lang="tr">
+                                Canton Network üzerinde tokenize edilmiş repo ve teminat iş akışları
+                                için AI destekli operasyon cockpit'i. Kurumsal seviye DLT settlement
+                                için tasarlandı.
+                            </p>
+                            <div class="hack-links">
+                                <a href="https://hackathon.appsfactory.cc/" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> Hackathon
+                                </a>
+                                <a href="https://github.com/CantonControlTower" target="_blank">
+                                    <i class="bi bi-github"></i> Repo
+                                </a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Hermes-Agent / NousResearch -->
+                    <div class="hack-card">
+                        <div class="hack-card-media">
+                            <img src="/MyResume-1.0.0/assets/img/hackathons/hermes.png" alt="Nous Research">
+                        </div>
+                        <div class="hack-card-inner">
+                            <div class="hack-card-header">
+                                <span class="hack-meta" lang="en">March 2026 + April 2026 (live) · Solo</span>
+                                <span class="hack-meta" lang="tr">Mart 2026 + Nisan 2026 (devam) · Solo</span>
+                                <span class="hack-badge live" lang="en">2× Submissions</span>
+                                <span class="hack-badge live" lang="tr">2× Katılım</span>
+                            </div>
+                            <h3>Hermes-Agent Contributions</h3>
+                            <div class="hack-host">Nous Research Hackathons</div>
+                            <p lang="en">
+                                Upstream contributions to <strong>NousResearch/hermes-agent</strong>
+                                submitted as hackathon entries. Notable work: sandbox bidirectional file
+                                transfer, MCP sampling governance, terminal env hardening, gateway
+                                resilience — 14 PRs total.
+                            </p>
+                            <p lang="tr">
+                                <strong>NousResearch/hermes-agent</strong> upstream'ine yaptığım
+                                katkılar hackathon olarak submit edildi. Öne çıkanlar: sandbox için
+                                çift yönlü dosya transferi, MCP sampling governance, terminal env
+                                hardening, gateway dayanıklılığı — toplam 14 PR.
+                            </p>
+                            <div class="hack-links">
+                                <a href="https://x.com/NousResearch/status/2045225469088326039"
+                                    target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> 2nd (Live)
+                                </a>
+                                <a href="https://x.com/NousResearch/status/2029607069934866507"
+                                    target="_blank">
+                                    <i class="bi bi-box-arrow-up-right"></i> 1st
+                                </a>
+                                <a href="https://github.com/NousResearch/hermes-agent/pulls?q=author%3Aeren-karakus0"
+                                    target="_blank">
+                                    <i class="bi bi-github"></i> PRs
+                                </a>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- /Hackathons Section -->
+
+
+        <!-- ============== Open Source Contributions Section ============== -->
+        <section id="opensource" class="opensource section light-background">
+
+            <div class="container section-title" data-aos="fade-up">
+                <h2 lang="en">Open Source Contributions</h2>
+                <h2 lang="tr">Açık Kaynak Katkıları</h2>
+                <p lang="en">
+                    Pull requests shipped to projects I use and believe in — spanning AI agents,
+                    Web3 ecosystems and developer tooling.
+                </p>
+                <p lang="tr">
+                    Kullandığım ve inandığım projelere gönderdiğim pull request'ler — AI agent'ları,
+                    Web3 ekosistemleri ve geliştirici araçları kapsamında.
+                </p>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Group 1: AI Agents & Frameworks -->
+                <div class="oss-group">
+                    <h3 lang="en">AI Agents &amp; Frameworks</h3>
+                    <h3 lang="tr">AI Agent'ları ve Framework'ler</h3>
+                    <div class="oss-grid">
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/hermes.png" alt="NousResearch">
+                                    <h4><a href="https://github.com/NousResearch/hermes-agent/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">NousResearch/hermes-agent</a></h4>
+                                </div>
+                                <span class="oss-prs merged">14 PRs</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Native MCP client, sandbox file-transfer, gateway recovery, Psyche
+                                network monitoring skill and security hardening across the agent.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Native MCP client, sandbox dosya transferi, gateway recovery, Psyche
+                                network monitoring skill'i ve güvenlik sıkılaştırması.
+                            </p>
+                            <div class="oss-org">Nous Research — AI agent platform</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/eigent.png" alt="Eigent">
+                                    <h4><a href="https://github.com/eigent-ai/eigent/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">eigent-ai/eigent</a></h4>
+                                </div>
+                                <span class="oss-prs">7 PRs</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Security hardening across Electron, server, backend and OAuth layers;
+                                multiple auth-enforcement PRs merged.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Electron, sunucu, backend ve OAuth katmanlarında güvenlik
+                                sıkılaştırma; birden fazla auth enforcement PR'ı merge edildi.
+                            </p>
+                            <div class="oss-org">Eigent — desktop AI co-work suite</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/openwebui.png" alt="Open WebUI">
+                                    <h4><a href="https://github.com/open-webui/open-webui/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">open-webui/open-webui</a></h4>
+                                </div>
+                                <span class="oss-prs">4 PRs</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Tool-server URL normalization, Windows textarea newline handling,
+                                Python 3.12 warning suppression.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Tool server URL normalizasyonu, Windows'ta textarea satır sonu
+                                işleme, Python 3.12 warning bastırma.
+                            </p>
+                            <div class="oss-org">Open WebUI — user-friendly AI interface</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/openmind.png" alt="OpenMind">
+                                    <h4><a href="https://github.com/OpenMind/OM1/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">OpenMind/OM1</a></h4>
+                                </div>
+                                <span class="oss-prs">6 PRs</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                RF-mapper thread safety, fuser no-op optimization, cortex selective
+                                hot-reload, TTS cleanup.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                RF-mapper thread safety, fuser no-op optimizasyonu, cortex seçici
+                                hot-reload, TTS temizliği.
+                            </p>
+                            <div class="oss-org">OpenMind — modular AI runtime for robots</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/crewAI.png" alt="crewAI">
+                                    <h4><a href="https://github.com/crewAIInc/crewAI/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">crewAIInc/crewAI</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Prevent infinite recursion and params overwrite in LLM
+                                <code>call()/acall()</code>.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                LLM <code>call()/acall()</code>'de sonsuz özyineleme ve parametre
+                                üzerine yazmayı engelleme.
+                            </p>
+                            <div class="oss-org">crewAI — agent orchestration framework</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/flowise.png" alt="FlowiseAI">
+                                    <h4><a href="https://github.com/FlowiseAI/Flowise/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">FlowiseAI/Flowise</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Keyboard accessibility: move click handlers to ButtonBase for proper
+                                focus/keyboard behavior.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Klavye erişilebilirliği: click handler'ları ButtonBase'e taşıyarak
+                                doğru focus/klavye davranışı.
+                            </p>
+                            <div class="oss-org">FlowiseAI — visual AI agent builder</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/jan.png" alt="Jan">
+                                    <h4><a href="https://github.com/janhq/jan/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">janhq/jan</a></h4>
+                                </div>
+                                <span class="oss-prs merged">1 merged</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Tauri: handle non-UTF-8 paths in <code>default_data_folder_path</code>.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Tauri: <code>default_data_folder_path</code>'te UTF-8 olmayan
+                                yolları işleme.
+                            </p>
+                            <div class="oss-org">Jan — offline ChatGPT alternative</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Group 2: Web3 & Blockchain -->
+                <div class="oss-group">
+                    <h3 lang="en">Web3 &amp; Blockchain</h3>
+                    <h3 lang="tr">Web3 ve Blockchain</h3>
+                    <div class="oss-grid">
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/shelby.jpg" alt="Shelby Protocol">
+                                    <h4><a href="https://github.com/shelby-xyz"
+                                        target="_blank">shelby-xyz/*</a></h4>
+                                </div>
+                                <span class="oss-prs">11 PRs</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Documentation &amp; UX improvements across shelby-skills,
+                                solana-starter, examples, shelby-breakpoint and shelby-quickstart
+                                (decision guides, wallet docs, troubleshooting).
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                shelby-skills, solana-starter, examples, shelby-breakpoint ve
+                                shelby-quickstart'ta dokümantasyon ve UX iyileştirmeleri (decision
+                                guide'lar, cüzdan docs, troubleshooting).
+                            </p>
+                            <div class="oss-org">Shelby Protocol — decentralized storage on Solana</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/entrius.png" alt="Entrius">
+                                    <h4><a href="https://github.com/entrius/gittensor/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">entrius/gittensor</a></h4>
+                                </div>
+                                <span class="oss-prs merged">4 PRs (1 merged)</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                CLI hardening — issue-command validation, JSON output, merge
+                                prediction commands, retry-logic fixes.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                CLI sıkılaştırma — issue komutları için validation, JSON output,
+                                merge prediction komutları, retry logic düzeltmeleri.
+                            </p>
+                            <div class="oss-org">Entrius — Bittensor tooling</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/entrius.png" alt="Entrius">
+                                    <h4><a href="https://github.com/entrius/venth/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">entrius/venth</a></h4>
+                                </div>
+                                <span class="oss-prs merged">1 merged</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Tide-chart equity-forecast comparison dashboard for Bittensor
+                                subnet predictions.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Bittensor subnet tahminleri için tide-chart equity-forecast
+                                karşılaştırma dashboard'ı.
+                            </p>
+                            <div class="oss-org">Entrius · Gittensor × Synth</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/miden.jpg" alt="0xMiden">
+                                    <h4><a href="https://github.com/0xMiden/node/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">0xMiden/node</a></h4>
+                                </div>
+                                <span class="oss-prs merged">1 merged</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                RPC layer refactor — section separators and comments in
+                                <code>api.rs</code> (Rust).
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                RPC katmanı refactor — <code>api.rs</code>'de section separator'ları
+                                ve yorumlar (Rust).
+                            </p>
+                            <div class="oss-org">0xMiden — STARK-based L2</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/republicai.png" alt="Republic AI">
+                                    <h4><a href="https://github.com/RepublicAI/networks/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">RepublicAI/networks</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Documentation: Community Tools section introducing republic-sdk.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Dokümantasyon: republic-sdk'yı tanıtan Community Tools bölümü.
+                            </p>
+                            <div class="oss-org">Republic AI — decentralized AI infra</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Group 3: Developer Tooling -->
+                <div class="oss-group">
+                    <h3 lang="en">Developer Tooling</h3>
+                    <h3 lang="tr">Geliştirici Araçları</h3>
+                    <div class="oss-grid">
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/trpc.png" alt="tRPC">
+                                    <h4><a href="https://github.com/trpc/trpc/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">trpc/trpc</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                Regression tests for superjson error deserialization.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                superjson error deserialization için regression testleri.
+                            </p>
+                            <div class="oss-org">tRPC — end-to-end typesafe APIs</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/zellij.png" alt="Zellij">
+                                    <h4><a href="https://github.com/zellij-org/zellij/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">zellij-org/zellij</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                URL-encode session name in share URL (Rust).
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                Share URL'sinde session adının URL-encode edilmesi (Rust).
+                            </p>
+                            <div class="oss-org">Zellij — terminal workspace</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/changedetection.jpg" alt="changedetection.io">
+                                    <h4><a href="https://github.com/dgtlmoon/changedetection.io/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">dgtlmoon/changedetection.io</a></h4>
+                                </div>
+                                <span class="oss-prs merged">1 merged</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                i18n — accept translated confirmation text when clearing snapshot
+                                history.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                i18n — snapshot geçmişi temizlenirken çevrilmiş onay metnini
+                                kabul et.
+                            </p>
+                            <div class="oss-org">changedetection.io — website monitoring</div>
+                        </div>
+
+                        <div class="oss-item">
+                            <div class="oss-item-head">
+                                <div class="oss-identity">
+                                    <img class="oss-logo" src="/MyResume-1.0.0/assets/img/oss/nginx.png" alt="Nginx Proxy Manager">
+                                    <h4><a href="https://github.com/NginxProxyManager/nginx-proxy-manager/pulls?q=author%3Aeren-karakus0"
+                                        target="_blank">NginxProxyManager</a></h4>
+                                </div>
+                                <span class="oss-prs">1 PR</span>
+                            </div>
+                            <p class="oss-item-body" lang="en">
+                                i18n — correct Irish locale flag and language label.
+                            </p>
+                            <p class="oss-item-body" lang="tr">
+                                i18n — Irish locale için doğru bayrak ve dil etiketi.
+                            </p>
+                            <div class="oss-org">Nginx Proxy Manager</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="additional-info" style="margin-top: 20px; text-align: center;">
+                    <p lang="en">
+                        Full contribution history on
+                        <a href="https://github.com/eren-karakus0" target="_blank"
+                            style="color: var(--accent-color); font-weight: bold;">GitHub</a>.
+                    </p>
+                    <p lang="tr">
+                        Tüm katkı geçmişi
+                        <a href="https://github.com/eren-karakus0" target="_blank"
+                            style="color: var(--accent-color); font-weight: bold;">GitHub</a>
+                        üzerinde.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /OSS Section -->
+
+
+        <!-- ============== Testimonials Section ============== -->
         <section id="testimonials" class="testimonials section">
 
             <div class="container section-title" data-aos="fade-up">
-                <h2>Referanslar</h2>
+                <h2 lang="en">Testimonials</h2>
+                <h2 lang="tr">Referanslar</h2>
             </div>
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -665,22 +1724,35 @@
                     </script>
                     <div class="swiper-wrapper">
 
-                        <!-- 1. Sefa Beker -->
+                        <!-- Sefa Beker -->
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <div class="row gy-4 justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="testimonial-content">
-                                            <p><i class="bi bi-quote quote-icon-left"></i><span>Eren, staj sürecinde
-                                                    teknik altyapısı ve öğrenme isteğiyle dikkat çeken bir takım
-                                                    arkadaşıydı. Production-grade otomotiv log platformu sürecinde
-                                                    karmaşık problemleri hızla çözdü.</span><i
-                                                    class="bi bi-quote quote-icon-right"></i></p>
+                                            <p>
+                                                <i class="bi bi-quote quote-icon-left"></i>
+                                                <span lang="en">Eren stood out during his internship
+                                                    for his technical depth and hunger to learn. On our
+                                                    production automotive log platform, he solved
+                                                    complex problems fast.</span>
+                                                <span lang="tr">Eren, staj sürecinde teknik altyapısı
+                                                    ve öğrenme isteğiyle dikkat çeken bir takım
+                                                    arkadaşıydı. Production-grade otomotiv log
+                                                    platformu sürecinde karmaşık problemleri hızla
+                                                    çözdü.</span>
+                                                <i class="bi bi-quote quote-icon-right"></i>
+                                            </p>
                                             <h3>Sefa Beker</h3>
-                                            <h4>Anadolu Isuzu - Ekip Lideri</h4>
-                                            <div class="stars"><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                            <h4 lang="en">Anadolu Isuzu — Team Lead</h4>
+                                            <h4 lang="tr">Anadolu Isuzu — Ekip Lideri</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
@@ -691,21 +1763,33 @@
                             </div>
                         </div>
 
-                        <!-- 2. Hıdır Üstündağ -->
+                        <!-- Hıdır Üstündağ -->
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <div class="row gy-4 justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="testimonial-content">
-                                            <p><i class="bi bi-quote quote-icon-left"></i><span>Eren, teknolojiye olan
-                                                    ilgisi ve öğrenme azmiyle takdir ettiğim bir öğrenci. Kendini
-                                                    geliştirme konusundaki kararlılığı gelecekteki başarısının
-                                                    garantisidir.</span><i class="bi bi-quote quote-icon-right"></i></p>
+                                            <p>
+                                                <i class="bi bi-quote quote-icon-left"></i>
+                                                <span lang="en">Eren is a student I respect for his
+                                                    passion for technology and his drive to keep
+                                                    growing. That determination is the surest sign of
+                                                    his future success.</span>
+                                                <span lang="tr">Eren, teknolojiye olan ilgisi ve
+                                                    öğrenme azmiyle takdir ettiğim bir öğrenci. Kendini
+                                                    geliştirme konusundaki kararlılığı gelecekteki
+                                                    başarısının garantisidir.</span>
+                                                <i class="bi bi-quote quote-icon-right"></i>
+                                            </p>
                                             <h3>Hıdır Üstündağ</h3>
                                             <h4>OYEDU Co-Founder</h4>
-                                            <div class="stars"><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
@@ -716,21 +1800,34 @@
                             </div>
                         </div>
 
-                        <!-- 3. Utku Çeken -->
+                        <!-- Utku Çeken -->
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <div class="row gy-4 justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="testimonial-content">
-                                            <p><i class="bi bi-quote quote-icon-left"></i><span>Eren'in geliştirdiği
-                                                    otomotiv platformu kurumsal standartlarda, production-ready bir
-                                                    çalışmaydı. Yenilikçi yaklaşımı yönetim olarak bizleri çok
-                                                    etkiledi.</span><i class="bi bi-quote quote-icon-right"></i></p>
+                                            <p>
+                                                <i class="bi bi-quote quote-icon-left"></i>
+                                                <span lang="en">The automotive platform Eren built
+                                                    was production-ready, at enterprise standards. His
+                                                    innovative approach left a strong impression on
+                                                    management.</span>
+                                                <span lang="tr">Eren'in geliştirdiği otomotiv
+                                                    platformu kurumsal standartlarda, production-ready
+                                                    bir çalışmaydı. Yenilikçi yaklaşımı yönetim olarak
+                                                    bizleri çok etkiledi.</span>
+                                                <i class="bi bi-quote quote-icon-right"></i>
+                                            </p>
                                             <h3>Utku Çeken</h3>
-                                            <h4>Anadolu Isuzu - Siber Güvenlik Yöneticisi</h4>
-                                            <div class="stars"><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                            <h4 lang="en">Anadolu Isuzu — Cybersecurity Manager</h4>
+                                            <h4 lang="tr">Anadolu Isuzu — Siber Güvenlik Yöneticisi</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
@@ -741,21 +1838,32 @@
                             </div>
                         </div>
 
-                        <!-- 4. Murat Yücedağ -->
+                        <!-- Murat Yücedağ -->
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <div class="row gy-4 justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="testimonial-content">
-                                            <p><i class="bi bi-quote quote-icon-left"></i><span>Yazılım geliştirme ve
-                                                    teknolojiye olan tutkusuyla disiplinini birleştiren, zorluklar
-                                                    karşısında asla vazgeçmeyen örnek bir öğrenci.</span><i
-                                                    class="bi bi-quote quote-icon-right"></i></p>
+                                            <p>
+                                                <i class="bi bi-quote quote-icon-left"></i>
+                                                <span lang="en">A student who pairs passion and
+                                                    discipline in software development, and never
+                                                    gives up in the face of challenges.</span>
+                                                <span lang="tr">Yazılım geliştirme ve teknolojiye olan
+                                                    tutkusuyla disiplinini birleştiren, zorluklar
+                                                    karşısında asla vazgeçmeyen örnek bir öğrenci.</span>
+                                                <i class="bi bi-quote quote-icon-right"></i>
+                                            </p>
                                             <h3>Murat Yücedağ</h3>
-                                            <h4>Yazılım Mühendisi - Eğitmen</h4>
-                                            <div class="stars"><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                            <h4 lang="en">Software Engineer — Instructor</h4>
+                                            <h4 lang="tr">Yazılım Mühendisi — Eğitmen</h4>
+                                            <div class="stars">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 text-center">
@@ -771,92 +1879,115 @@
                 </div>
             </div>
 
-        </section><!-- /Testimonials Section -->
+        </section>
+        <!-- /Testimonials Section -->
 
 
-        <!-- Contact Section -->
+        <!-- ============== Contact Section ============== -->
         <section id="contact" class="contact section">
 
-            <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>İletişim</h2>
-                <p>Sorularınız, projeleriniz veya iş birlikleriniz için benimle iletişime geçmekten çekinmeyin.</p>
-            </div><!-- End Section Title -->
+                <h2 lang="en">Contact</h2>
+                <h2 lang="tr">İletişim</h2>
+                <p lang="en">
+                    For questions, projects or collaborations — feel free to reach out.
+                </p>
+                <p lang="tr">
+                    Sorularınız, projeleriniz veya iş birlikleriniz için benimle iletişime geçmekten
+                    çekinmeyin.
+                </p>
+            </div>
 
             <div class="container" data-aos="fade" data-aos-delay="100">
-
                 <div class="row gy-4">
-
-                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                    <div
+                        style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
 
                         <div style="flex: 1 1 30%; display: flex; align-items: center;">
                             <a href="https://maps.app.goo.gl/rq3dS1cJ24YxZLUb6" target="_blank"
                                 style="text-decoration: none; color: inherit; display: flex; align-items: center;">
                                 <i class="bi bi-geo-alt flex-shrink-0"
-                                    style="font-size: 24px; margin-right: 10px; color: #007bff;"></i>
+                                    style="font-size: 24px; margin-right: 10px; color: #0563bb;"></i>
                                 <div>
-                                    <h3 style="margin: 0;">Adres</h3>
-                                    <p style="margin: 0;">Maltepe, İstanbul, Türkiye</p>
+                                    <h3 style="margin: 0;" lang="en">Address</h3>
+                                    <h3 style="margin: 0;" lang="tr">Adres</h3>
+                                    <p style="margin: 0;">Maltepe, Istanbul, Türkiye</p>
                                 </div>
                             </a>
-                        </div><!-- End Info Item -->
+                        </div>
 
                         <div style="flex: 1 1 30%; display: flex; align-items: center;">
                             <a href="tel:+905455852445"
                                 style="text-decoration: none; color: inherit; display: flex; align-items: center;">
                                 <i class="bi bi-telephone flex-shrink-0"
-                                    style="font-size: 24px; margin-right: 10px; color: #007bff;"></i>
+                                    style="font-size: 24px; margin-right: 10px; color: #0563bb;"></i>
                                 <div>
-                                    <h3 style="margin: 0;">Telefon</h3>
+                                    <h3 style="margin: 0;" lang="en">Phone</h3>
+                                    <h3 style="margin: 0;" lang="tr">Telefon</h3>
                                     <p style="margin: 0;">+90 (545) 585 2445</p>
                                 </div>
                             </a>
-                        </div><!-- End Info Item -->
+                        </div>
 
                         <div style="flex: 1 1 30%; display: flex; align-items: center;">
-                            <a href="mailto:erenkar950@gmail.com" target="_blank"
+                            <a href="mailto:erenkar950@gmail.com"
                                 style="text-decoration: none; color: inherit; display: flex; align-items: center;">
                                 <i class="bi bi-envelope flex-shrink-0"
-                                    style="font-size: 24px; margin-right: 10px; color: #007bff;"></i>
+                                    style="font-size: 24px; margin-right: 10px; color: #0563bb;"></i>
                                 <div>
                                     <h3 style="margin: 0;">Email</h3>
                                     <p style="margin: 0;">erenkar950@gmail.com</p>
                                 </div>
                             </a>
-                        </div><!-- End Info Item -->
+                        </div>
 
                     </div>
+                </div>
 
+                <div class="text-center" style="margin-top: 40px;">
+                    <a class="btn-cv"
+                        href="mailto:erenkar950@gmail.com?subject=Hello%20Eren"
+                        style="display:inline-flex; align-items:center; gap:8px; padding: 12px 28px;
+                               background: var(--accent-color); color:#fff; border-radius:30px;
+                               text-decoration:none; font-family: var(--nav-font); font-weight:500;
+                               letter-spacing:0.3px;">
+                        <i class="bi bi-send"></i>
+                        <span lang="en">Send me an email</span>
+                        <span lang="tr">Bana mail gönder</span>
+                    </a>
                 </div>
 
             </div>
 
-        </section><!-- /Contact Section -->
+        </section>
+        <!-- /Contact Section -->
 
     </main>
+
 
     <footer id="footer" class="footer position-relative light-background">
         <div class="container">
             <h3 class="sitename">Muhammet Eren Karakuş</h3>
-            <p>Teknolojiye olan tutkum ve sürekli öğrenme isteğimle yazılım dünyasında kendimi geliştirmeye devam
-                ediyorum. Her zaman yeni projelere ve iş birliklerine açığım.</p>
+            <p lang="en">
+                Software Engineer — building AI agents, distributed systems and automation.
+                Always open to new projects and collaborations.
+            </p>
+            <p lang="tr">
+                Yazılım Mühendisi — AI agent'ları, dağıtık sistemler ve otomasyon üzerine
+                çalışıyorum. Yeni projelere ve iş birliklerine her zaman açığım.
+            </p>
             <div class="social-links d-flex justify-content-center">
-                <a href="https://www.linkedin.com/in/muhammeterenkarakus" target="_blank"><i
-                        class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/eren-karakus0" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammeterenkarakus" target="_blank"
+                    aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/eren-karakus0" target="_blank" aria-label="GitHub"><i
+                        class="bi bi-github"></i></a>
             </div>
             <div class="container">
                 <div class="copyright">
-                    <span>Copyright</span> <strong class="px-1 sitename">Muhammet Eren Karakuş</strong> <span>All Rights
-                        Reserved</span>
-                </div>
-                <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- You can delete the links only if you've purchased the pro version. -->
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-                        href="https://themewagon.com">ThemeWagon</a>
+                    <span>&copy;</span>
+                    <strong class="px-1 sitename">Muhammet Eren Karakuş</strong>
+                    <span lang="en">All Rights Reserved</span>
+                    <span lang="tr">Tüm Hakları Saklıdır</span>
                 </div>
             </div>
         </div>
@@ -864,15 +1995,15 @@
 
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
     <script src="/MyResume-1.0.0/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/MyResume-1.0.0/assets/vendor/php-email-form/validate.js"></script>
     <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
     <script src="/MyResume-1.0.0/assets/vendor/typed.js/typed.umd.js"></script>
     <script src="/MyResume-1.0.0/assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -882,9 +2013,9 @@
     <script src="/MyResume-1.0.0/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="/MyResume-1.0.0/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
+    <!-- Main JS + i18n -->
     <script src="/MyResume-1.0.0/assets/js/main.js"></script>
-
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
 
 </body>
 

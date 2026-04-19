@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="KiteID — Names for humans and agents on Kite AI">
+  <defs>
+    <!-- Parchment gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F0"/>
+      <stop offset="55%" stop-color="#F5F0E4"/>
+      <stop offset="100%" stop-color="#EDE8DC"/>
+    </linearGradient>
+
+    <!-- Burnished gold radial glow -->
+    <radialGradient id="goldOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9986A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#C9986A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C9986A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="1.2" fill="#141414" fill-opacity="0.05"/>
+    </pattern>
+
+    <!-- Soft card shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#141414" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Kite rhombus watermark -->
+    <symbol id="kite" viewBox="-50 -50 100 100">
+      <polygon points="0,-50 40,0 0,50 -40,0" fill="#C9986A" fill-opacity="0.08"/>
+    </symbol>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2400" height="1200" fill="url(#bg)"/>
+  <rect width="2400" height="1200" fill="url(#grid)"/>
+
+  <!-- Decorative gold orb top-right -->
+  <circle cx="2100" cy="260" r="560" fill="url(#goldOrb)"/>
+
+  <!-- Kite rhombus watermarks -->
+  <use href="#kite" x="180" y="1020" width="90" height="90"/>
+  <use href="#kite" x="320" y="990" width="60" height="60"/>
+  <use href="#kite" x="1950" y="1040" width="110" height="110"/>
+
+  <!-- Top-left accent tag -->
+  <g transform="translate(160, 200)">
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="#C9986A"/>
+    <text x="32" y="13" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="20" font-weight="600" fill="#9B8564" letter-spacing="3">
+      IDENTITY ON KITE AI · TESTNET LIVE
+    </text>
+  </g>
+
+  <!-- Main wordmark: Kite[ID] -->
+  <g transform="translate(160, 480)">
+    <text font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="340" letter-spacing="-12">
+      <tspan font-weight="400" fill="#141414">Kite</tspan><tspan font-weight="800" fill="#C9986A">ID</tspan>
+    </text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(160, 620)">
+    <text font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="400" fill="#141414" opacity="0.85">
+      Names for humans and agents
+    </text>
+    <text y="78" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="400" fill="#141414" opacity="0.85">
+      on <tspan font-weight="700" fill="#141414">Kite AI</tspan>.
+    </text>
+  </g>
+
+  <!-- Feature pills -->
+  <g transform="translate(160, 850)" font-family="'DM Sans', sans-serif" font-size="22" font-weight="500">
+    <g>
+      <rect x="0" y="0" width="230" height="52" rx="26" fill="#FAF7F0" stroke="#DBD5C7" stroke-width="1.5"/>
+      <text x="30" y="33" fill="#141414">Commit-reveal · ENS</text>
+    </g>
+    <g transform="translate(248, 0)">
+      <rect x="0" y="0" width="210" height="52" rx="26" fill="#FAF7F0" stroke="#DBD5C7" stroke-width="1.5"/>
+      <text x="30" y="33" fill="#141414">Self-hosted · Foundry</text>
+    </g>
+    <g transform="translate(476, 0)">
+      <rect x="0" y="0" width="190" height="52" rx="26" fill="#FAF7F0" stroke="#DBD5C7" stroke-width="1.5"/>
+      <text x="30" y="33" fill="#141414">Next.js 16 · Ponder</text>
+    </g>
+  </g>
+
+  <!-- URL bottom-left -->
+  <text x="160" y="1060" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" fill="#9B8564" letter-spacing="2">
+    kiteid.xyz
+  </text>
+
+  <!-- Right-side domain card mockup -->
+  <g transform="translate(1500, 340)" filter="url(#cardShadow)">
+    <!-- Card body -->
+    <rect x="0" y="0" width="720" height="520" rx="28" fill="#FAF7F0" stroke="#DBD5C7" stroke-width="1.5"/>
+
+    <!-- Card header: dots + type -->
+    <g transform="translate(36, 36)">
+      <circle cx="8" cy="8" r="7" fill="#DBD5C7"/>
+      <circle cx="32" cy="8" r="7" fill="#DBD5C7"/>
+      <circle cx="56" cy="8" r="7" fill="#DBD5C7"/>
+      <text x="96" y="14" font-family="'JetBrains Mono', monospace" font-size="16" fill="#9B8564" letter-spacing="2">
+        KITEID.XYZ/ALICE
+      </text>
+    </g>
+
+    <!-- Domain name huge -->
+    <g transform="translate(60, 190)">
+      <text font-family="'DM Sans', sans-serif" font-size="132" letter-spacing="-4">
+        <tspan font-weight="700" fill="#141414">alice</tspan><tspan font-weight="400" fill="#C9986A">.kite</tspan>
+      </text>
+    </g>
+
+    <!-- Meta rows -->
+    <g transform="translate(60, 290)" font-family="'DM Sans', sans-serif" font-size="22">
+      <g>
+        <text x="0" y="0" fill="#9B8564" letter-spacing="2" font-size="14" font-weight="600">OWNER</text>
+        <text x="0" y="32" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500" fill="#141414">0x3bE2…82b0eCa</text>
+      </g>
+      <g transform="translate(0, 82)">
+        <text x="0" y="0" fill="#9B8564" letter-spacing="2" font-size="14" font-weight="600">EXPIRES</text>
+        <text x="0" y="32" font-size="24" font-weight="500" fill="#141414">365 days</text>
+      </g>
+      <g transform="translate(340, 82)">
+        <text x="0" y="0" fill="#9B8564" letter-spacing="2" font-size="14" font-weight="600">PRICE</text>
+        <text x="0" y="32" font-size="24" font-weight="500" fill="#141414">5 KITE / year</text>
+      </g>
+    </g>
+
+    <!-- Action button mockup -->
+    <g transform="translate(60, 430)">
+      <rect x="0" y="0" width="600" height="64" rx="14" fill="#C9986A"/>
+      <text x="300" y="42" font-family="'DM Sans', sans-serif" font-size="22" font-weight="600" fill="#FAF7F0" text-anchor="middle">
+        Register alice.kite
+      </text>
+    </g>
+  </g>
+
+  <!-- Delegation mini-diagram (bottom right) -->
+  <g transform="translate(1540, 960)" opacity="0.9">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#9B8564" letter-spacing="2">
+      AGENT DELEGATION (V2)
+    </text>
+    <g transform="translate(0, 30)">
+      <!-- Principal orb -->
+      <circle cx="30" cy="30" r="24" fill="#C9986A"/>
+      <text x="30" y="36" font-family="'DM Sans', sans-serif" font-size="18" font-weight="700" fill="#FAF7F0" text-anchor="middle">you</text>
+
+      <!-- Line 1 -->
+      <line x1="54" y1="30" x2="150" y2="30" stroke="#9B8564" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Agent 1 -->
+      <circle cx="180" cy="30" r="22" fill="#FAF7F0" stroke="#9B8564" stroke-width="2"/>
+      <text x="180" y="36" font-family="'DM Sans', sans-serif" font-size="15" font-weight="600" fill="#141414" text-anchor="middle">agt.01</text>
+
+      <!-- Line 2 -->
+      <line x1="202" y1="30" x2="300" y2="30" stroke="#9B8564" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Agent 2 -->
+      <circle cx="330" cy="30" r="22" fill="#FAF7F0" stroke="#9B8564" stroke-width="2"/>
+      <text x="330" y="36" font-family="'DM Sans', sans-serif" font-size="15" font-weight="600" fill="#141414" text-anchor="middle">agt.02</text>
+
+      <!-- Line 3 -->
+      <line x1="352" y1="30" x2="450" y2="30" stroke="#9B8564" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Agent 3 -->
+      <circle cx="480" cy="30" r="22" fill="#FAF7F0" stroke="#9B8564" stroke-width="2"/>
+      <text x="480" y="36" font-family="'DM Sans', sans-serif" font-size="15" font-weight="600" fill="#141414" text-anchor="middle">agt.03</text>
+    </g>
+  </g>
+
+  <!-- Bottom-right status chip -->
+  <g transform="translate(2160, 80)">
+    <rect x="-130" y="0" width="130" height="40" rx="20" fill="#FAF7F0" stroke="#C9986A" stroke-width="1.5"/>
+    <circle cx="-104" cy="20" r="5" fill="#C9986A">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="-88" y="26" font-family="'DM Sans', sans-serif" font-size="15" font-weight="600" fill="#9B8564" letter-spacing="1">LIVE TESTNET</text>
+  </g>
+</svg>

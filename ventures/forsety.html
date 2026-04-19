@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Forsety — Proof Layer for Licensed AI Data · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="Forsety turns every dataset access into a cryptographic receipt — so AI builders can prove licensed use and licensors can trust what leaves their catalog.">
+
+    <meta property="og:title" content="Forsety — Proof Layer for Licensed AI Data">
+    <meta property="og:description"
+        content="A cryptographic receipt for every dataset access. Built on Shelby Protocol and Aptos.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/forsety-hero.png">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/forsety.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+
+    <style>
+        /* Forsety case-study inline styles */
+        .fs-quote {
+            margin: 1.25rem 0;
+            padding: 1.1rem 1.35rem;
+            border-left: 3px solid #273C6B;
+            background: rgba(39, 60, 107, 0.04);
+            font-style: italic;
+            color: #1f2937;
+            border-radius: 0 10px 10px 0;
+            font-size: 1.02rem;
+        }
+        .fs-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            align-items: center;
+            margin: 1.25rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+        .fs-flow-step {
+            padding: 0.55rem 0.95rem;
+            border: 1px solid rgba(39, 60, 107, 0.25);
+            border-radius: 8px;
+            background: #fff;
+            color: #273C6B;
+            font-weight: 600;
+        }
+        .fs-flow-arrow {
+            color: #D4AF37;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .fs-users {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .fs-user-card {
+            padding: 1.1rem 1.2rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            background: #fff;
+        }
+        .fs-user-card .fs-user-icon {
+            font-size: 1.6rem;
+            color: #D4AF37;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .fs-user-card h5 {
+            margin: 0 0 0.4rem;
+            color: #0a0f1a;
+            font-size: 1rem;
+        }
+        .fs-user-card p {
+            margin: 0;
+            font-size: 0.94rem;
+            color: #4b5563;
+            line-height: 1.55;
+        }
+        .fs-diff {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.85rem;
+            margin-top: 1rem;
+        }
+        .fs-diff-item {
+            padding: 1rem 1.1rem;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.06), transparent);
+        }
+        .fs-diff-item strong {
+            display: block;
+            color: #0a0f1a;
+            margin-bottom: 0.3rem;
+        }
+        .fs-diff-item p {
+            margin: 0;
+            font-size: 0.93rem;
+            color: #4b5563;
+        }
+    </style>
+</head>
+
+<body class="case-study brand-forsety">
+
+    <div class="side-ornament side-ornament-left" aria-hidden="true">
+        <span class="orn-dot sm"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot sm"></span>
+    </div>
+    <div class="side-ornament side-ornament-right" aria-hidden="true">
+        <svg class="wavy-rail" viewBox="0 0 24 1200"
+            preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0 Q 22 30 12 60 T 12 120 T 12 180 T 12 240 T 12 300 T 12 360 T 12 420 T 12 480 T 12 540 T 12 600 T 12 660 T 12 720 T 12 780 T 12 840 T 12 900 T 12 960 T 12 1020 T 12 1080 T 12 1140 T 12 1200"
+                stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.5" />
+            <circle cx="12" cy="180"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="420"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="660"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="900"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="1140" r="2.5" fill="currentColor" opacity="0.8"/>
+        </svg>
+    </div>
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" id="langSwitcher"
+            style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">Forsetyxyz · Venture</div>
+        <h1>Forsety</h1>
+        <p class="case-subtitle" lang="en">
+            A proof layer for licensed AI data. Forsety turns every dataset
+            access into a cryptographic receipt — so AI builders can prove
+            licensed use and licensors can trust what leaves their catalog.
+            Built on Shelby Protocol and Aptos.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            Lisanslı AI verisi için bir kanıt katmanı. Forsety her veri seti
+            erişimini kriptografik bir makbuza dönüştürür — AI geliştiricileri
+            lisanslı kullanımı kanıtlayabilir, lisansörler kataloglarından
+            çıkan her şeye güvenebilir. Shelby Protocol ve Aptos üzerine inşa
+            edildi.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">AI Data Licensing</span>
+            <span class="venture-badge">Compliance &amp; Audit</span>
+            <span class="venture-badge">Shelby Protocol</span>
+            <span class="venture-badge">Aptos</span>
+            <span class="venture-badge">Next.js</span>
+            <span class="venture-badge">TypeScript</span>
+            <span class="venture-badge">MCP for AI Agents</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://forsety.xyz/" target="_blank" class="primary">
+                <i class="bi bi-globe2"></i>
+                <span lang="en">Visit Live</span>
+                <span lang="tr">Canlı Siteyi Ziyaret Et</span>
+            </a>
+            <a href="https://github.com/Forsetyxyz" target="_blank" class="secondary">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://x.com/forsetyxyz" target="_blank" class="secondary">
+                <i class="bi bi-twitter-x"></i> @forsetyxyz
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/forsety-hero.png"
+            alt="Forsety hero"
+            onerror="this.style.display='none';">
+    </div>
+
+    <div class="case-video" data-aos="fade-up">
+        <video controls preload="metadata" playsinline muted
+            poster="/MyResume-1.0.0/assets/img/ventures/forsety-hero.png">
+            <source src="/MyResume-1.0.0/assets/video/forsety-intro.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption" lang="en">Forsety — product intro video</div>
+        <div class="video-caption" lang="tr">Forsety — ürün tanıtım videosu</div>
+    </div>
+
+    <!-- Ecosystem strip: Aptos + Shelby -->
+    <div class="case-body" style="padding-bottom: 0;">
+        <div class="ecosystem-strip" data-aos="fade-up">
+            <span class="eco-label" lang="en">Built on</span>
+            <span class="eco-label" lang="tr">Üzerine inşa edildi</span>
+            <a class="eco-item" href="https://aptoslabs.com/" target="_blank" rel="noopener">
+                <img src="/MyResume-1.0.0/assets/img/ventures/forsety/aptos-logo.png" alt="Aptos">
+                <span>Aptos</span>
+            </a>
+            <a class="eco-item" href="https://shelby.xyz/" target="_blank" rel="noopener">
+                <img src="/MyResume-1.0.0/assets/img/ventures/forsety/shelby-logo.jpg" alt="Shelby Protocol">
+                <span>Shelby Protocol</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="case-body">
+
+        <!-- The Problem -->
+        <section data-aos="fade-up">
+            <h2 lang="en">The Problem</h2>
+            <h2 lang="tr">Problem</h2>
+            <p lang="en">
+                The AI industry runs on data — but its supply chain is opaque.
+                Licensed datasets get used outside their terms. AI teams can't
+                prove which corpora their models actually saw. Licensors have no
+                way to enforce the contracts they sign. And regulation is
+                catching up fast: the EU AI Act, NYT v OpenAI, Getty v Stability
+                AI — each one asks the same question:
+                <em>where did your data come from?</em>
+            </p>
+            <p lang="tr">
+                AI endüstrisi veri üstüne kurulu — fakat tedarik zinciri şeffaf
+                değil. Lisanslı veri setleri kapsam dışında kullanılıyor. AI
+                ekipleri modellerinin gerçekten hangi korpusa dokunduğunu
+                kanıtlayamıyor. Lisansörlerin imzaladıkları sözleşmeleri
+                uygulayacak bir yolu yok. Regülasyon da hızla yetişiyor: EU AI
+                Act, NYT v OpenAI, Getty v Stability AI — hepsi aynı soruyu
+                soruyor: <em>bu veri nereden geldi?</em>
+            </p>
+            <div class="fs-quote" lang="en">
+                Forsety doesn't try to prove what ended up inside a model's
+                weights. It proves <strong>licensed access and compliant
+                usage</strong> — which is what contracts, audits and courtrooms
+                actually ask for.
+            </div>
+            <div class="fs-quote" lang="tr">
+                Forsety, modelin ağırlıklarında ne kaldığını kanıtlamaya
+                çalışmaz. Kanıtladığı şey <strong>lisanslı erişim ve uyumlu
+                kullanımdır</strong> — sözleşmelerin, denetimlerin ve
+                mahkemelerin gerçekten sorduğu şey.
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section data-aos="fade-up">
+            <h2 lang="en">How It Works</h2>
+            <h2 lang="tr">Nasıl Çalışır</h2>
+            <p lang="en">
+                The flow is deliberately simple: a licensor uploads a dataset
+                with its license and access policy. When an AI team or agent
+                uses that dataset, Forsety records a signed, tamper-evident
+                receipt. Anyone with the right permission can later export a
+                verifiable <strong>Evidence Pack</strong> — a self-contained
+                JSON proof that holds up in audits and legal review.
+            </p>
+            <p lang="tr">
+                Akış bilinçli olarak sade: bir lisansör veri setini, lisansı ve
+                erişim politikasıyla birlikte yükler. Bir AI ekibi veya agent
+                o veri setini kullandığında, Forsety imzalı, müdahaleye karşı
+                korumalı bir makbuz oluşturur. Yetkisi olan herkes daha sonra
+                doğrulanabilir bir <strong>Evidence Pack</strong> dışa
+                aktarabilir — denetim ve hukuki incelemede ayakta kalan,
+                kendi kendine yeten bir JSON kanıt.
+            </p>
+
+            <div class="fs-flow">
+                <span class="fs-flow-step"><i class="bi bi-cloud-arrow-up"></i> Upload</span>
+                <span class="fs-flow-arrow">&rarr;</span>
+                <span class="fs-flow-step"><i class="bi bi-file-earmark-text"></i> License &amp; Policy</span>
+                <span class="fs-flow-arrow">&rarr;</span>
+                <span class="fs-flow-step"><i class="bi bi-box-seam"></i> Licensed Access</span>
+                <span class="fs-flow-arrow">&rarr;</span>
+                <span class="fs-flow-step"><i class="bi bi-shield-check"></i> Receipt</span>
+                <span class="fs-flow-arrow">&rarr;</span>
+                <span class="fs-flow-step"><i class="bi bi-journal-check"></i> Evidence Pack</span>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section data-aos="fade-up">
+            <h2 lang="en">What Forsety Gives You</h2>
+            <h2 lang="tr">Forsety Ne Kazandırır</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 lang="en">Tamper-evident receipts</h4>
+                    <h4 lang="tr">Müdahaleye karşı makbuzlar</h4>
+                    <p lang="en">Every dataset access produces a signed,
+                        chain-anchored receipt. Licensors and auditors see
+                        what actually happened — not what someone claims.</p>
+                    <p lang="tr">Her veri seti erişimi imzalı, zincir üstüne
+                        sabitlenmiş bir makbuz üretir. Lisansörler ve denetçiler
+                        iddia edileni değil, gerçekten olanı görür.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-journal-check"></i></div>
+                    <h4 lang="en">One-click Evidence Packs</h4>
+                    <h4 lang="tr">Tek tık Evidence Pack'ler</h4>
+                    <p lang="en">Export a portable JSON proof — dataset,
+                        license, policy version, full access timeline — ready
+                        for legal, compliance and partner review.</p>
+                    <p lang="tr">Taşınabilir bir JSON kanıt dışa aktar — veri
+                        seti, lisans, policy sürümü, tam erişim timeline'ı —
+                        hukuk, uyumluluk ve partner incelemesine hazır.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-file-earmark-lock"></i></div>
+                    <h4 lang="en">Policies you can version</h4>
+                    <h4 lang="tr">Versiyonlayabildiğin policy'ler</h4>
+                    <p lang="en">Update access rules without losing the past.
+                        Each change creates a new version, and every receipt
+                        remembers exactly which version governed it.</p>
+                    <p lang="tr">Erişim kurallarını geçmişi kaybetmeden
+                        güncelle. Her değişiklik yeni bir versiyon yaratır ve
+                        her makbuz hangi versiyonun geçerli olduğunu hatırlar.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-robot"></i></div>
+                    <h4 lang="en">Built for AI agents</h4>
+                    <h4 lang="tr">AI agent'lar için tasarlandı</h4>
+                    <p lang="en">Forsety ships with a Model Context Protocol
+                        server, so AI agents — Claude, GPT or anything
+                        MCP-compatible — can register, remember, check policies
+                        and get audited as first-class citizens.</p>
+                    <p lang="tr">Forsety bir Model Context Protocol sunucusuyla
+                        gelir, böylece AI agent'lar — Claude, GPT veya MCP uyumlu
+                        herhangi biri — birinci sınıf katılımcı olarak kayıt
+                        olabilir, hatırlayabilir, policy kontrol edebilir ve
+                        audit edilebilir.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-wallet2"></i></div>
+                    <h4 lang="en">Wallet-signed actions</h4>
+                    <h4 lang="tr">Cüzdan imzalı eylemler</h4>
+                    <p lang="en">Uploads, policy changes, share links and
+                        exports all require an Aptos wallet signature. No
+                        dashboards without ownership, no quiet edits, no
+                        replayable requests.</p>
+                    <p lang="tr">Yüklemeler, policy değişiklikleri, share
+                        link'ler ve dışa aktarımlar hepsi Aptos cüzdan imzası
+                        gerektirir. Sahiplik olmadan dashboard yok, sessiz
+                        düzenleme yok, tekrarlanabilir istek yok.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-share"></i></div>
+                    <h4 lang="en">Expiring share links</h4>
+                    <h4 lang="tr">Süresi dolan share link'ler</h4>
+                    <p lang="en">Send an auditor or licensee a time-bound,
+                        revocable link. Access is logged, bounded and
+                        auditable — no static API keys in the wild.</p>
+                    <p lang="tr">Bir denetçiye veya lisans alana zaman sınırlı,
+                        iptal edilebilir bir link gönder. Erişim loglanır,
+                        sınırlıdır ve denetlenebilir — ortalıkta dolaşan statik
+                        API key yok.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
+                    <h4 lang="en">A dashboard built for licensors</h4>
+                    <h4 lang="tr">Lisansörler için dashboard</h4>
+                    <p lang="en">Live access feed, filters by licensee,
+                        dataset and time window, search, file preview, and
+                        one-click proof export. Designed for people who have
+                        to defend their catalog, not configure a database.</p>
+                    <p lang="tr">Canlı erişim akışı; lisans alan, veri seti ve
+                        zaman penceresi filtreleri; arama, dosya önizleme ve
+                        tek tık kanıt dışa aktarımı. Veritabanı ayarlamak için
+                        değil, kataloğunu savunmak zorunda olan insanlar için
+                        tasarlandı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
+                    <h4 lang="en">Decentralized by design</h4>
+                    <h4 lang="tr">Tasarım gereği dağıtık</h4>
+                    <p lang="en">Storage on Shelby Protocol, settlement on
+                        Aptos. No centralized evidence store, no single vendor
+                        you have to trust more than the proof itself.</p>
+                    <p lang="tr">Shelby Protocol üzerinde depolama, Aptos
+                        üzerinde settlement. Merkezi evidence store yok,
+                        kanıtın kendisinden daha fazla güvenmek zorunda
+                        olduğun tek bir vendor yok.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who it's for -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Who Forsety Is For</h2>
+            <h2 lang="tr">Forsety Kimin İçin</h2>
+            <p lang="en">Three industries feeling the same pressure, one proof
+                layer that fits all of them:</p>
+            <p lang="tr">Aynı baskıyı hisseden üç endüstri, hepsine uyan tek
+                bir kanıt katmanı:</p>
+
+            <div class="case-video" style="margin: 20px 0 28px; padding: 0;" data-aos="fade-up">
+                <video controls preload="metadata" playsinline muted
+                    poster="/MyResume-1.0.0/assets/img/ventures/forsety-hero.png">
+                    <source src="/MyResume-1.0.0/assets/video/forsety-who-needs.mp4" type="video/mp4">
+                </video>
+                <div class="video-caption" lang="en">Forsety — who needs it</div>
+                <div class="video-caption" lang="tr">Forsety — kime gerekli</div>
+            </div>
+
+            <div class="fs-users">
+                <div class="fs-user-card">
+                    <span class="fs-user-icon"><i class="bi bi-music-note-beamed"></i></span>
+                    <h5 lang="en">Music &amp; audio rights holders</h5>
+                    <h5 lang="tr">Müzik &amp; ses hak sahipleri</h5>
+                    <p lang="en">Know which licensed catalog an AI was exposed
+                        to, which clips were streamed, and under what terms —
+                        with a receipt you can hand to a lawyer.</p>
+                    <p lang="tr">Bir AI'nın hangi lisanslı kataloga maruz
+                        kaldığını, hangi kliplerin stream edildiğini ve hangi
+                        koşullar altında olduğunu bil — bir avukata teslim
+                        edebileceğin bir makbuzla.</p>
+                </div>
+                <div class="fs-user-card">
+                    <span class="fs-user-icon"><i class="bi bi-newspaper"></i></span>
+                    <h5 lang="en">News agencies &amp; publishers</h5>
+                    <h5 lang="tr">Haber ajansları &amp; yayıncılar</h5>
+                    <p lang="en">Receipt-backed licensing for editorial
+                        archives — a defensible answer to "which articles did
+                        your model see, under what license, and when?"</p>
+                    <p lang="tr">Editoryal arşivler için makbuz destekli
+                        lisanslama — "modelin hangi makaleleri, hangi lisans
+                        altında, ne zaman gördü?" sorusuna savunulabilir cevap.</p>
+                </div>
+                <div class="fs-user-card">
+                    <span class="fs-user-icon"><i class="bi bi-image"></i></span>
+                    <h5 lang="en">Visual artists &amp; stock libraries</h5>
+                    <h5 lang="tr">Görsel sanatçılar &amp; stock kütüphaneleri</h5>
+                    <p lang="en">A tamper-evident, timestamped audit trail for
+                        image licensing — exportable as an Evidence Pack when
+                        something has to be proven.</p>
+                    <p lang="tr">Görsel lisanslama için müdahaleye karşı
+                        korumalı, timestamp'li bir audit trail — bir şeyin
+                        kanıtlanması gerektiğinde Evidence Pack olarak dışa
+                        aktarılabilir.</p>
+                </div>
+                <div class="fs-user-card">
+                    <span class="fs-user-icon"><i class="bi bi-cpu"></i></span>
+                    <h5 lang="en">AI teams building with licensed data</h5>
+                    <h5 lang="tr">Lisanslı veriyle çalışan AI ekipleri</h5>
+                    <p lang="en">Show partners, investors and regulators that
+                        every training and inference step ran against data you
+                        had the right to use — with a proof that doesn't rely
+                        on your word.</p>
+                    <p lang="tr">Partnerlere, yatırımcılara ve
+                        düzenleyicilere her eğitim ve inference adımının
+                        kullanma hakkın olan veri üzerinde çalıştığını göster —
+                        senin sözüne dayanmayan bir kanıtla.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why different -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Why Forsety</h2>
+            <h2 lang="tr">Neden Forsety</h2>
+            <div class="fs-diff">
+                <div class="fs-diff-item">
+                    <strong lang="en">Honest about what it proves</strong>
+                    <strong lang="tr">Ne kanıtladığı konusunda dürüst</strong>
+                    <p lang="en">No magic claim about what's inside a model's
+                        weights. Just provable licensed access — the thing
+                        that actually matters in a contract dispute.</p>
+                    <p lang="tr">Modelin ağırlıklarında ne olduğuna dair
+                        sihirli bir iddia yok. Sadece kanıtlanabilir lisanslı
+                        erişim — sözleşme anlaşmazlığında asıl önemli olan şey.</p>
+                </div>
+                <div class="fs-diff-item">
+                    <strong lang="en">Agent-native, not retrofit</strong>
+                    <strong lang="tr">Sonradan değil, agent-native</strong>
+                    <p lang="en">Forsety speaks MCP, the native language of
+                        modern AI agents. Plug Claude or any MCP client in —
+                        no glue code, no custom SDK ritual.</p>
+                    <p lang="tr">Forsety modern AI agent'ların native dili olan
+                        MCP'yi konuşur. Claude'u veya herhangi bir MCP
+                        istemcisini tak — glue code yok, özel SDK ritüeli yok.</p>
+                </div>
+                <div class="fs-diff-item">
+                    <strong lang="en">Open source by design</strong>
+                    <strong lang="tr">Tasarım gereği açık kaynak</strong>
+                    <p lang="en">Every core repo is public. If you can't read
+                        the code, you shouldn't trust the proof. Forsety is
+                        built on that premise.</p>
+                    <p lang="tr">Her core repo herkese açık. Kodu
+                        okuyamıyorsan, kanıta güvenmemelisin. Forsety bu önerme
+                        üzerine kurulu.</p>
+                </div>
+                <div class="fs-diff-item">
+                    <strong lang="en">Chosen stack, not default</strong>
+                    <strong lang="tr">Varsayılan değil, seçilmiş yığın</strong>
+                    <p lang="en">Shelby Protocol for decentralized storage,
+                        Aptos for fast, verifiable settlement. No centralized
+                        evidence store, no "just trust us" architecture.</p>
+                    <p lang="tr">Dağıtık depolama için Shelby Protocol, hızlı
+                        ve doğrulanabilir settlement için Aptos. Merkezi
+                        evidence store yok, "bize güven" mimarisi yok.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Role -->
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role</h2>
+            <h2 lang="tr">Rolüm</h2>
+            <p lang="en">
+                Founder and sole engineer. Forsety is mine end-to-end — the
+                product thesis, the technical decisions (Shelby, Aptos, MCP),
+                the architecture, the dashboard, the brand identity
+                ("Living Justice"), the landing site, and the launch
+                storytelling on X. It is my primary push into building
+                infrastructure where AI, licensing and cryptography meet.
+            </p>
+            <p lang="tr">
+                Kurucu ve tek mühendis. Forsety uçtan uca benim — ürün tezi,
+                teknik kararlar (Shelby, Aptos, MCP), mimari, dashboard, marka
+                kimliği ("Living Justice"), landing site ve X üzerindeki
+                lansman hikayeleri. AI, lisanslama ve kriptografinin buluştuğu
+                altyapıyı inşa etme yönündeki birincil çalışmam.
+            </p>
+        </section>
+
+        <!-- Design -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Design — "Living Justice"</h2>
+            <h2 lang="tr">Tasarım — "Living Justice"</h2>
+            <p lang="en">
+                Forsety is named after Forseti, the Norse god of justice. The
+                visual system carries that weight: navy-deep
+                <code>#0a0f1a</code> with gold <code>#D4AF37</code> accents,
+                a Tiwaz (ᛏ) rune as the mark, and typography that pairs Space
+                Grotesk with Playfair Display. The same system extends to the
+                launch content on X — a series of short films that explain
+                the product, the partners and the people who need it.
+            </p>
+            <p lang="tr">
+                Forsety adını Norse adalet tanrısı Forseti'den alır. Görsel
+                sistem bu ağırlığı taşır: <code>#D4AF37</code> altın aksanlı
+                koyu navy <code>#0a0f1a</code>, marka işareti olarak Tiwaz (ᛏ)
+                rune'u ve Space Grotesk'u Playfair Display ile eşleyen bir
+                tipografi. Aynı sistem X üzerindeki lansman içeriğine uzanır —
+                ürünü, partnerleri ve ona ihtiyacı olan insanları anlatan kısa
+                filmler serisi.
+            </p>
+        </section>
+
+        <!-- Links -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://forsety.xyz/" target="_blank">forsety.xyz — Live site</a></li>
+                <li><a href="https://github.com/Forsetyxyz" target="_blank">GitHub organization: Forsetyxyz</a></li>
+                <li><a href="https://x.com/forsetyxyz" target="_blank">X / Twitter: @forsetyxyz</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>

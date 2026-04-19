@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>KiteID — Names for Humans and Agents on Kite AI · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="Case study: KiteID — ENS-style .kite naming + agent identity layer for the Kite AI chain. Six contracts live on testnet, 224 tests passing, fully self-hosted. First-mover with zero direct competitors.">
+
+    <meta property="og:title" content="KiteID — Names for Humans and Agents on Kite AI">
+    <meta property="og:description"
+        content=".kite domains on Kite AI. Commit-reveal registration, Dutch-auction premium, agent delegation (V2). Six contracts live on testnet, 224 tests, self-hosted stack, solo build.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/kiteid-hero.svg">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/kiteid.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="case-study brand-kiteid">
+
+    <div class="side-ornament side-ornament-left" aria-hidden="true">
+        <span class="orn-dot sm"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot sm"></span>
+    </div>
+    <div class="side-ornament side-ornament-right" aria-hidden="true">
+        <svg class="wavy-rail" viewBox="0 0 24 1200"
+            preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0 Q 22 30 12 60 T 12 120 T 12 180 T 12 240 T 12 300 T 12 360 T 12 420 T 12 480 T 12 540 T 12 600 T 12 660 T 12 720 T 12 780 T 12 840 T 12 900 T 12 960 T 12 1020 T 12 1080 T 12 1140 T 12 1200"
+                stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.5" />
+            <circle cx="12" cy="180"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="420"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="660"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="900"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="1140" r="2.5" fill="currentColor" opacity="0.8"/>
+        </svg>
+    </div>
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">KiteID · Venture · Testnet Live</div>
+        <h1>KiteID</h1>
+        <p class="case-subtitle" lang="en">
+            ENS-style <strong>.kite</strong> naming on the Kite AI chain — plus
+            a delegable identity layer for the agentic economy. Six smart
+            contracts live on testnet chain 2368, commit-reveal registration,
+            Dutch-auction premium pricing, 224 passing tests, fully
+            self-hosted backend. First-mover with zero direct competitors.
+            Solo build, architecture to deploy.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            Kite AI zinciri üzerinde ENS tarzı <strong>.kite</strong> isim
+            sistemi — üstüne AI ajan ekonomisi için delege edilebilir kimlik
+            katmanı. Testnet chain 2368'de canlı altı akıllı kontrat,
+            commit-reveal kayıt akışı, Dutch-auction premium fiyatlama, 224
+            geçen test, tamamen self-hosted backend. Doğrudan rakibi olmayan
+            first-mover. Mimariden deploy'a solo inşa.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">Solidity 0.8.34</span>
+            <span class="venture-badge">Foundry</span>
+            <span class="venture-badge">OpenZeppelin 5.5</span>
+            <span class="venture-badge">Next.js 16</span>
+            <span class="venture-badge">React 19</span>
+            <span class="venture-badge">Wagmi + Viem</span>
+            <span class="venture-badge">RainbowKit + SIWE</span>
+            <span class="venture-badge">Better Auth</span>
+            <span class="venture-badge">Hono</span>
+            <span class="venture-badge">Ponder</span>
+            <span class="venture-badge">Drizzle</span>
+            <span class="venture-badge">PostgreSQL 17</span>
+            <span class="venture-badge">Tailwind v4</span>
+            <span class="venture-badge">Turborepo</span>
+            <span class="venture-badge">Self-hosted</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://kiteid.xyz" target="_blank" class="primary">
+                <i class="bi bi-globe2"></i>
+                <span lang="en">Visit kiteid.xyz</span>
+                <span lang="tr">kiteid.xyz'i Ziyaret Et</span>
+            </a>
+            <a href="https://github.com/KiteID/kiteid" target="_blank" class="secondary">
+                <i class="bi bi-github"></i> GitHub: KiteID/kiteid
+            </a>
+            <a href="https://testnet.kitescan.ai/address/0xBD6a09D7227F56E79327d680183317C10A1370Df"
+                target="_blank" class="secondary">
+                <i class="bi bi-shield-check"></i>
+                <span lang="en">Verified Contracts</span>
+                <span lang="tr">Doğrulanmış Kontratlar</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/kiteid-hero.svg"
+            alt="KiteID — Names for humans and agents on Kite AI"
+            onerror="this.style.display='none';">
+    </div>
+
+    <main class="case-body">
+
+        <section data-aos="fade-up">
+            <h2 lang="en">At a Glance</h2>
+            <h2 lang="tr">Bir Bakışta</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 lang="en">6 contracts live on testnet</h4>
+                    <h4 lang="tr">Testnet'te 6 canlı kontrat</h4>
+                    <p lang="en">Registry, BaseRegistrar, UUPS Controller,
+                        Resolver, Price Oracle and Reverse Registrar — all
+                        deployed and verified on Kite AI testnet (chain 2368)
+                        at block 20858663.</p>
+                    <p lang="tr">Registry, BaseRegistrar, UUPS Controller,
+                        Resolver, Price Oracle ve Reverse Registrar — hepsi
+                        Kite AI testnet'inde (chain 2368), block 20858663'te
+                        deploy edildi ve doğrulandı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-check2-square"></i></div>
+                    <h4 lang="en">224 passing tests</h4>
+                    <h4 lang="tr">224 geçen test</h4>
+                    <p lang="en">166 Foundry contract tests (fuzz + invariant),
+                        41 SDK unit tests, 17 web tests. 95%+ contract line
+                        coverage. CI: 15/15 typecheck, 11/11 build green.</p>
+                    <p lang="tr">166 Foundry kontrat testi (fuzz + invariant),
+                        41 SDK birim testi, 17 web testi. %95+ kontrat satır
+                        kapsamı. CI: 15/15 typecheck, 11/11 build yeşil.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-flag"></i></div>
+                    <h4 lang="en">First-mover, no direct rivals</h4>
+                    <h4 lang="tr">First-mover, doğrudan rakipsiz</h4>
+                    <p lang="en">No naming service exists on Kite AI today.
+                        KiteID ships a reference implementation while the
+                        chain itself is still early — a window that does not
+                        reopen.</p>
+                    <p lang="tr">Kite AI üzerinde bugün çalışan bir isim
+                        servisi yok. KiteID, zincir henüz erken dönemdeyken
+                        referans implementasyonu yayınlıyor — bir daha
+                        açılmayan bir pencere.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-hdd-network"></i></div>
+                    <h4 lang="en">Fully self-hosted</h4>
+                    <h4 lang="tr">Tamamen self-hosted</h4>
+                    <p lang="en">One Hetzner CAX21 ARM VPS runs everything:
+                        Postgres 17, PgBouncer, Dragonfly, Ponder indexer,
+                        Next.js, Hono API, observability. ~$1,420/year vs
+                        ~$3,700 managed — 62 % cheaper.</p>
+                    <p lang="tr">Tek bir Hetzner CAX21 ARM VPS her şeyi
+                        çalıştırıyor: Postgres 17, PgBouncer, Dragonfly,
+                        Ponder indexer, Next.js, Hono API, gözlemlenebilirlik.
+                        Yıllık ~$1.420 vs managed ~$3.700 — %62 daha ucuz.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">The Problem</h2>
+            <h2 lang="tr">Problem</h2>
+            <p lang="en">
+                Every mature chain eventually needs a naming primitive.
+                Ethereum has ENS, Solana has SNS — both emerged years into
+                each chain's life, and both created outsized value by turning
+                raw addresses (<code>0x3bE2…82b0eCa</code>) into human-
+                readable identity (<code>alice.eth</code>). Kite AI — an
+                Avalanche L1 subnet purpose-built for AI agents, native
+                x402 payments and Kite Passport identity — is still early,
+                fast, and dirt-cheap on gas. It is also nameless.
+            </p>
+            <p lang="tr">
+                Her olgunlaşan zincir er ya da geç bir isim primitifine
+                ihtiyaç duyuyor. Ethereum'un ENS'i, Solana'nın SNS'i var —
+                ikisi de zincirlerinin ömrünün içinde ortaya çıktı ve ham
+                adresi (<code>0x3bE2…82b0eCa</code>) okunabilir kimliğe
+                (<code>alice.eth</code>) çevirerek devasa değer yarattı.
+                Kite AI — AI ajanları için tasarlanmış bir Avalanche L1
+                subnet'i, native x402 ödeme ve Kite Passport kimlik primitifi
+                ile — henüz erken, hızlı ve gas'i çok ucuz. Aynı zamanda
+                isimsiz.
+            </p>
+            <p lang="en">
+                KiteID fills that gap. V1 is the naming layer — commit-reveal
+                registration, Dutch-auction premium for expired names, full
+                ENS-style resolution. V2 extends it into the real prize:
+                a delegable identity layer for AI agents, integrating Kite
+                Passport and x402 so that an agent doesn't just have a
+                wallet, it has a <em>name</em>, a verifiable delegation
+                chain, and an on-chain reputation surface.
+            </p>
+            <p lang="tr">
+                KiteID bu boşluğu dolduruyor. V1 isimlendirme katmanı —
+                commit-reveal kayıt, süresi bitmiş isimler için Dutch-auction
+                premium, tam ENS tarzı çözümleme. V2 ise asıl ödüle uzanıyor:
+                AI ajanları için delege edilebilir kimlik katmanı; Kite
+                Passport ve x402 entegrasyonuyla bir ajan sadece bir cüzdana
+                değil, bir <em>isme</em>, doğrulanabilir delegasyon zincirine
+                ve on-chain reputasyon yüzeyine sahip oluyor.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role — Solo, End-to-End</h2>
+            <h2 lang="tr">Rolüm — Tek Başıma, Baştan Sona</h2>
+            <p lang="en">
+                Founder, sole architect, sole engineer. No co-founders, no
+                contractors. Every ADR, every commit, every deploy is mine:
+            </p>
+            <p lang="tr">
+                Kurucu, tek mimar, tek mühendis. Ortak yok, freelancer yok.
+                Her ADR, her commit, her deploy benim:
+            </p>
+            <ul lang="en">
+                <li><strong>Product &amp; strategy:</strong> thesis, scoping
+                    (V1 naming → V2 agent identity), KITE-denominated pricing
+                    model, revenue split (60 % Ops / 25 % Reserve / 10 %
+                    Ecosystem / 5 % Buyback), and phase gating.</li>
+                <li><strong>Architecture:</strong> 8 ADRs (stack decision,
+                    contracts, frontend, backend/indexing, monorepo, security,
+                    tokenomics, self-hosted infrastructure) and 17 research
+                    documents — written before any code.</li>
+                <li><strong>Smart contracts:</strong> Six contracts, ENS-inspired
+                    but rewritten for Kite — UUPS-upgradeable Controller,
+                    immutable Registry and BaseRegistrar, Linear Premium
+                    Dutch-auction price oracle, Resolver, Reverse Registrar.
+                    Solidity 0.8.34, OpenZeppelin 5.5, Solady. Foundry fuzz
+                    + invariant suite. Slither + Aderyn + Halmos in CI.</li>
+                <li><strong>Frontend:</strong> Next.js 16 (Turbopack) + React
+                    19, Tailwind v4 with <code>@theme</code> tokens,
+                    shadcn/ui, Motion v12, RHF+Zod, TanStack Query v5, Zustand.
+                    Parchment Identity design system from scratch. Playwright
+                    E2E + Vitest. Biome v2.3.</li>
+                <li><strong>Web3 integration:</strong> Viem + Wagmi v3.6 +
+                    RainbowKit + SIWE via Better Auth. Full commit-reveal UX
+                    with 60-second client-side countdown, excess-refund
+                    handling, reverse-record opt-in.</li>
+                <li><strong>Backend:</strong> Hono on Node, self-hosted
+                    PostgreSQL 17 + PgBouncer pool, Drizzle ORM, Dragonfly
+                    (Redis-compat). Separate <code>ponder_index</code> schema
+                    for the indexer, role-based grants (app / ponder / backup).</li>
+                <li><strong>Indexing:</strong> Ponder v0.16 self-hosted on the
+                    same VPS, shares Postgres with the app, real-time event
+                    ingestion from the testnet contracts.</li>
+                <li><strong>Infrastructure:</strong> Hetzner CAX21 ARM VPS +
+                    Dokploy PaaS + Cloudflare Tunnel (origin IP hidden) +
+                    Cloudflare Access SSH. No Vercel, no Neon, no paid
+                    managed services.</li>
+                <li><strong>DevOps:</strong> Turborepo + pnpm workspaces,
+                    multi-arch Docker builds (amd64 + arm64) via buildx →
+                    GHCR → Dokploy webhook, <code>ubuntu-24.04-arm</code>
+                    GitHub runners for native ARM speed.</li>
+                <li><strong>Security &amp; ops:</strong> CodeQL + Semgrep +
+                    Trivy + gitleaks in CI, branch protection, dependabot,
+                    CrowdSec IPS + Cloudflare bouncer, AIDE + osquery +
+                    auditd on the host, WAL-G + pgBackRest backup pipeline
+                    to R2 (RPO 15 min, RTO &lt; 30 min).</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Ürün &amp; strateji:</strong> tez, scope'lama (V1
+                    naming → V2 ajan kimliği), KITE-cinsinden fiyatlama
+                    modeli, gelir dağılımı (%60 Operasyon / %25 Rezerv /
+                    %10 Ekosistem / %5 Buyback), ve faz kapıları.</li>
+                <li><strong>Mimari:</strong> 8 ADR (stack kararı,
+                    kontratlar, frontend, backend/indexing, monorepo,
+                    güvenlik, tokenomics, self-hosted altyapı) ve 17
+                    araştırma dokümanı — herhangi bir kod yazılmadan önce.</li>
+                <li><strong>Akıllı kontratlar:</strong> Altı kontrat,
+                    ENS'ten ilham almış ama Kite için yeniden yazıldı —
+                    UUPS upgradeable Controller, immutable Registry ve
+                    BaseRegistrar, Linear Premium Dutch-auction price
+                    oracle, Resolver, Reverse Registrar. Solidity 0.8.34,
+                    OpenZeppelin 5.5, Solady. Foundry fuzz + invariant
+                    paketi. CI'da Slither + Aderyn + Halmos.</li>
+                <li><strong>Frontend:</strong> Next.js 16 (Turbopack) +
+                    React 19, <code>@theme</code> token'lı Tailwind v4,
+                    shadcn/ui, Motion v12, RHF+Zod, TanStack Query v5,
+                    Zustand. Sıfırdan Parchment Identity tasarım sistemi.
+                    Playwright E2E + Vitest. Biome v2.3.</li>
+                <li><strong>Web3 entegrasyonu:</strong> Viem + Wagmi v3.6 +
+                    RainbowKit + Better Auth üzerinden SIWE. Tam commit-
+                    reveal UX — 60 saniyelik client-side geri sayım, fazla
+                    ödemeyi iade, reverse-record opt-in.</li>
+                <li><strong>Backend:</strong> Node üzerinde Hono, self-hosted
+                    PostgreSQL 17 + PgBouncer havuzu, Drizzle ORM,
+                    Dragonfly (Redis-uyumlu). İndexer için ayrı
+                    <code>ponder_index</code> şeması, rol-bazlı yetkiler
+                    (app / ponder / backup).</li>
+                <li><strong>İndeksleme:</strong> Aynı VPS üzerinde self-hosted
+                    Ponder v0.16, uygulamayla Postgres paylaşıyor, testnet
+                    kontratlarından gerçek zamanlı event alımı.</li>
+                <li><strong>Altyapı:</strong> Hetzner CAX21 ARM VPS +
+                    Dokploy PaaS + Cloudflare Tunnel (origin IP gizli) +
+                    Cloudflare Access SSH. Vercel yok, Neon yok, ücretli
+                    managed servis yok.</li>
+                <li><strong>DevOps:</strong> Turborepo + pnpm workspaces,
+                    buildx ile multi-arch Docker build'ler (amd64 + arm64)
+                    → GHCR → Dokploy webhook, native ARM hızı için
+                    <code>ubuntu-24.04-arm</code> GitHub runner'lar.</li>
+                <li><strong>Güvenlik &amp; ops:</strong> CI'da CodeQL +
+                    Semgrep + Trivy + gitleaks, branch protection,
+                    dependabot, CrowdSec IPS + Cloudflare bouncer, host
+                    üzerinde AIDE + osquery + auditd, R2'ye WAL-G +
+                    pgBackRest yedekleme hattı (RPO 15 dk, RTO &lt; 30 dk).</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Smart Contract Architecture</h2>
+            <h2 lang="tr">Akıllı Kontrat Mimarisi</h2>
+            <p lang="en">
+                The contract layer is ENS-inspired but pruned and re-tuned
+                for Kite. No NameWrapper in V1 (complexity reserved for V2),
+                no multi-TLD: just <code>.kite</code>. The split between
+                the upgradeable Controller and the immutable core follows a
+                hard invariant — <em>ownership logic never migrates in place</em>.
+            </p>
+            <p lang="tr">
+                Kontrat katmanı ENS'ten ilham almış ama Kite için budanmış
+                ve yeniden ayarlanmış. V1'de NameWrapper yok (karmaşıklık
+                V2'ye saklanıyor), çoklu TLD yok: sadece <code>.kite</code>.
+                Upgradeable Controller ile immutable çekirdek arasındaki
+                ayrım sert bir invariant'a dayanıyor — <em>sahiplik
+                mantığı yerinde migrate olmaz</em>.
+            </p>
+            <ul lang="en">
+                <li><strong>KiteRegistry</strong> (immutable) — node → owner /
+                    resolver / TTL, the single source of truth.</li>
+                <li><strong>KiteBaseRegistrar</strong> (immutable, ERC-721) —
+                    owns the <code>.kite</code> node, mints name NFTs, enforces
+                    90-day grace period and expiry.</li>
+                <li><strong>KiteController</strong> (UUPS upgradeable) —
+                    commit-reveal registration, price quoting, withdrawals,
+                    reserved-name gating. The <em>only</em> upgradeable
+                    contract in the system.</li>
+                <li><strong>KiteResolver</strong> — IAddrResolver,
+                    INameResolver, ITextResolver, IContentHashResolver,
+                    IMulticallable. Clear-on-transfer via version bumps.</li>
+                <li><strong>LinearPremiumPriceOracle</strong> — tiered base
+                    pricing (640 / 160 / 5 KITE per year for 3 / 4 / 5+ char
+                    names) plus a 14-day exponential Dutch-auction premium
+                    on expired names.</li>
+                <li><strong>KiteReverseRegistrar</strong> — lets an address
+                    set a primary <code>.kite</code> name, deterministic
+                    reverse-node derivation.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>KiteRegistry</strong> (immutable) — node → owner /
+                    resolver / TTL, tek hakikat kaynağı.</li>
+                <li><strong>KiteBaseRegistrar</strong> (immutable, ERC-721) —
+                    <code>.kite</code> node'un sahibi, isim NFT'lerini
+                    mint'ler, 90 günlük grace period ve expiry'yi zorlar.</li>
+                <li><strong>KiteController</strong> (UUPS upgradeable) —
+                    commit-reveal kayıt, fiyat sorgusu, withdraw'lar,
+                    reserved-name gate'i. Sistemdeki <em>tek</em> upgradeable
+                    kontrat.</li>
+                <li><strong>KiteResolver</strong> — IAddrResolver,
+                    INameResolver, ITextResolver, IContentHashResolver,
+                    IMulticallable. Transfer'da version bump ile temizlenir.</li>
+                <li><strong>LinearPremiumPriceOracle</strong> — kademeli
+                    taban fiyat (3 / 4 / 5+ karakter için yıllık 640 / 160 /
+                    5 KITE) artı süresi bitmiş isimlerde 14 günlük üstel
+                    Dutch-auction premium.</li>
+                <li><strong>KiteReverseRegistrar</strong> — bir adrese birincil
+                    <code>.kite</code> ismi atamayı sağlar, deterministic
+                    reverse-node türetimi.</li>
+            </ul>
+            <p lang="en">
+                All six contracts are verified on <a
+                href="https://testnet.kitescan.ai/" target="_blank">testnet.kitescan.ai</a>.
+                Deploy block: 20858663. Ten reserved names (<code>admin</code>,
+                <code>kite</code>, <code>kiteid</code>, …) were set on-chain
+                via per-name <code>cast send</code> calls to work around a
+                Kite RPC quirk (the non-standard <code>feePayer</code>
+                receipt field breaks Foundry's default deserializer — the TX
+                succeeds with status <code>0x1</code>, Foundry just can't
+                parse the receipt).
+            </p>
+            <p lang="tr">
+                Altı kontratın hepsi <a href="https://testnet.kitescan.ai/"
+                target="_blank">testnet.kitescan.ai</a>'de doğrulandı.
+                Deploy block: 20858663. On rezerv isim (<code>admin</code>,
+                <code>kite</code>, <code>kiteid</code>, …) Kite RPC'nin bir
+                tuhaflığı etrafından dolanmak için isim başına <code>cast
+                send</code> ile on-chain olarak set edildi (standart dışı
+                <code>feePayer</code> receipt alanı Foundry'nin varsayılan
+                deserializer'ını kırıyor — TX <code>0x1</code> status ile
+                başarılı oluyor, Foundry sadece receipt'i parse edemiyor).
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">The Full Stack</h2>
+            <h2 lang="tr">Tam Stack</h2>
+            <h3 lang="en">Contracts</h3>
+            <h3 lang="tr">Kontratlar</h3>
+            <p lang="en">
+                Foundry v1.0+ · Solidity 0.8.34+ · OpenZeppelin Contracts
+                5.5 · Solady · Soldeer for deps · Slither + Aderyn + Halmos
+                for static analysis and symbolic execution.
+            </p>
+            <p lang="tr">
+                Foundry v1.0+ · Solidity 0.8.34+ · OpenZeppelin Contracts
+                5.5 · Solady · bağımlılıklar için Soldeer · statik analiz ve
+                sembolik yürütme için Slither + Aderyn + Halmos.
+            </p>
+
+            <h3 lang="en">Frontend</h3>
+            <h3 lang="tr">Frontend</h3>
+            <p lang="en">
+                Next.js 16.2 (Turbopack) · React 19 · TypeScript 6.0 ·
+                Tailwind v4 with <code>@theme</code> tokens · shadcn/ui ·
+                Motion v12 · React Hook Form + Zod · TanStack Query v5 ·
+                Zustand · Vitest + Playwright · Biome v2.3.
+            </p>
+            <p lang="tr">
+                Next.js 16.2 (Turbopack) · React 19 · TypeScript 6.0 ·
+                <code>@theme</code> token'lı Tailwind v4 · shadcn/ui ·
+                Motion v12 · React Hook Form + Zod · TanStack Query v5 ·
+                Zustand · Vitest + Playwright · Biome v2.3.
+            </p>
+
+            <h3 lang="en">Web3</h3>
+            <h3 lang="tr">Web3</h3>
+            <p lang="en">
+                Viem (not ethers) · Wagmi v3.6+ · RainbowKit as primary
+                connector · SIWE via Better Auth with custom Kite-chain
+                message verification.
+            </p>
+            <p lang="tr">
+                Viem (ethers değil) · Wagmi v3.6+ · birincil connector olarak
+                RainbowKit · Kite zinciri için özel mesaj doğrulamalı,
+                Better Auth üstünden SIWE.
+            </p>
+
+            <h3 lang="en">Monorepo</h3>
+            <h3 lang="tr">Monorepo</h3>
+            <p lang="en">
+                Turborepo 2.x (Vercel free cache) · pnpm workspaces · Biome
+                v2.3 · tsdown · Changesets · lefthook. Apps: <code>web</code>,
+                <code>indexer</code>, <code>workers</code>, <code>docs</code>.
+                Packages: <code>contracts</code>, <code>contracts-abi</code>,
+                <code>sdk</code>, <code>ui</code>, <code>api</code>,
+                <code>db</code>, <code>brand</code>, <code>utils</code>.
+            </p>
+            <p lang="tr">
+                Turborepo 2.x (Vercel free cache) · pnpm workspaces · Biome
+                v2.3 · tsdown · Changesets · lefthook. App'ler:
+                <code>web</code>, <code>indexer</code>, <code>workers</code>,
+                <code>docs</code>. Paketler: <code>contracts</code>,
+                <code>contracts-abi</code>, <code>sdk</code>, <code>ui</code>,
+                <code>api</code>, <code>db</code>, <code>brand</code>,
+                <code>utils</code>.
+            </p>
+
+            <h3 lang="en">Backend · Self-hosted</h3>
+            <h3 lang="tr">Backend · Self-hosted</h3>
+            <p lang="en">
+                Hono on Node · PostgreSQL 17 + PgBouncer (transaction pool) ·
+                Drizzle ORM · Dragonfly (Redis-compatible) · Better Auth +
+                SIWE · self-hosted Inngest · Cloudflare R2 · Resend.
+            </p>
+            <p lang="tr">
+                Node üzerinde Hono · PostgreSQL 17 + PgBouncer (transaction
+                havuzu) · Drizzle ORM · Dragonfly (Redis-uyumlu) · Better
+                Auth + SIWE · self-hosted Inngest · Cloudflare R2 · Resend.
+            </p>
+
+            <h3 lang="en">Indexing</h3>
+            <h3 lang="tr">İndeksleme</h3>
+            <p lang="en">
+                Ponder v0.16 · deployed via Dokploy on the same CAX21 ·
+                shared Postgres with <code>ponder_index</code> schema ·
+                real-time event indexing from the six testnet contracts.
+            </p>
+            <p lang="tr">
+                Ponder v0.16 · aynı CAX21'de Dokploy üzerinden deploy ·
+                <code>ponder_index</code> şemasıyla paylaşılan Postgres · altı
+                testnet kontratından gerçek zamanlı event indekslemesi.
+            </p>
+
+            <h3 lang="en">Infrastructure</h3>
+            <h3 lang="tr">Altyapı</h3>
+            <p lang="en">
+                Hetzner CAX21 — 4 vCPU, 8 GB RAM, 80 GB SSD, ARM Ampere
+                Altra, $9.49/mo · Debian 12 arm64 · LUKS · unattended-upgrades ·
+                Dokploy PaaS (Docker Swarm + Traefik + GitHub webhooks) ·
+                Cloudflare Tunnel (origin IP never exposed) · SSH via
+                Cloudflare Access — <em>no open port 22 to the internet</em>.
+            </p>
+            <p lang="tr">
+                Hetzner CAX21 — 4 vCPU, 8 GB RAM, 80 GB SSD, ARM Ampere
+                Altra, aylık 9,49 $ · Debian 12 arm64 · LUKS · unattended-
+                upgrades · Dokploy PaaS (Docker Swarm + Traefik + GitHub
+                webhook'ları) · Cloudflare Tunnel (origin IP asla ifşa
+                edilmiyor) · Cloudflare Access üstünden SSH — <em>internete
+                açık port 22 yok</em>.
+            </p>
+
+            <h3 lang="en">Observability</h3>
+            <h3 lang="tr">Gözlemlenebilirlik</h3>
+            <p lang="en">
+                GlitchTip (Sentry-SDK compatible) · OpenPanel (cookieless
+                analytics) · Uptime Kuma (internal) · BetterStack (external) ·
+                Beszel (container metrics) · Dozzle (live logs) · Kener
+                (<code>status.kiteid.xyz</code>) · Tenderly (contracts).
+            </p>
+            <p lang="tr">
+                GlitchTip (Sentry-SDK uyumlu) · OpenPanel (cookiesiz
+                analitik) · Uptime Kuma (iç) · BetterStack (dış) · Beszel
+                (container metrikleri) · Dozzle (canlı log) · Kener
+                (<code>status.kiteid.xyz</code>) · Tenderly (kontratlar).
+            </p>
+
+            <h3 lang="en">DevOps</h3>
+            <h3 lang="tr">DevOps</h3>
+            <p lang="en">
+                GitHub Actions reusable workflows · <code>ubuntu-24.04-arm</code>
+                runners (free on public repos) · multi-arch Docker builds
+                (amd64 + arm64) via buildx → GHCR → Dokploy webhook ·
+                CodeQL + Semgrep + Trivy + gitleaks · Slither + Aderyn in
+                CI · Halmos pre-audit · CrowdSec IPS + Cloudflare bouncer ·
+                AIDE + osquery + auditd host hardening · WAL-G + pgBackRest
+                to R2 — RPO 15 min, RTO &lt; 30 min.
+            </p>
+            <p lang="tr">
+                GitHub Actions reusable workflow'lar ·
+                <code>ubuntu-24.04-arm</code> runner'lar (public repo'da
+                ücretsiz) · buildx ile multi-arch Docker build (amd64 +
+                arm64) → GHCR → Dokploy webhook · CodeQL + Semgrep + Trivy
+                + gitleaks · CI'da Slither + Aderyn · pre-audit Halmos ·
+                CrowdSec IPS + Cloudflare bouncer · AIDE + osquery + auditd
+                host sertleştirme · R2'ye WAL-G + pgBackRest — RPO 15 dk,
+                RTO &lt; 30 dk.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Tokenomics &amp; Pricing</h2>
+            <h2 lang="tr">Tokenomics &amp; Fiyatlama</h2>
+            <p lang="en">
+                All pricing is denominated in <strong>KITE</strong> — the
+                chain's native token — not in USD. Tier structure:
+            </p>
+            <p lang="tr">
+                Tüm fiyatlama USD yerine zincirin yerel token'ı olan
+                <strong>KITE</strong> cinsinden. Kademe yapısı:
+            </p>
+            <ul lang="en">
+                <li><strong>1–2 chars</strong>: reserved for V2 DAO auctions.</li>
+                <li><strong>3 chars</strong>: 640 KITE / year.</li>
+                <li><strong>4 chars</strong>: 160 KITE / year.</li>
+                <li><strong>5+ chars</strong>: 5 KITE / year.</li>
+                <li><strong>Expired premium</strong>: 14-day exponential
+                    Dutch-auction decay on top of base price (vs ENS's 21 days).</li>
+                <li><strong>Grace period</strong>: 90 days after expiry before
+                    a name can be re-registered.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>1–2 karakter</strong>: V2 DAO açık artırmaları için
+                    saklandı.</li>
+                <li><strong>3 karakter</strong>: yıllık 640 KITE.</li>
+                <li><strong>4 karakter</strong>: yıllık 160 KITE.</li>
+                <li><strong>5+ karakter</strong>: yıllık 5 KITE.</li>
+                <li><strong>Süresi bitmiş premium</strong>: taban fiyatın
+                    üstüne 14 günlük üstel Dutch-auction düşüşü (ENS'in 21
+                    gününe karşılık).</li>
+                <li><strong>Grace period</strong>: süre bitiminden sonra
+                    ismin yeniden kaydedilebilmesi için 90 gün.</li>
+            </ul>
+            <p lang="en">
+                Revenue split: <strong>60 %</strong> operations · <strong>25 %</strong>
+                reserve · <strong>10 %</strong> ecosystem grants · <strong>5 %</strong>
+                buyback (V1.5 onwards).
+            </p>
+            <p lang="tr">
+                Gelir dağılımı: <strong>%60</strong> operasyon · <strong>%25</strong>
+                rezerv · <strong>%10</strong> ekosistem hibeleri · <strong>%5</strong>
+                buyback (V1.5'ten itibaren).
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Engineering Discipline</h2>
+            <h2 lang="tr">Mühendislik Disiplini</h2>
+            <p lang="en">
+                Research-first before architecture, architecture-first
+                before code. Each phase has a written exit gate.
+            </p>
+            <p lang="tr">
+                Mimariden önce araştırma, koddan önce mimari. Her fazın yazılı
+                bir çıkış kapısı var.
+            </p>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-journal-bookmark"></i></div>
+                    <h4 lang="en">17 research docs</h4>
+                    <h4 lang="tr">17 araştırma dokümanı</h4>
+                    <p lang="en">From contract patterns and frontend stack
+                        to VPS capacity sizing, Cloudflare Tunnel, self-hosted
+                        Postgres and VPS hardening — each decision traced back
+                        to a written justification.</p>
+                    <p lang="tr">Kontrat pattern'lerinden frontend stack'e,
+                        VPS kapasitesi boyutlandırmasından Cloudflare
+                        Tunnel'a, self-hosted Postgres ve VPS sertleştirmesine
+                        — her karar yazılı bir gerekçeye bağlanıyor.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
+                    <h4 lang="en">8 ADRs</h4>
+                    <h4 lang="tr">8 ADR</h4>
+                    <p lang="en">Locked stack decision, contracts, frontend,
+                        backend/indexing, monorepo, security model,
+                        tokenomics &amp; pricing, self-hosted infrastructure
+                        — versioned in the docs repo.</p>
+                    <p lang="tr">Kilitlenmiş stack kararı, kontratlar,
+                        frontend, backend/indexing, monorepo, güvenlik modeli,
+                        tokenomics &amp; fiyatlama, self-hosted altyapı —
+                        docs reposunda versiyonlanmış.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+                    <h4 lang="en">Phase gating</h4>
+                    <h4 lang="tr">Faz kapıları</h4>
+                    <p lang="en">Phase 0A (repo &amp; dev env) → 0B (prod infra)
+                        → 1 (contracts) → 2 (frontend) → 3 (backend &amp;
+                        indexing) → 4 (testnet beta) → 5 (audit &amp; mainnet)
+                        → 6 (V2 identity). Each has measurable exit criteria.</p>
+                    <p lang="tr">Faz 0A (repo &amp; dev env) → 0B (prod
+                        altyapı) → 1 (kontratlar) → 2 (frontend) → 3
+                        (backend &amp; indexing) → 4 (testnet beta) → 5
+                        (denetim &amp; mainnet) → 6 (V2 kimlik). Her birinin
+                        ölçülebilir çıkış kriteri var.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
+                    <h4 lang="en">Professional from day 1</h4>
+                    <h4 lang="tr">Başından itibaren profesyonel</h4>
+                    <p lang="en">Branch protection, Dependabot, PR workflow,
+                        conventional commits, lefthook pre-commit hooks,
+                        semantic versioning, changesets — solo project run
+                        like a team.</p>
+                    <p lang="tr">Branch protection, Dependabot, PR workflow,
+                        conventional commits, lefthook pre-commit hook'ları,
+                        semantic versioning, changeset'ler — bir takım gibi
+                        yürütülen solo proje.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://kiteid.xyz" target="_blank">kiteid.xyz — Live landing</a></li>
+                <li><a href="https://github.com/KiteID/kiteid" target="_blank">GitHub: KiteID/kiteid (monorepo)</a></li>
+                <li><a href="https://github.com/KiteID" target="_blank">GitHub Organization: KiteID</a></li>
+                <li><a href="https://testnet.kitescan.ai/address/0xBD6a09D7227F56E79327d680183317C10A1370Df" target="_blank">Verified Controller on Blockscout</a></li>
+                <li><a href="https://testnet.kitescan.ai/" target="_blank">Kite AI Testnet Explorer</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>

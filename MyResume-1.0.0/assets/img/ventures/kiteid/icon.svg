@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  KiteID Icon Mark — Standalone (no background)
+  Just the gold orb with glow, transparent background.
+  Use case: in-product icons, inline marks, custom backgrounds
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  width="256"
+  height="256"
+  role="img"
+  aria-label="KiteID mark"
+>
+  <title>KiteID mark</title>
+  <defs>
+    <radialGradient id="kid-mark-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#E8B987" stop-opacity="0.6"/>
+      <stop offset="50%"  stop-color="#C9986A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#A87C52" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="kid-mark-core" cx="40%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#F5DCB8"/>
+      <stop offset="50%"  stop-color="#C9986A"/>
+      <stop offset="100%" stop-color="#A87C52"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer glow -->
+  <circle cx="128" cy="128" r="120" fill="url(#kid-mark-glow)"/>
+
+  <!-- Core orb -->
+  <circle cx="128" cy="128" r="56" fill="url(#kid-mark-core)"/>
+
+  <!-- Subtle highlight -->
+  <ellipse cx="112" cy="108" rx="18" ry="12" fill="#FAF7F0" opacity="0.4"/>
+</svg>

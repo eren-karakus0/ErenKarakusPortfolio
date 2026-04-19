@@ -90,10 +90,11 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
+   * Typed.js initialization is handled by i18n.js (bilingual-aware).
+   * Legacy fallback: only run here if the bilingual attributes are absent.
    */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  if (selectTyped && selectTyped.hasAttribute('data-typed-items')) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
     new Typed('.typed', {

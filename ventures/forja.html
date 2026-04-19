@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Forja — Non-custodial Token Toolkit for Tempo · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="Case study: Forja — non-custodial token toolkit for the Tempo blockchain. Seven tools, seven verified smart contracts, forge-editorial design system. Built solo end-to-end: product, Solidity, Next.js, self-hosted infrastructure.">
+
+    <meta property="og:title" content="Forja — Non-custodial Token Toolkit for Tempo">
+    <meta property="og:description"
+        content="Seven tools, seven verified smart contracts on Tempo mainnet. Create, multisend, lock, claim, launch, trade, discover. Built solo.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/forja-hero.png">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/forja.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="case-study brand-forja">
+
+    <div class="side-ornament side-ornament-left" aria-hidden="true">
+        <span class="orn-dot sm"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line"></span>
+        <span class="orn-dot"></span>
+        <span class="orn-line short"></span>
+        <span class="orn-dot sm"></span>
+    </div>
+    <div class="side-ornament side-ornament-right" aria-hidden="true">
+        <svg class="wavy-rail" viewBox="0 0 24 1200"
+            preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0 Q 22 30 12 60 T 12 120 T 12 180 T 12 240 T 12 300 T 12 360 T 12 420 T 12 480 T 12 540 T 12 600 T 12 660 T 12 720 T 12 780 T 12 840 T 12 900 T 12 960 T 12 1020 T 12 1080 T 12 1140 T 12 1200"
+                stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.5" />
+            <circle cx="12" cy="180"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="420"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="660"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="900"  r="2.5" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="1140" r="2.5" fill="currentColor" opacity="0.8"/>
+        </svg>
+    </div>
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">ForjaTempo · Venture · Live</div>
+        <h1>Forja</h1>
+        <p class="case-subtitle" lang="en">
+            Non-custodial token toolkit for Tempo — the payments-first
+            blockchain by Stripe and Paradigm. Seven tools in one forge:
+            create, send, lock, claim, launch, trade, discover. Seven smart
+            contracts on mainnet, fully verified on Sourcify. 335+ passing
+            Foundry tests. Fully self-hosted. Built solo end-to-end.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            Tempo için non-custodial token araç seti — Stripe ve Paradigm'in
+            ödeme odaklı blockchain'i. Tek dökümhanede yedi araç: oluştur,
+            gönder, kilitle, claim, launchpad, trade, keşfet. Mainnet'te
+            yedi akıllı kontrat, hepsi Sourcify üzerinde doğrulanmış. 335+
+            geçen Foundry testi. Tamamen self-hosted. Baştan sona tek
+            başıma inşa ettim.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">TypeScript 5.8</span>
+            <span class="venture-badge">Next.js 16</span>
+            <span class="venture-badge">React 19</span>
+            <span class="venture-badge">Solidity</span>
+            <span class="venture-badge">Foundry</span>
+            <span class="venture-badge">OpenZeppelin 5.5</span>
+            <span class="venture-badge">Wagmi + Viem</span>
+            <span class="venture-badge">RainbowKit</span>
+            <span class="venture-badge">Drizzle ORM</span>
+            <span class="venture-badge">PostgreSQL 17</span>
+            <span class="venture-badge">Tailwind v4</span>
+            <span class="venture-badge">Self-hosted</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://forja.fun/" target="_blank" class="primary">
+                <i class="bi bi-globe2"></i>
+                <span lang="en">Visit forja.fun</span>
+                <span lang="tr">forja.fun'ı Ziyaret Et</span>
+            </a>
+            <a href="https://github.com/ForjaTempo" target="_blank" class="secondary">
+                <i class="bi bi-github"></i> GitHub: ForjaTempo
+            </a>
+            <a href="https://forja.fun/security" target="_blank" class="secondary">
+                <i class="bi bi-shield-check"></i>
+                <span lang="en">Security &amp; Contracts</span>
+                <span lang="tr">Güvenlik &amp; Kontratlar</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/forja-hero.png"
+            alt="Forja — token toolkit for Tempo"
+            onerror="this.style.display='none';">
+    </div>
+
+    <main class="case-body">
+
+        <section data-aos="fade-up">
+            <h2 lang="en">At a Glance</h2>
+            <h2 lang="tr">Bir Bakışta</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-hash"></i></div>
+                    <h4 lang="en">7 smart contracts</h4>
+                    <h4 lang="tr">7 akıllı kontrat</h4>
+                    <p lang="en">Deployed on Tempo mainnet (chain 4217). Every byte
+                        verified on Sourcify, every function covered by Foundry tests.</p>
+                    <p lang="tr">Tempo mainnet'te (chain 4217) deploy edildi. Her byte
+                        Sourcify'de doğrulandı, her fonksiyon Foundry testleriyle kapsandı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-check2-square"></i></div>
+                    <h4 lang="en">335+ passing tests</h4>
+                    <h4 lang="tr">335+ geçen test</h4>
+                    <p lang="en">Foundry test suite with fuzz + invariant coverage
+                        across factory, locker v1/v2, claimer, launchpad and swap router.</p>
+                    <p lang="tr">Factory, locker v1/v2, claimer, launchpad ve swap router
+                        üzerinde fuzz + invariant kapsamlı Foundry test paketi.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-stack"></i></div>
+                    <h4 lang="en">1,060+ tokens indexed</h4>
+                    <h4 lang="tr">1.060+ indekslenmiş token</h4>
+                    <p lang="en">Every TIP-20 on Tempo — Forja-forged, launchpad and
+                        external — surfaced in one searchable discovery hub.</p>
+                    <p lang="tr">Tempo'daki her TIP-20 — Forja ile basılmış, launchpad ve
+                        dış — tek, aranabilir bir keşif merkezinde toplanıyor.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-lock-fill"></i></div>
+                    <h4 lang="en">Non-custodial</h4>
+                    <h4 lang="tr">Non-custodial</h4>
+                    <p lang="en">Keys never leave the user's wallet. No seed phrase,
+                        no custody, no fund-moving privileges on any contract.</p>
+                    <p lang="tr">Anahtarlar kullanıcının cüzdanından hiç çıkmıyor. Seed
+                        phrase yok, custody yok, hiçbir kontratta fon-hareket yetkisi yok.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">The Problem</h2>
+            <h2 lang="tr">Problem</h2>
+            <p lang="en">
+                A new blockchain wins when its primitives are one-click away.
+                Tempo — institutional-grade, backed by Stripe and Paradigm — had
+                all the pieces for builders, but "create a token, send it to
+                holders, lock the founder share, launch with a bonding curve,
+                enable trading, then monitor it" was still five separate tools,
+                five wallet popups, and no way to see the whole picture.
+            </p>
+            <p lang="tr">
+                Yeni bir blockchain, primitif'leri tek tıkla olduğunda
+                kazanır. Tempo — Stripe ve Paradigm destekli, kurumsal
+                seviyede — geliştiriciler için bütün parçalara sahipti; ama
+                "bir token oluştur, holder'lara gönder, kurucu payını
+                kilitle, bonding curve ile launch et, trading'i aç, sonra
+                izle" hâlâ beş ayrı araç, beş cüzdan popup'ı ve bütünü
+                görmenin hiçbir yolu yoktu.
+            </p>
+            <p lang="en">
+                Forja collapses that lifecycle into a single coherent product.
+                One forge-editorial visual language. Seven tools that hand off
+                to each other cleanly. First-class discovery and analytics so
+                creators see their token as an operator, not as a tx list.
+            </p>
+            <p lang="tr">
+                Forja bu lifecycle'ı tek, tutarlı bir ürüne indirgiyor. Tek
+                forge-editorial görsel dil. Birbirine temiz devreden yedi
+                araç. Creator'ın token'ını bir tx listesi olarak değil,
+                operatör gözüyle görmesini sağlayan birinci sınıf keşif ve
+                analitik.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role — Solo, End-to-End</h2>
+            <h2 lang="tr">Rolüm — Tek Başıma, Baştan Sona</h2>
+            <p lang="en">
+                Founder, sole engineer, sole designer. There is no team. Every
+                decision, every commit and every deploy is mine:
+            </p>
+            <p lang="tr">
+                Kurucu, tek mühendis, tek tasarımcı. Takım yok. Her karar,
+                her commit ve her deploy benim:
+            </p>
+            <ul lang="en">
+                <li><strong>Product &amp; strategy:</strong> scope, roadmap, tool
+                    selection, go-to-market framing.</li>
+                <li><strong>Smart contracts:</strong> Solidity 0.8.x on
+                    OpenZeppelin 5.5. Seven contracts — factory, multisend, locker
+                    v1 + v2, merkle claimer, launchpad with bonding curve,
+                    Uniswap-v4-integrated swap router. All written, tested
+                    (Foundry fuzz + invariant), deployed and verified solo.</li>
+                <li><strong>Frontend:</strong> Next.js 16 App Router + React 19,
+                    Tailwind v4, shadcn/ui v4. Forge-editorial design system
+                    designed from scratch — typography, color palette,
+                    per-tool identity, motion, brand assets.</li>
+                <li><strong>Data layer:</strong> Drizzle ORM + PostgreSQL 17,
+                    custom on-chain indexer, daily-stats aggregator, image proxy,
+                    analytics pipeline.</li>
+                <li><strong>Infrastructure:</strong> Hetzner VPS + Dokploy +
+                    Cloudflare Tunnel + self-hosted MinIO + self-hosted
+                    PostgreSQL + systemd. No Vercel, no Neon, no paid managed
+                    services.</li>
+                <li><strong>Operations:</strong> CI/CD on GitHub Actions,
+                    releases, hotfixes, security audits, UX audits, content.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Ürün &amp; strateji:</strong> scope, roadmap, araç
+                    seçimi, go-to-market mesajı.</li>
+                <li><strong>Akıllı kontratlar:</strong> OpenZeppelin 5.5
+                    üzerinde Solidity 0.8.x. Yedi kontrat — factory, multisend,
+                    locker v1 + v2, merkle claimer, bonding-curve'lü launchpad,
+                    Uniswap-v4 entegre swap router. Hepsi yazıldı, test edildi
+                    (Foundry fuzz + invariant), deploy edildi ve tek başıma
+                    doğrulandı.</li>
+                <li><strong>Frontend:</strong> Next.js 16 App Router + React 19,
+                    Tailwind v4, shadcn/ui v4. Forge-editorial tasarım sistemi
+                    sıfırdan kurgulandı — tipografi, renk paleti, araç başına
+                    kimlik, motion, marka varlıkları.</li>
+                <li><strong>Veri katmanı:</strong> Drizzle ORM + PostgreSQL 17,
+                    özel on-chain indexer, günlük-istatistik aggregator, image
+                    proxy, analitik pipeline.</li>
+                <li><strong>Altyapı:</strong> Hetzner VPS + Dokploy + Cloudflare
+                    Tunnel + self-hosted MinIO + self-hosted PostgreSQL +
+                    systemd. Vercel yok, Neon yok, ücretli managed servis yok.</li>
+                <li><strong>Operasyon:</strong> GitHub Actions üzerinde CI/CD,
+                    release'ler, hotfix'ler, güvenlik denetimleri, UX denetimleri,
+                    içerik.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Seven Tools, One Forge</h2>
+            <h2 lang="tr">Yedi Araç, Bir Dökümhane</h2>
+            <p lang="en">
+                Each tool has its own page, its own accent color (gold, green,
+                indigo, ember, pink, cyan, violet) and its own cursor-glow
+                identity — but they share one runtime, one design language and
+                one on-chain data surface. The user can move from creation to
+                distribution to listing without leaving the site.
+            </p>
+            <p lang="tr">
+                Her aracın kendi sayfası, kendi accent rengi (gold, green,
+                indigo, ember, pink, cyan, violet) ve kendi cursor-glow
+                kimliği var — ama hepsi tek runtime, tek tasarım dili ve tek
+                on-chain veri yüzeyini paylaşıyor. Kullanıcı site'den çıkmadan
+                oluşturma'dan dağıtım'a, oradan listeleme'ye geçebiliyor.
+            </p>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-coin"></i></div>
+                    <h4 lang="en">Create — TIP-20 in 30 seconds</h4>
+                    <h4 lang="tr">Create — 30 saniyede TIP-20</h4>
+                    <p lang="en">Name, symbol, supply. OpenZeppelin-audited
+                        TIP-20 implementation deployed straight to mainnet,
+                        no hidden owner keys. 2 USDC flat fee.</p>
+                    <p lang="tr">İsim, sembol, arz. OpenZeppelin-denetimli TIP-20
+                        implementasyonu doğrudan mainnet'e deploy ediliyor,
+                        gizli owner key yok. 2 USDC sabit ücret.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-send"></i></div>
+                    <h4 lang="en">Multisend — 500 transfers, one tx</h4>
+                    <h4 lang="tr">Multisend — 500 transfer, tek tx</h4>
+                    <p lang="en">Batch distribution for payroll, airdrops,
+                        rewards. CSV in, single transaction out. Gas savings
+                        built in.</p>
+                    <p lang="tr">Payroll, airdrop, ödül için toplu dağıtım. CSV
+                        girdi, tek işlem çıktı. Gas tasarrufu yapısal.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-lock"></i></div>
+                    <h4 lang="en">Lock — vesting with teeth</h4>
+                    <h4 lang="tr">Lock — gerçek vesting</h4>
+                    <p lang="en">Cliff + linear vesting + optional revocation.
+                        V2 batch-lock for team schedules. Beneficiary claim
+                        flow and creator revoke — all on-chain enforced.</p>
+                    <p lang="tr">Cliff + linear vesting + opsiyonel revoke. V2
+                        ile batch-lock takım programları. Yararlanıcı claim
+                        akışı ve creator revoke — hepsi on-chain zorlanıyor.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-gift"></i></div>
+                    <h4 lang="en">Claim — Merkle-proof airdrops</h4>
+                    <h4 lang="tr">Claim — Merkle-proof airdrop</h4>
+                    <p lang="en">Publish a million eligible wallets with one
+                        root hash. Gas-free for the creator, permissionless
+                        claim for users. OpenZeppelin MerkleProof under the
+                        hood.</p>
+                    <p lang="tr">Tek root hash ile bir milyon uygun cüzdan
+                        yayımla. Creator için gas-free, kullanıcı için
+                        permissionless claim. Altta OpenZeppelin MerkleProof.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-rocket"></i></div>
+                    <h4 lang="en">Launchpad — fair-launch curve</h4>
+                    <h4 lang="tr">Launchpad — adil launch eğrisi</h4>
+                    <p lang="en">Bonding-curve price discovery, automatic
+                        graduation to Uniswap v4 liquidity at the 69k USDC
+                        threshold. Built-in emergency withdraw, daily cap and
+                        kill switch for canary safety.</p>
+                    <p lang="tr">Bonding-curve fiyat keşfi, 69k USDC eşiğinde
+                        Uniswap v4 likiditesine otomatik geçiş. Canary
+                        güvenliği için yapısal emergency withdraw, daily cap
+                        ve kill switch.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-arrow-left-right"></i></div>
+                    <h4 lang="en">Swap — v4 + enshrined DEX</h4>
+                    <h4 lang="tr">Swap — v4 + enshrined DEX</h4>
+                    <p lang="en">Best-route swap across Uniswap v4 pools and
+                        Tempo's native enshrined DEX (stablecoin precompile).
+                        Permit2 gasless approval, 0.25 % flat protocol fee,
+                        per-row decimals snapshotted for correct display.</p>
+                    <p lang="tr">Uniswap v4 havuzları ve Tempo'nun enshrined
+                        native DEX'i (stablecoin precompile) arasında en iyi
+                        rotalı swap. Permit2 gasless onay, %0.25 sabit protokol
+                        ücreti, doğru gösterim için satır başına decimals
+                        snapshot.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-layers"></i></div>
+                    <h4 lang="en">Tokens Hub — discovery</h4>
+                    <h4 lang="tr">Tokens Hub — keşif</h4>
+                    <p lang="en">Every TIP-20 on Tempo in one searchable index.
+                        Per-token detail pages with three metric tiles (holders,
+                        transfers, active wallets) and three charts (activity,
+                        holder growth, active wallets) backed by the daily-stats
+                        aggregator.</p>
+                    <p lang="tr">Tempo'daki her TIP-20 tek, aranabilir bir
+                        indekste. Token başına detay sayfaları üç metrik
+                        tile'ı (holder, transfer, aktif cüzdan) ve üç grafiği
+                        (aktivite, holder büyümesi, aktif cüzdanlar) günlük
+                        istatistik aggregator ile birlikte sunuyor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Architecture</h2>
+            <h2 lang="tr">Mimari</h2>
+            <h3 lang="en">Smart Contracts</h3>
+            <h3 lang="tr">Akıllı Kontratlar</h3>
+            <ul lang="en">
+                <li><strong>ForjaTokenFactory</strong> — TIP-20 minter with
+                    creator ownership.</li>
+                <li><strong>ForjaMultisend</strong> — batched ERC-20
+                    distribution.</li>
+                <li><strong>ForjaLocker v1 &amp; v2</strong> — time-locked
+                    vesting, v2 adds batch-lock + lower gas.</li>
+                <li><strong>ForjaClaimer</strong> — Merkle-proof claim with
+                    canary cap window.</li>
+                <li><strong>ForjaLaunchpad</strong> — bonding curve with
+                    emergency withdraw, daily cap, kill switch.</li>
+                <li><strong>ForjaSwapRouter v2</strong> — Uniswap v4 +
+                    enshrined DEX routing, Permit2 integration, 0.25 % skim.</li>
+                <li>All seven verified on Sourcify, chain 4217. OpenZeppelin
+                    5.5.0 base.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>ForjaTokenFactory</strong> — creator ownership'lı
+                    TIP-20 minter.</li>
+                <li><strong>ForjaMultisend</strong> — batched ERC-20
+                    dağıtımı.</li>
+                <li><strong>ForjaLocker v1 &amp; v2</strong> — zaman kilitli
+                    vesting, v2 batch-lock + düşük gas ekliyor.</li>
+                <li><strong>ForjaClaimer</strong> — canary cap pencereli
+                    Merkle-proof claim.</li>
+                <li><strong>ForjaLaunchpad</strong> — emergency withdraw,
+                    günlük cap, kill switch'li bonding curve.</li>
+                <li><strong>ForjaSwapRouter v2</strong> — Uniswap v4 +
+                    enshrined DEX routing, Permit2 entegrasyonu, %0.25 skim.</li>
+                <li>Yedinin tamamı Sourcify'de doğrulandı, chain 4217.
+                    OpenZeppelin 5.5.0 temelli.</li>
+            </ul>
+
+            <h3 lang="en">Frontend</h3>
+            <h3 lang="tr">Frontend</h3>
+            <ul lang="en">
+                <li><strong>Next.js 16</strong> App Router with React Server
+                    Components, strict CSS chunking, nonce-based CSP.</li>
+                <li><strong>Wagmi 3 + Viem 2 + RainbowKit 2</strong> for wallet
+                    connection, custom <code>darkTheme</code> override aligned
+                    with the gold-accent forge-editorial palette.</li>
+                <li><strong>Permit2</strong> for gasless swap approvals.</li>
+                <li><strong>Recharts</strong> dynamic-imported for per-token
+                    charts; <strong>Framer Motion</strong> for page transitions,
+                    scroll reveal and live-feed slide-ins; <strong>canvas
+                    confetti</strong> for transaction success.</li>
+                <li><strong>Satori</strong> for dynamic per-token /
+                    per-launch / per-claim OpenGraph images.</li>
+            </ul>
+            <ul lang="tr">
+                <li><strong>Next.js 16</strong> App Router, React Server
+                    Component'ler, strict CSS chunking, nonce-tabanlı CSP.</li>
+                <li><strong>Wagmi 3 + Viem 2 + RainbowKit 2</strong> ile
+                    cüzdan bağlantısı; gold-accent forge-editorial palete
+                    hizalanmış özel <code>darkTheme</code> override.</li>
+                <li><strong>Permit2</strong> ile gasless swap onayları.</li>
+                <li>Token başına grafikler için dynamic-import'lu
+                    <strong>Recharts</strong>; sayfa geçişleri, scroll reveal
+                    ve live-feed slide-in'leri için <strong>Framer Motion</strong>;
+                    transaction success için <strong>canvas confetti</strong>.</li>
+                <li>Dinamik token/launch/claim OpenGraph görselleri için
+                    <strong>Satori</strong>.</li>
+            </ul>
+
+            <h3 lang="en">Data &amp; Indexing</h3>
+            <h3 lang="tr">Veri &amp; İndeksleme</h3>
+            <ul lang="en">
+                <li><strong>Drizzle ORM + PostgreSQL 17</strong> with 13
+                    migrations; schema covers tokens, holders, transfers,
+                    daily stats, launches, claims, swaps, v4 pools, token
+                    identity (canonical user-curated metadata).</li>
+                <li><strong>Custom on-chain indexer</strong> with forward-only
+                    incremental indexing, idempotent upserts on <code>(txHash,
+                    logIndex)</code>, batch block-timestamp resolution.</li>
+                <li><strong>Daily stats aggregator</strong> runs on cron with
+                    a 14-day backfill window to heal late-arriving transfers.</li>
+                <li><strong>Image storage</strong> on self-hosted MinIO with
+                    UUID keys, sharp re-encode to WebP, per-wallet upload
+                    ownership tracking and orphan cleanup on form cancel.</li>
+            </ul>
+            <ul lang="tr">
+                <li>13 migration'lı <strong>Drizzle ORM + PostgreSQL 17</strong>;
+                    şema token, holder, transfer, günlük istatistik, launch,
+                    claim, swap, v4 pool, token identity (canonical kullanıcı
+                    metadata'sı) içeriyor.</li>
+                <li><strong>Özel on-chain indexer</strong>: forward-only
+                    incremental indeksleme, <code>(txHash, logIndex)</code>
+                    üzerinde idempotent upsert, batch block-timestamp
+                    çözümü.</li>
+                <li>Geç gelen transfer'leri iyileştirmek için cron'da
+                    çalışan <strong>günlük istatistik aggregator</strong>,
+                    14 günlük backfill penceresi.</li>
+                <li>Self-hosted MinIO üzerinde UUID key'li <strong>görsel
+                    depolama</strong>, sharp ile WebP'ye yeniden kodlama,
+                    per-wallet upload sahipliği takibi ve form cancel'da
+                    orphan temizliği.</li>
+            </ul>
+
+            <h3 lang="en">Infrastructure — fully self-hosted</h3>
+            <h3 lang="tr">Altyapı — tamamen self-hosted</h3>
+            <ul lang="en">
+                <li><strong>Hetzner CX33 VPS</strong> running Ubuntu, orchestrated
+                    by <strong>Dokploy</strong>.</li>
+                <li><strong>Cloudflare Tunnel</strong> — zero exposed ports,
+                    no origin IP leak, automatic TLS.</li>
+                <li><strong>Docker</strong> for PostgreSQL 17, MinIO, OpenPanel
+                    analytics; <strong>systemd</strong> for the Next.js server.</li>
+                <li><strong>GitHub Actions</strong> CI — lint (Biome 2.4),
+                    typecheck, Foundry contracts suite, Next.js build — all
+                    gating every PR before a controlled deploy script mirrors
+                    main to the VPS.</li>
+                <li>Zero paid managed services. Every dependency I own.</li>
+            </ul>
+            <ul lang="tr">
+                <li>Ubuntu üzerinde <strong>Hetzner CX33 VPS</strong>,
+                    <strong>Dokploy</strong> ile orkestrasyon.</li>
+                <li><strong>Cloudflare Tunnel</strong> — sıfır açık port,
+                    origin IP sızıntısı yok, otomatik TLS.</li>
+                <li>PostgreSQL 17, MinIO, OpenPanel analytics için
+                    <strong>Docker</strong>; Next.js sunucusu için
+                    <strong>systemd</strong>.</li>
+                <li><strong>GitHub Actions</strong> CI — lint (Biome 2.4),
+                    typecheck, Foundry kontrat suite, Next.js build — her PR'ı
+                    geçmek zorunda, sonra kontrollü deploy script'i main'i
+                    VPS'e mirror'lıyor.</li>
+                <li>Ücretli managed servis yok. Her bağımlılık bana ait.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Security &amp; Trust</h2>
+            <h2 lang="tr">Güvenlik &amp; Güven</h2>
+            <p lang="en">
+                Forja is non-custodial by construction — no contract can move
+                user funds without the user's own signature. Beyond that:
+            </p>
+            <p lang="tr">
+                Forja yapısı gereği non-custodial — hiçbir kontrat kullanıcının
+                kendi imzası olmadan kullanıcı fonlarını hareket ettiremez.
+                Bunun ötesinde:
+            </p>
+            <ul lang="en">
+                <li><strong>SIWE-style wallet auth</strong> with server-issued
+                    single-use nonces, HMAC-signed session cookies (httpOnly,
+                    secure, sameSite lax), timing-safe comparisons on every
+                    hot path.</li>
+                <li><strong>Strict CSP</strong> with per-request nonce,
+                    <code>strict-dynamic</code>, <code>frame-ancestors 'none'</code>,
+                    HSTS preload (2-year max-age).</li>
+                <li><strong>Upload hardening</strong> — magic-byte validation,
+                    sharp re-encode strips embedded metadata, UUID-only keys,
+                    per-wallet rate limits.</li>
+                <li><strong>Published security policy</strong> at
+                    <a href="https://forja.fun/security" target="_blank">forja.fun/security</a>
+                    with severity ladder, scope, safe-harbor terms and a
+                    <code>.well-known/security.txt</code> contact.</li>
+                <li><strong>External audits</strong> — pre-launch passes by
+                    parallel security-auditor, UX-auditor and code-quality
+                    agents; zero critical / zero high findings.</li>
+            </ul>
+            <ul lang="tr">
+                <li>Server tarafı tek-kullanımlık nonce'lu <strong>SIWE-tarzı
+                    wallet auth</strong>, HMAC imzalı session cookie
+                    (httpOnly, secure, sameSite lax), her hot path'ta
+                    timing-safe karşılaştırma.</li>
+                <li>Request başına nonce'lu, <code>strict-dynamic</code>,
+                    <code>frame-ancestors 'none'</code>, HSTS preload (2 yıl
+                    max-age) ile <strong>strict CSP</strong>.</li>
+                <li><strong>Upload sıkılaştırma</strong> — magic-byte
+                    doğrulama, sharp ile re-encode gömülü metadata'yı siler,
+                    sadece UUID key, wallet başına rate limit.</li>
+                <li><a href="https://forja.fun/security" target="_blank">forja.fun/security</a>
+                    adresinde severity ladder, scope, safe-harbor şartları
+                    ve <code>.well-known/security.txt</code> iletişimi ile
+                    <strong>yayımlanmış güvenlik politikası</strong>.</li>
+                <li><strong>Dış denetim</strong> — paralel security-auditor,
+                    UX-auditor ve code-quality ajanlarının launch öncesi
+                    taraması; sıfır kritik / sıfır yüksek bulgu.</li>
+            </ul>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Design — Forge-Editorial</h2>
+            <h2 lang="tr">Tasarım — Forge-Editorial</h2>
+            <p lang="en">
+                The visual system I designed for Forja isn't generic crypto.
+                It's editorial: Instrument Serif display typeface, Geist body
+                sans, JetBrains Mono for addresses. Plum-black surfaces warmed
+                by a metallic gold primary and an ember accent, with seven
+                tool-specific colors (gold, ember, indigo, green, pink, cyan,
+                violet). Motion is intentional, not ambient — a cursor-following
+                radial glow, spark particles on the landing, ember-flicker on
+                live chips, scroll-reveal stagger, transaction-success confetti.
+            </p>
+            <p lang="tr">
+                Forja için tasarladığım görsel sistem generic crypto değil.
+                Editorial: display için Instrument Serif, gövde için Geist
+                sans, adresler için JetBrains Mono. Metalik gold primary ve
+                ember accent ile ısıtılmış plum-black yüzeyler, yedi
+                araç-özgü renk (gold, ember, indigo, green, pink, cyan,
+                violet). Hareket ambient değil kasıtlı — cursor-takipli
+                radyal glow, landing'de kıvılcım partikülleri, canlı
+                chip'lerde ember-flicker, scroll-reveal stagger, transaction
+                success konfetisi.
+            </p>
+            <p lang="en">
+                The brand kit I produced — logo (wavy-flame anvil silhouette),
+                mono variants, horizontal + vertical lockups, X/Twitter avatar +
+                banner, Farcaster banner, OG template, palette sheet — lives at
+                <a href="https://forja.fun/brand" target="_blank">forja.fun/brand</a>,
+                both SVG and PNG.
+            </p>
+            <p lang="tr">
+                Ürettiğim brand kit — logo (dalgalı-alev örs silueti), mono
+                varyantları, yatay + dikey lockup'lar, X/Twitter avatar +
+                banner, Farcaster banner, OG template, palet sayfası — hem
+                SVG hem PNG olarak
+                <a href="https://forja.fun/brand" target="_blank">forja.fun/brand</a>
+                adresinde.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://forja.fun/" target="_blank">forja.fun — Live</a></li>
+                <li><a href="https://github.com/ForjaTempo/forja" target="_blank">GitHub: ForjaTempo/forja</a></li>
+                <li><a href="https://forja.fun/security" target="_blank">Security policy &amp; contract registry</a></li>
+                <li><a href="https://forja.fun/brand" target="_blank">Brand kit</a></li>
+                <li><a href="https://forja.fun/tokens" target="_blank">Tokens Hub — every TIP-20 on Tempo</a></li>
+                <li><a href="https://repo.sourcify.dev/contracts/full_match/4217/0xC513F939402ED2e751Ca315AB0388F9c176e3bE0/" target="_blank">Sourcify: ForjaTokenFactory</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="pg3" x1="55" y1="40" x2="145" y2="130" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C1D95"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="100" cy="93" r="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ib3" x1="100" y1="6" x2="100" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD" stop-opacity="0"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="ob3-l" x1="77" y1="128" x2="38" y2="188" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ob3-c" x1="100" y1="140" x2="100" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ob3-r" x1="123" y1="128" x2="162" y2="188" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4B5FD" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glow -->
+  <circle cx="100" cy="93" r="72" fill="url(#glow3)"/>
+
+  <!-- Input beam -->
+  <line x1="100" y1="6" x2="100" y2="46" stroke="url(#ib3)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Prism body -->
+  <path d="M100 44L146 72L146 114L100 142L54 114L54 72Z" fill="url(#pg3)"/>
+
+  <!-- Facet lines -->
+  <path d="M100 44L100 142" stroke="#C4B5FD" stroke-width=".6" opacity=".2"/>
+  <path d="M54 72L146 114" stroke="#C4B5FD" stroke-width=".6" opacity=".15"/>
+  <path d="M146 72L54 114" stroke="#C4B5FD" stroke-width=".6" opacity=".15"/>
+
+  <!-- Upper facet highlights -->
+  <path d="M100 44L146 72L100 93Z" fill="white" opacity=".08"/>
+  <path d="M100 44L54 72L100 93Z" fill="white" opacity=".04"/>
+
+  <!-- Center eye -->
+  <circle cx="100" cy="93" r="10" fill="#1C0F2B"/>
+  <circle cx="97" cy="90" r="3" fill="white" opacity=".5"/>
+
+  <!-- Output beams -->
+  <line x1="77" y1="128" x2="38" y2="188" stroke="url(#ob3-l)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="100" y1="142" x2="100" y2="194" stroke="url(#ob3-c)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="123" y1="128" x2="162" y2="188" stroke="url(#ob3-r)" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Muhammet Eren Karakuş · Software Engineer · CV</title>
+    <meta name="description"
+        content="CV of Muhammet Eren Karakuş. Software Engineer graduating June 2026 from Marmara University. AI agents, Web3 infrastructure and automation tools.">
+    <meta name="robots" content="noindex">
+
+    <link href="../MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== Print & page setup ===== */
+        @page {
+            size: A4;
+            margin: 12mm 14mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.38;
+            color: #1f2937;
+            background: #f0f2f6;
+        }
+
+        a {
+            color: #0563bb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Screen container ===== */
+        .cv-sheet {
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 18px auto;
+            padding: 12mm 14mm;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== Print-only adjustments ===== */
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .cv-sheet {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                min-height: auto;
+                max-width: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            a {
+                color: #0563bb;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .exp-item,
+            .venture-item,
+            .project-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* ===== Typography ===== */
+        h1 {
+            font-size: 22pt;
+            font-weight: 900;
+            letter-spacing: -0.3px;
+            margin: 0 0 2px;
+            color: #0f172a;
+        }
+
+        .title-line {
+            font-size: 11pt;
+            font-weight: 500;
+            color: #0563bb;
+            margin-bottom: 6px;
+            letter-spacing: 0.2px;
+        }
+
+        h2 {
+            font-size: 10.5pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #0f172a;
+            margin: 12px 0 6px;
+            padding-bottom: 3px;
+            border-bottom: 1.5px solid #0563bb;
+        }
+
+        h3 {
+            font-size: 10.5pt;
+            font-weight: 700;
+            margin: 0;
+            color: #1f2937;
+        }
+
+        p {
+            margin: 0 0 6px;
+        }
+
+        ul {
+            margin: 2px 0 4px 0;
+            padding-left: 16px;
+        }
+
+        ul li {
+            margin-bottom: 2px;
+        }
+
+        section {
+            margin-bottom: 4px;
+        }
+
+        /* ===== Header / contact row ===== */
+        .cv-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+        }
+
+        .cv-header-left {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cv-photo {
+            width: 90px;
+            height: 115px;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 14px;
+            font-size: 9.5pt;
+            color: #374151;
+        }
+
+        .contact-row .sep {
+            color: #9ca3af;
+        }
+
+        .contact-row a {
+            color: #0563bb;
+        }
+
+        /* ===== Skills block ===== */
+        .skills-grid {
+            display: block;
+        }
+
+        .skills-grid .skill-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 2px;
+            font-size: 9.8pt;
+        }
+
+        .skills-grid .skill-label {
+            min-width: 118px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* ===== Experience block ===== */
+        .exp-item {
+            margin-bottom: 7px;
+        }
+
+        .exp-head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .exp-role {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .exp-company {
+            font-weight: 500;
+            color: #0563bb;
+        }
+
+        .exp-period {
+            font-size: 9.2pt;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .exp-link {
+            font-size: 9.4pt;
+            color: #0563bb;
+        }
+
+        .exp-desc {
+            margin: 2px 0 0;
+            color: #374151;
+        }
+
+        /* ===== Venture / Project item ===== */
+        .venture-item,
+        .project-item {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .venture-item .v-name,
+        .project-item .p-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .venture-item .v-url,
+        .project-item .p-url {
+            color: #0563bb;
+            font-size: 9.4pt;
+        }
+
+        .venture-item .v-desc,
+        .project-item .p-desc {
+            color: #374151;
+            margin-top: 1px;
+        }
+
+        .tech-tag {
+            font-size: 9pt;
+            color: #6b7280;
+        }
+
+        /* ===== OSS + Hackathons compact ===== */
+        .compact-text {
+            font-size: 9.8pt;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* ===== Education + Languages ===== */
+        .edu-row,
+        .lang-row {
+            font-size: 10pt;
+        }
+
+        .edu-row strong {
+            color: #0f172a;
+        }
+
+        /* ===== References grid ===== */
+        .refs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            font-size: 9.5pt;
+        }
+
+        .ref-item .ref-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .ref-item .ref-role {
+            color: #374151;
+            font-size: 9.2pt;
+        }
+
+        .ref-item .ref-contact {
+            color: #6b7280;
+            font-size: 9pt;
+        }
+
+        /* ===== Print banner (browser only) ===== */
+        .print-banner {
+            max-width: 210mm;
+            margin: 12px auto 0;
+            padding: 10px 14px;
+            background: #eef5ff;
+            border: 1px solid #b8d4f5;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #1e40af;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .print-banner button {
+            background: #0563bb;
+            color: #fff;
+            border: 0;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .print-banner button:hover {
+            background: #044a8f;
+        }
+
+        .print-banner a {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 680px) {
+            .refs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Browser-only instruction banner -->
+    <div class="print-banner no-print">
+        <span>To export this CV as PDF: use your browser's <strong>Print</strong> (Ctrl/Cmd + P) and choose
+            "Save as PDF". A4 size, default margins.</span>
+        <button onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <main class="cv-sheet">
+
+        <!-- ========== Header ========== -->
+        <header class="cv-header">
+            <div class="cv-header-left">
+                <h1>Muhammet Eren Karakuş</h1>
+                <div class="title-line">Software Engineer</div>
+                <div class="contact-row">
+                    <span>erenkar950@gmail.com</span>
+                    <span class="sep">·</span>
+                    <span>+90 545 585 2445</span>
+                    <span class="sep">·</span>
+                    <span>Istanbul, Türkiye</span>
+                    <span class="sep">·</span>
+                    <a href="https://merenkarakus.com">merenkarakus.com</a>
+                    <span class="sep">·</span>
+                    <a href="https://linkedin.com/in/muhammeterenkarakus">linkedin.com/in/muhammeterenkarakus</a>
+                    <span class="sep">·</span>
+                    <a href="https://github.com/eren-karakus0">github.com/eren-karakus0</a>
+                </div>
+            </div>
+            <img class="cv-photo" src="../MyResume-1.0.0/assets/img/vesikalik.jpg"
+                alt="Muhammet Eren Karakuş">
+        </header>
+
+        <!-- ========== Summary ========== -->
+        <section>
+            <h2>Summary</h2>
+            <p>
+                Software Engineer graduating June 2026 from Marmara University. I design and ship
+                production systems at the intersection of AI, Web3 infrastructure and automation: from
+                Solidity smart contracts and on-chain analytics to self-hosted TypeScript stacks and
+                enterprise .NET platforms. Founder-engineer of four live ventures (Forsety, PanoptesLabs,
+                KiteID, ForjaTempo); internship experience at Ziraat Technology, AIATUS AI and Anadolu
+                Isuzu.
+            </p>
+        </section>
+
+        <!-- ========== Skills ========== -->
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-row">
+                    <span class="skill-label">Languages</span>
+                    <span>Python, TypeScript, Go, C#, C, Java, Solidity, SQL</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Frameworks</span>
+                    <span>.NET / ASP.NET, Next.js, Node.js, Spring Boot, Foundry, Wagmi + Viem,
+                        OpenZeppelin, React, Tailwind</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">AI &amp; ML</span>
+                    <span>LightGBM, XGBoost, RAG systems, MCP (Model Context Protocol), LLM integration,
+                        Claude Code, Cursor, GitHub Copilot, n8n</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Infrastructure</span>
+                    <span>VPS administration, Docker, Dokploy, Cloudflare, Nginx Proxy Manager, Redis,
+                        DragonflyDB, GitHub Actions, Hetzner</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Blockchain</span>
+                    <span>Solana, Aptos, Tempo, Canton Network, Kite AI, Cosmos SDK, EVM (Ethereum /
+                        Polygon), Shelby Protocol</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Databases</span>
+                    <span>PostgreSQL, Oracle, MSSQL, SQLite, Prisma, Drizzle ORM, Oracle Data Integrator
+                        (ODI), PL/SQL</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Concepts</span>
+                    <span>REST, gRPC, OAuth, SIWE / SIWS, Microservices, Event-driven architecture,
+                        Clean Architecture, CI/CD, Agile / Scrum</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Experience ========== -->
+        <section>
+            <h2>Experience</h2>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Embedded Systems &amp; Digital Solutions Intern</span> ·
+                        <span class="exp-company">Anadolu Isuzu Automotive Industry</span>
+                    </div>
+                    <span class="exp-period">Sep 2025 – Jan 2026 · Istanbul</span>
+                </div>
+                <ul class="exp-desc">
+                    <li>Delivered a production-grade <strong>Automotive Log Monitoring Platform
+                            (.NET)</strong> with real-time telemetry visualization and
+                        <strong>AI/RAG-based question answering</strong> for fault diagnosis; planned
+                        for fleet-wide deployment at Anadolu Isuzu.</li>
+                    <li>Built <strong>SignalR</strong> push pipelines for real-time dashboards and
+                        <strong>OTA update orchestration (FOTA &amp; SOTA)</strong> for remote firmware
+                        and software deployment across vehicles.</li>
+                </ul>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">AI &amp; Data Engineering Intern</span> ·
+                        <span class="exp-company">AIATUS AI</span>
+                    </div>
+                    <span class="exp-period">Aug 2025 – Sep 2025 · Remote</span>
+                </div>
+                <p class="exp-desc">
+                    LLM research and implementation for operational-workflow automation; built AI-facing
+                    UIs and API integrations using Node.js and modern frontend tooling on user-focused
+                    real-world projects.
+                </p>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Online Intern, QNB 101 Program</span> ·
+                        <span class="exp-company">QNB Turkey</span>
+                    </div>
+                    <span class="exp-period">Feb 2025 – Mar 2025 · Remote</span>
+                </div>
+                <p class="exp-desc">
+                    Completed banking-technology, financial-software-systems and career-development
+                    tracks; connected with industry professionals across QNB's tech organization.
+                </p>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Web Development Program</span> ·
+                        <span class="exp-company">Acunmedya Academy</span>
+                    </div>
+                    <span class="exp-period">Oct 2024 – Feb 2025 · Remote</span>
+                </div>
+                <p class="exp-desc">
+                    Full-stack web development with .NET / C#, layered architecture and enterprise design
+                    patterns; shipped practical applications through the program.
+                </p>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Data Warehouse Management Intern</span> ·
+                        <span class="exp-company">Ziraat Technology</span>
+                    </div>
+                    <span class="exp-period">Jul 2024 – Sep 2024 · Istanbul Financial Center</span>
+                </div>
+                <ul class="exp-desc">
+                    <li>Designed <strong>ETL / ELT pipelines</strong> with Oracle Data Integrator
+                        (ODI) for bank-scale data-warehouse workflows at the Istanbul Financial
+                        Center.</li>
+                    <li>Authored and tuned <strong>PL/SQL and SQL</strong> for query optimization,
+                        performance improvements and automated enterprise data flows over large
+                        historical datasets.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ========== Ventures & Products ========== -->
+        <section>
+            <h2>Ventures &amp; Products</h2>
+
+            <div class="venture-item">
+                <a class="v-name" href="https://forsety.xyz/" target="_blank">Forsety</a>
+                <a class="v-url" href="https://forsety.xyz/" target="_blank">(forsety.xyz)</a>
+                <span>: Proof layer for licensed AI data. Cryptographic receipt for every dataset access.
+                    Built on Shelby Protocol and Aptos. Solo.</span>
+                <div class="tech-tag">TypeScript · Next.js · Drizzle ORM · MCP server · Turborepo</div>
+            </div>
+
+            <div class="venture-item">
+                <a class="v-name" href="https://panoptes.cc/" target="_blank">PanoptesLabs</a>
+                <a class="v-url" href="https://panoptes.cc/" target="_blank">(panoptes.cc)</a>
+                <span>: Chain intelligence platform (validator monitoring, endpoint health, anomaly
+                    detection) plus the official <code>republic-sdk</code> TypeScript SDK on npm for the
+                    Republic AI network. Solo.</span>
+                <div class="tech-tag">TypeScript · Next.js · Cosmos SDK · Prisma + PostgreSQL · VPS</div>
+            </div>
+
+            <div class="venture-item">
+                <a class="v-name" href="https://kiteid.xyz" target="_blank">KiteID</a>
+                <a class="v-url" href="https://kiteid.xyz" target="_blank">(kiteid.xyz)</a>
+                <span>: ENS-style <code>.kite</code> naming and delegable agent identity on the Kite AI
+                    chain. Six smart contracts live on testnet; 224 passing tests; self-hosted. Solo.</span>
+                <div class="tech-tag">Solidity · Foundry · OpenZeppelin · Next.js · Ponder · Drizzle</div>
+            </div>
+
+            <div class="venture-item">
+                <a class="v-name" href="https://forja.fun/" target="_blank">ForjaTempo / Forja</a>
+                <a class="v-url" href="https://forja.fun/" target="_blank">(forja.fun)</a>
+                <span>: Non-custodial token toolkit for Tempo, the payments-first blockchain by Stripe and
+                    Paradigm. Seven smart contracts verified on mainnet; 335+ Foundry tests. Solo.</span>
+                <div class="tech-tag">Solidity · Foundry · Next.js · Wagmi + Viem · RainbowKit</div>
+            </div>
+        </section>
+
+        <!-- ========== Selected Projects ========== -->
+        <section>
+            <h2>Selected Projects</h2>
+
+            <div class="project-item">
+                <span class="p-name">Automotive Log Monitoring Platform (.NET)</span>.
+                Production enterprise system at Anadolu Isuzu: real-time telemetry dashboard, AI/RAG
+                question answering, SignalR push updates, OTA (FOTA / SOTA) orchestration.
+            </div>
+
+            <div class="project-item">
+                <span class="p-name">Data Warehouse and ETL Development (ODI, SQL)</span>.
+                Oracle Data Integrator pipelines and PL/SQL tuning for bank-scale warehouse workflows at
+                Ziraat Technology, Istanbul Financial Center.
+            </div>
+
+            <div class="project-item">
+                <span class="p-name">PolyHawk Tracker</span>
+                <span class="v-url">(TypeScript)</span>.
+                Real-time Polymarket whale tracker: insider-pattern detection, wallet-level P&amp;L
+                analytics and Telegram alerts for trading signals.
+            </div>
+
+            <div class="project-item">
+                <span class="p-name">personal-ai</span>
+                <span class="v-url">(B.Sc. Graduation Project, in progress)</span>.
+                Privacy-first mobile AI assistant running an on-device LLM; no data leaves the device.
+                React Native + native inference.
+            </div>
+        </section>
+
+        <!-- ========== Open Source Contributions ========== -->
+        <section>
+            <h2>Open Source Contributions</h2>
+            <p class="compact-text">
+                Contributions to <strong>17 upstream projects</strong>: <strong>14 merged PRs</strong> to
+                <strong>NousResearch/hermes-agent</strong> (native MCP client, sandbox file transfer,
+                security hardening); <strong>7 PRs</strong> to <strong>eigent-ai/eigent</strong>. Also
+                open-webui, janhq/jan, FlowiseAI, crewAI, OpenMind/OM1, shelby-xyz, 0xMiden/node,
+                RepublicAI, trpc, zellij, changedetection.io, NginxProxyManager.
+            </p>
+        </section>
+
+        <!-- ========== Hackathons ========== -->
+        <section>
+            <h2>Hackathons</h2>
+            <p class="compact-text">
+                Solo participant across AI-agent and Web3 hackathons: <strong>Nous Research Hackathons</strong>
+                (Mar &amp; Apr 2026, hermes-agent sandbox PR submissions); <strong>Encode Club Kites: AI Agentic
+                    Economy</strong> (Apr 2026, KiteID); <strong>AppsFactory Canton Network</strong> (Apr 2026,
+                Canton Control Tower); <strong>OpenWallet Hackathon</strong> (Apr 2026, CryptoGotchi).
+            </p>
+        </section>
+
+        <!-- ========== Education ========== -->
+        <section>
+            <h2>Education</h2>
+            <div class="edu-row">
+                <strong>Marmara University, Faculty of Technology</strong>, Computer Engineering,
+                Bachelor of Science · <em>Expected June 2026</em> · Istanbul
+            </div>
+        </section>
+
+        <!-- ========== Leadership & Activities ========== -->
+        <section>
+            <h2>Leadership &amp; Activities</h2>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Chair, Events Committee</span> ·
+                        <span class="exp-company">MÜSAK, Marmara University Social Activity Club</span> ·
+                        <a href="https://www.instagram.com/musosyalaktiviteler_/" target="_blank"
+                            class="exp-link">@musosyalaktiviteler_</a>
+                    </div>
+                    <span class="exp-period">Current</span>
+                </div>
+            </article>
+
+            <article class="exp-item">
+                <div class="exp-head">
+                    <div>
+                        <span class="exp-role">Chair, Career Committee</span> ·
+                        <span class="exp-company">MACSEC, Marmara University Computer Engineering Club</span> ·
+                        <a href="https://www.instagram.com/macsecommunity/" target="_blank"
+                            class="exp-link">@macsecommunity</a>
+                    </div>
+                    <span class="exp-period">Previous</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== Languages ========== -->
+        <section>
+            <h2>Languages</h2>
+            <div class="lang-row">English: B1 · Turkish: Native</div>
+        </section>
+
+        <!-- ========== References ========== -->
+        <section>
+            <h2>References</h2>
+            <div class="refs-grid">
+                <div class="ref-item">
+                    <div class="ref-name">Hıdır Üstündağ</div>
+                    <div class="ref-role">Co-Founder, OYEDU</div>
+                    <div class="ref-contact">+90 541 935 70 59</div>
+                </div>
+                <div class="ref-item">
+                    <div class="ref-name">Sefa Beker</div>
+                    <div class="ref-role">Team Lead, Anadolu Isuzu</div>
+                    <div class="ref-contact">
+                        <a href="https://drive.google.com/file/d/1MiRcXuKLDj7CJAPx9u2NGUhAn_04_mfo/view"
+                            target="_blank">Reference letter (PDF)</a>
+                    </div>
+                </div>
+                <div class="ref-item">
+                    <div class="ref-name">Utku Çeken</div>
+                    <div class="ref-role">Cybersecurity Manager, Anadolu Isuzu</div>
+                    <div class="ref-contact">
+                        <a href="https://drive.google.com/file/d/1prY_uJMncYrW6m9xu-ooM4ykv9ISIqLi/view"
+                            target="_blank">Reference letter (PDF)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

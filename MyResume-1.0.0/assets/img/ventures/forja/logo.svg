@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Forja">
+  <title>Forja</title>
+  <defs>
+    <linearGradient id="forjaGold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffe5a8"/>
+      <stop offset="0.5" stop-color="#f0d38a"/>
+      <stop offset="1" stop-color="#e8b860"/>
+    </linearGradient>
+    <linearGradient id="forjaFlame" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0" stop-color="#ff6b3d"/>
+      <stop offset="0.55" stop-color="#ff8a4a"/>
+      <stop offset="1" stop-color="#ffc77a"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 10 L28 10 L26 14 L22 14 L22 20 L25 23 L25 26 L7 26 L7 23 L10 20 L10 14 L6 14 Z" fill="url(#forjaGold)"/>
+  <path d="M16 2.2 C 13.6 4.2, 12.6 6.4, 13.6 8.6 C 14.2 9.8, 15.1 9.4, 14.9 8.2 C 15.3 9.1, 15.8 9.1, 16 8.3 C 16.2 9.1, 16.7 9.1, 17.1 8.2 C 16.9 9.4, 17.8 9.8, 18.4 8.6 C 19.4 6.4, 18.4 4.2, 16 2.2 Z" fill="url(#forjaFlame)"/>
+</svg>
