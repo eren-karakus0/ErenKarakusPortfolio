@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Unicity Machine Economy Apps · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="Three full-stack TypeScript apps on the Unicity Sphere SDK: an agent marketplace with on-chain escrow and an MCP server, a provably-fair game engine with an autonomous house, and an autonomous agent-matchmaking app.">
+
+    <meta property="og:title" content="Unicity Machine Economy Apps">
+    <meta property="og:description"
+        content="Agent marketplace with on-chain escrow, a provably-fair arcade published on Unicity Sphere, and autonomous agent matchmaking. TypeScript monorepos on the Sphere SDK.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/unicity/banner.png">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/unicity.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+
+    <style>
+        /* Unicity case-study inline styles */
+        .uc-apps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+        .uc-app {
+            padding: 1.2rem 1.3rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            background: #fff;
+        }
+        .uc-app .uc-icon {
+            font-size: 1.7rem;
+            color: #5b6cff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .uc-app h4 {
+            margin: 0 0 0.35rem;
+            color: #0a0f1a;
+        }
+        .uc-app .uc-tag {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #5b6cff;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .uc-app p {
+            margin: 0.4rem 0 0;
+            font-size: 0.94rem;
+            color: #4b5563;
+            line-height: 1.55;
+        }
+        .uc-app .uc-links {
+            margin-top: 0.7rem;
+            display: flex;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+            font-size: 0.88rem;
+        }
+        .uc-app .uc-links a {
+            color: #5b6cff;
+            font-weight: 600;
+        }
+        .uc-note {
+            margin: 1.1rem 0 0;
+            padding: 0.9rem 1.1rem;
+            border-left: 3px solid #5b6cff;
+            background: rgba(91, 108, 255, 0.05);
+            border-radius: 0 10px 10px 0;
+            font-size: 0.96rem;
+            color: #1f2937;
+        }
+    </style>
+</head>
+
+<body class="case-study">
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" id="langSwitcher"
+            style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">Unicity Sphere · Machine Economy</div>
+        <h1>Unicity Machine Economy Apps</h1>
+        <p class="case-subtitle" lang="en">
+            Three full-stack TypeScript applications built on the Unicity Sphere
+            SDK for the "Build the Machine Economy" program: an agent marketplace
+            with on-chain escrow and an MCP server, a provably-fair arcade with an
+            autonomous house, and an autonomous agent-matchmaking app. One of them,
+            Arcade House, was selected and published by the Unicity team on the
+            official Sphere platform.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            Unicity Sphere SDK üzerinde, "Build the Machine Economy" programı için
+            geliştirilmiş üç full-stack TypeScript uygulaması: on-chain escrow ve
+            MCP server içeren bir ajan pazar yeri, otonom bir "house" ajanına sahip
+            provably-fair bir oyun salonu ve otonom ajan eşleştirme uygulaması.
+            Bunlardan Arcade House, Unicity ekibi tarafından seçilip resmi Sphere
+            platformunda yayımlandı.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">TypeScript</span>
+            <span class="venture-badge">Next.js / React</span>
+            <span class="venture-badge">Sphere SDK</span>
+            <span class="venture-badge">On-chain Escrow</span>
+            <span class="venture-badge">MCP Server</span>
+            <span class="venture-badge">Provably-Fair</span>
+            <span class="venture-badge">pnpm Monorepo</span>
+            <span class="venture-badge">Vercel + Render + CI</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://sphere.unicity.network/apps/unicity-arcade-house" target="_blank" class="primary">
+                <i class="bi bi-globe2"></i>
+                <span lang="en">Arcade House on Sphere</span>
+                <span lang="tr">Sphere'de Arcade House</span>
+            </a>
+            <a href="https://unicityagentbazaar.vercel.app" target="_blank" class="secondary">
+                <i class="bi bi-box-arrow-up-right"></i>
+                <span lang="en">Agent Bazaar (live)</span>
+                <span lang="tr">Agent Bazaar (canlı)</span>
+            </a>
+            <a href="https://github.com/eren-karakus0/unicity-agent-bazaar" target="_blank" class="secondary">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/unicity/banner.png"
+            alt="Unicity Machine Economy Apps"
+            onerror="this.style.display='none';">
+    </div>
+
+    <main class="case-body">
+
+        <!-- Context -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Context</h2>
+            <h2 lang="tr">Bağlam</h2>
+            <p lang="en">
+                Unicity is a "machine economy" network: the thesis is that
+                autonomous agents should be able to discover, hire and pay each
+                other trustlessly, at machine speed. I built three products on top
+                of its Sphere SDK during the builder program, each exploring a
+                different piece of that idea and all of them shipping as real,
+                deployed applications on testnet2.
+            </p>
+            <p lang="tr">
+                Unicity bir "machine economy" ağı: temel tez, otonom ajanların
+                birbirini güvensiz (trustless) ve makine hızında keşfedip
+                kiralayıp ödeyebilmesi. Builder programı boyunca Sphere SDK
+                üzerinde, her biri bu fikrin farklı bir parçasını keşfeden ve
+                hepsi testnet2'de gerçekten deploy edilmiş üç ürün geliştirdim.
+            </p>
+        </section>
+
+        <!-- The three apps -->
+        <section data-aos="fade-up">
+            <h2 lang="en">The Three Apps</h2>
+            <h2 lang="tr">Üç Uygulama</h2>
+
+            <div class="uc-apps">
+                <div class="uc-app">
+                    <span class="uc-icon"><i class="bi bi-shop"></i></span>
+                    <span class="uc-tag">Marketplace</span>
+                    <h4>Agent Bazaar</h4>
+                    <p lang="en">
+                        A marketplace where anyone lists an agent as a paid
+                        service; buyers (humans or other agents) hire it and pay
+                        peer-to-peer, with funds held in an on-chain escrow that
+                        releases on delivery and refunds on failure. Ships an
+                        autonomous escrow/settlement agent, an "Agent Kit" so any
+                        webhook becomes bazaar-compatible, and an MCP server so an
+                        LLM can discover, hire, pay and verify entirely on-chain.
+                    </p>
+                    <p lang="tr">
+                        Herkesin bir ajanı ücretli hizmet olarak listelediği bir
+                        pazar yeri; alıcılar (insan ya da başka ajanlar) onu
+                        kiralar ve P2P öder, fonlar teslimde serbest bırakılan,
+                        başarısızlıkta iade edilen bir on-chain escrow'da tutulur.
+                        Otonom bir escrow/settlement ajanı, herhangi bir webhook'u
+                        pazara uyumlu kılan "Agent Kit" ve bir LLM'in tamamen
+                        on-chain keşfedip kiralayıp ödeyebildiği bir MCP server
+                        içerir.
+                    </p>
+                    <div class="uc-links">
+                        <a href="https://unicityagentbazaar.vercel.app" target="_blank">Live</a>
+                        <a href="https://github.com/eren-karakus0/unicity-agent-bazaar" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="uc-app">
+                    <span class="uc-icon"><i class="bi bi-dice-5"></i></span>
+                    <span class="uc-tag">Published on Sphere</span>
+                    <h4>Arcade House</h4>
+                    <p lang="en">
+                        A provably-fair game engine (sha256 commit-reveal) where
+                        players compete against an autonomous "house" agent that
+                        pays out winners automatically. Selected and published by
+                        the Unicity team on the official Sphere platform, and
+                        cross-listed inside Agent Bazaar as a hireable game
+                        service, so the marketplace's autonomous buyer can pay the
+                        arcade's autonomous house directly.
+                    </p>
+                    <p lang="tr">
+                        Oyuncuların, kazananlara otomatik ödeme yapan otonom bir
+                        "house" ajanına karşı yarıştığı provably-fair bir oyun
+                        motoru (sha256 commit-reveal). Unicity ekibi tarafından
+                        seçilip resmi Sphere platformunda yayımlandı ve Agent
+                        Bazaar içinde kiralanabilir bir oyun hizmeti olarak
+                        çapraz listelendi; böylece pazar yerinin otonom alıcısı,
+                        arcade'in otonom house'una doğrudan ödeme yapabiliyor.
+                    </p>
+                    <div class="uc-links">
+                        <a href="https://sphere.unicity.network/apps/unicity-arcade-house" target="_blank">On Sphere</a>
+                        <a href="https://github.com/eren-karakus0/unicity-arcade-house" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="uc-app">
+                    <span class="uc-icon"><i class="bi bi-hearts"></i></span>
+                    <span class="uc-tag">Autonomous Agents</span>
+                    <h4>Sparks</h4>
+                    <p lang="en">
+                        An experiment in autonomous agent interaction: agents that
+                        discover and match with each other and run provably-fair
+                        autonomous "dates" on the network, exploring how agents
+                        coordinate and settle without a human in the loop.
+                    </p>
+                    <p lang="tr">
+                        Otonom ajan etkileşimi üzerine bir deney: birbirini
+                        keşfedip eşleşen ve ağ üzerinde provably-fair otonom
+                        "buluşmalar" yürüten ajanlar; ajanların insan olmadan
+                        nasıl koordine olup uzlaştığını keşfediyor.
+                    </p>
+                    <div class="uc-links">
+                        <a href="https://github.com/eren-karakus0/unicity-agent-tinder" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uc-note" lang="en">
+                <strong>Machine economy, made real:</strong> Agent Bazaar ships
+                an opt-in autonomous patron - a first-party buyer with its own
+                wallet that, on a timer, discovers a listing, hires it, funds the
+                escrow with real testnet UCT and releases payment on delivery.
+                One of the agents it hires is the Arcade House. Two live products
+                transacting on their own, no human in the loop.
+            </div>
+            <div class="uc-note" lang="tr">
+                <strong>Machine economy gerçeğe döndü:</strong> Agent Bazaar,
+                opt-in bir otonom patron içerir - kendi cüzdanı olan, bir zamanlayıcı
+                ile bir listeyi keşfedip kiralayan, escrow'u gerçek testnet UCT ile
+                fonlayan ve teslimde ödemeyi serbest bırakan birinci-taraf bir
+                alıcı. Kiraladığı ajanlardan biri Arcade House'tur. İki canlı ürün,
+                insan olmadan kendi başına işlem yapıyor.
+            </div>
+        </section>
+
+        <!-- Engineering -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Engineering Highlights</h2>
+            <h2 lang="tr">Mühendislik Öne Çıkanları</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-diagram-3"></i></div>
+                    <h4 lang="en">Escrow state machine</h4>
+                    <h4 lang="tr">Escrow state machine</h4>
+                    <p lang="en">A dependency-free, fully unit-tested core
+                        package: listings, an escrow state machine (quoted →
+                        funded → delivered → released / refunded / disputed),
+                        reputation and verified reviews.</p>
+                    <p lang="tr">Bağımsız, tamamen unit-test edilmiş bir core
+                        paket: listeler, bir escrow state machine (quoted →
+                        funded → delivered → released / refunded / disputed),
+                        itibar ve doğrulanmış yorumlar.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-wallet2"></i></div>
+                    <h4 lang="en">Sign-In-With-Wallet auth</h4>
+                    <h4 lang="tr">Sign-In-With-Wallet auth</h4>
+                    <p lang="en">Nonce challenge → wallet signature → secp256k1
+                        verify → HMAC session token. Every mutation is gated;
+                        settlement always routes to the counterparty's proven
+                        chain pubkey.</p>
+                    <p lang="tr">Nonce challenge → cüzdan imzası → secp256k1
+                        doğrulama → HMAC session token. Her mutasyon korunur;
+                        settlement daima karşı tarafın kanıtlanmış chain
+                        pubkey'ine yönlenir.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-robot"></i></div>
+                    <h4 lang="en">MCP server ("agents hiring agents")</h4>
+                    <h4 lang="tr">MCP server ("ajanlar ajan kiralıyor")</h4>
+                    <p lang="en">The marketplace exposed as a Model Context
+                        Protocol server: any MCP client discovers, hires, pays,
+                        checks status and verifies receipts on-chain with its own
+                        wallet.</p>
+                    <p lang="tr">Pazar yeri bir Model Context Protocol server
+                        olarak sunuluyor: herhangi bir MCP client kendi cüzdanıyla
+                        keşfeder, kiralar, öder, durum kontrol eder ve makbuzları
+                        on-chain doğrular.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 lang="en">Security hardening</h4>
+                    <h4 lang="tr">Güvenlik sıkılaştırması</h4>
+                    <p lang="en">An SSRF guard on every outbound webhook call
+                        (loopback / private / link-local rejected, redirects
+                        disabled), fail-closed authorization, and write-once
+                        spending mandates.</p>
+                    <p lang="tr">Her giden webhook çağrısında SSRF koruması
+                        (loopback / private / link-local reddedilir, redirect
+                        kapalı), fail-closed yetkilendirme ve write-once harcama
+                        yetkileri.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-hash"></i></div>
+                    <h4 lang="en">Provably-fair game engine</h4>
+                    <h4 lang="tr">Provably-fair oyun motoru</h4>
+                    <p lang="en">Commit-reveal (sha256) outcomes players can
+                        verify themselves, with an autonomous house agent that
+                        settles winnings automatically.</p>
+                    <p lang="tr">Oyuncuların kendilerinin doğrulayabildiği
+                        commit-reveal (sha256) sonuçlar ve kazançları otomatik
+                        uzlaştıran otonom bir house ajanı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-boxes"></i></div>
+                    <h4 lang="en">Monorepo + deployment</h4>
+                    <h4 lang="tr">Monorepo + deployment</h4>
+                    <p lang="en">pnpm workspaces (core / backend / dashboard /
+                        agent-kit / mcp), GitHub Actions CI, frontend on Vercel
+                        and backend on Render. Every chain operation goes through
+                        the Sphere SDK.</p>
+                    <p lang="tr">pnpm workspaces (core / backend / dashboard /
+                        agent-kit / mcp), GitHub Actions CI, frontend Vercel'de
+                        ve backend Render'da. Her chain işlemi Sphere SDK'dan
+                        geçer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Role -->
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role</h2>
+            <h2 lang="tr">Rolüm</h2>
+            <p lang="en">
+                Sole engineer across all three apps - product shape, protocol and
+                escrow design, backend and autonomous agents, the React
+                dashboards, the MCP server, security hardening and deployment.
+                The work sits at the intersection of full-stack engineering,
+                autonomous-agent design and payment rails.
+            </p>
+            <p lang="tr">
+                Üç uygulamanın da tek mühendisi - ürün şekli, protokol ve escrow
+                tasarımı, backend ve otonom ajanlar, React dashboard'lar, MCP
+                server, güvenlik sıkılaştırması ve deployment. Çalışma; full-stack
+                mühendislik, otonom ajan tasarımı ve ödeme raylarının kesişiminde
+                yer alıyor.
+            </p>
+        </section>
+
+        <!-- Links -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://sphere.unicity.network/apps/unicity-arcade-house" target="_blank">Arcade House on Unicity Sphere</a></li>
+                <li><a href="https://unicityagentbazaar.vercel.app" target="_blank">Agent Bazaar — live app</a></li>
+                <li><a href="https://github.com/eren-karakus0/unicity-agent-bazaar" target="_blank">GitHub: unicity-agent-bazaar</a></li>
+                <li><a href="https://github.com/eren-karakus0/unicity-arcade-house" target="_blank">GitHub: unicity-arcade-house</a></li>
+                <li><a href="https://github.com/eren-karakus0/unicity-agent-tinder" target="_blank">GitHub: unicity-agent-tinder (Sparks)</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>

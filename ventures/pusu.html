@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>PUSU — Alarm-to-Execution Engine · Muhammet Eren Karakuş</title>
+    <meta name="description"
+        content="PUSU is a non-custodial alarm-to-execution trading engine on the BULK exchange, written in Rust. Set an alarm, sleep; when price hits, the pre-signed order executes itself.">
+
+    <meta property="og:title" content="PUSU — Alarm-to-Execution Engine">
+    <meta property="og:description"
+        content="A non-custodial, Rust alarm-to-execution engine on the BULK exchange. Pre-sign once; the order executes automatically on trigger.">
+    <meta property="og:image"
+        content="https://merenkarakus.com/MyResume-1.0.0/assets/img/ventures/pusu/mark.png">
+    <meta property="og:url" content="https://merenkarakus.com/ventures/pusu.html">
+
+    <link href="/MyResume-1.0.0/assets/img/logoFoto.png" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/MyResume-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/main.css" rel="stylesheet">
+    <link href="/MyResume-1.0.0/assets/css/custom.css" rel="stylesheet">
+
+    <style>
+        /* PUSU case-study inline styles */
+        .ps-code {
+            margin: 1.25rem 0;
+            padding: 1rem 1.2rem;
+            background: #0a0f1a;
+            color: #e6edf3;
+            border-radius: 10px;
+            font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            border-left: 3px solid #b7410e;
+        }
+        .ps-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.1rem 0 0;
+            font-size: 0.94rem;
+        }
+        .ps-table th, .ps-table td {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.7rem 0.9rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        .ps-table thead th {
+            background: rgba(183, 65, 14, 0.07);
+            color: #0a0f1a;
+        }
+        .ps-table td strong { color: #0a0f1a; }
+        .ps-note {
+            margin: 1.1rem 0 0;
+            padding: 0.9rem 1.1rem;
+            border-left: 3px solid #b7410e;
+            background: rgba(183, 65, 14, 0.05);
+            border-radius: 0 10px 10px 0;
+            font-size: 0.96rem;
+            color: #1f2937;
+        }
+        .case-hero-media.pusu-mark {
+            background: linear-gradient(135deg, #f6f2ef 0%, #efe7e1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .case-hero-media.pusu-mark img {
+            width: auto;
+            height: auto;
+            max-width: 220px;
+            max-height: 180px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="case-study">
+
+    <nav class="case-nav">
+        <a href="/#ventures" class="back">
+            <i class="bi bi-arrow-left"></i>
+            <span lang="en">Back to Portfolio</span>
+            <span lang="tr">Portfolyoya Dön</span>
+        </a>
+        <div class="lang-switcher" id="langSwitcher"
+            style="position: static; margin: 0;">
+            <button class="lang-btn" data-lang-target="en">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang-target="tr">TR</button>
+        </div>
+    </nav>
+
+    <header class="case-hero">
+        <div class="case-tag">BULK · Rust · Trading Infrastructure</div>
+        <h1>PUSU</h1>
+        <p class="case-subtitle" lang="en">
+            Set the alarm, sleep. When price hits, the trade enters itself.
+            PUSU is a non-custodial alarm-to-execution engine on the BULK
+            exchange, written in Rust: instead of a price alarm that only
+            notifies you, PUSU pre-signs the full order once and executes it
+            automatically the moment the condition is met.
+        </p>
+        <p class="case-subtitle" lang="tr">
+            Alarmı kur, uyu. Fiyat geldiğinde işlem kendi kendine girer.
+            PUSU, BULK borsası üzerinde Rust ile yazılmış non-custodial bir
+            alarm-to-execution motoru: sadece haber veren bir fiyat alarmı
+            yerine, PUSU tam emri bir kez önceden imzalar ve koşul sağlandığı
+            an otomatik olarak çalıştırır.
+        </p>
+
+        <div class="case-badges">
+            <span class="venture-badge">Rust</span>
+            <span class="venture-badge">Systems Programming</span>
+            <span class="venture-badge">Non-custodial</span>
+            <span class="venture-badge">BULK Exchange</span>
+            <span class="venture-badge">Execution Engine</span>
+            <span class="venture-badge">Failure-mode Design</span>
+        </div>
+
+        <div class="case-links">
+            <a href="https://github.com/eren-karakus0/pusu" target="_blank" class="primary">
+                <i class="bi bi-github"></i>
+                <span lang="en">View on GitHub</span>
+                <span lang="tr">GitHub'da Gör</span>
+            </a>
+            <a href="https://bulk.trade" target="_blank" class="secondary">
+                <i class="bi bi-box-arrow-up-right"></i> BULK
+            </a>
+        </div>
+    </header>
+
+    <div class="case-hero-media pusu-mark" data-aos="fade-up">
+        <img src="/MyResume-1.0.0/assets/img/ventures/pusu/mark-onlight.png"
+            alt="PUSU"
+            onerror="this.style.display='none';">
+    </div>
+
+    <main class="case-body">
+
+        <!-- The Problem -->
+        <section data-aos="fade-up">
+            <h2 lang="en">The Problem</h2>
+            <h2 lang="tr">Problem</h2>
+            <p lang="en">
+                Every trader does the same thing every day: they set a price
+                alarm. And that feature is fundamentally broken. The alarm rings
+                at 3 a.m., you're asleep, the opportunity is gone. Or by the time
+                you wake up and open the app, price has already moved. The gap
+                between the alarm and the trade is exactly where retail traders
+                lose the most money.
+            </p>
+            <p lang="tr">
+                Her trader her gün aynı şeyi yapar: bir fiyat alarmı kurar. Ve bu
+                özellik temelde bozuk. Alarm gece 03:00'te çalar, sen uyursun,
+                fırsat kaçar. Ya da uyanıp uygulamayı açana kadar fiyat çoktan
+                hareket etmiştir. Alarm ile işlem arasındaki boşluk, retail
+                trader'ın en çok para kaybettiği yerdir.
+            </p>
+        </section>
+
+        <!-- The Solution -->
+        <section data-aos="fade-up">
+            <h2 lang="en">The Solution</h2>
+            <h2 lang="tr">Çözüm</h2>
+            <p lang="en">
+                In PUSU, the alarm doesn't just notify - it acts. The user signs
+                once and closes the phone. When price arrives, the order enters,
+                and the protection is set up automatically the moment it fills.
+            </p>
+            <p lang="tr">
+                PUSU'da alarm sadece haber vermez - işlemi de yapar. Kullanıcı
+                bir kez imzalar ve telefonu kapatır. Fiyat geldiğinde emir girer,
+                dolduğu anda koruması otomatik kurulur.
+            </p>
+            <div class="ps-code" lang="en">Alarm: if BTC drops to 88,400
+  └─ Entry + stop + target, ready with a single signature
+     When price hits, the exchange runs it itself</div>
+            <div class="ps-code" lang="tr">Alarm: BTC 88.400'e düşerse
+  └─ Alım emri + stop + hedef, tek imzayla hazır
+     Fiyat geldiğinde borsa kendisi çalıştırır</div>
+        </section>
+
+        <!-- Two classes of alarms -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Two Classes of Alarms - and We Don't Hide It</h2>
+            <h2 lang="tr">Alarmlar İki Sınıfa Ayrılır - ve Bunu Gizlemiyoruz</h2>
+            <p lang="en">
+                Not every alarm can survive a server outage, and pretending
+                otherwise would be dishonest with someone's money. So PUSU makes
+                the trust boundary explicit: every alarm card carries a badge
+                telling the user exactly what it depends on.
+            </p>
+            <p lang="tr">
+                Her alarm bir sunucu kesintisinden sağ çıkamaz ve aksini iddia
+                etmek, birinin parası söz konusuyken dürüst olmaz. Bu yüzden PUSU
+                güven sınırını açıkça belirtir: her alarm kartında, neye bağlı
+                olduğunu kullanıcıya söyleyen bir rozet vardır.
+            </p>
+
+            <table class="ps-table" lang="en">
+                <thead>
+                    <tr><th></th><th>🔒 Exchange-native</th><th>⚡ Watcher-side</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Condition</strong></td><td>Price crosses a threshold</td><td>Candle close, indicator, multi-condition</td></tr>
+                    <tr><td><strong>Executed by</strong></td><td>BULK itself</td><td>The PUSU watcher</td></tr>
+                    <tr><td><strong>If our server dies</strong></td><td>The order still runs</td><td>The alarm is missed</td></tr>
+                </tbody>
+            </table>
+            <table class="ps-table" lang="tr">
+                <thead>
+                    <tr><th></th><th>🔒 Borsada yaşayan</th><th>⚡ Watcher'da</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Koşul</strong></td><td>Fiyat eşiği kesiyor</td><td>Mum kapanışı, indikatör, çok koşullu</td></tr>
+                    <tr><td><strong>Yürüten</strong></td><td>BULK'ın kendisi</td><td>PUSU watcher'ı</td></tr>
+                    <tr><td><strong>Sunucumuz ölürse</strong></td><td>Emir yine çalışır</td><td>Alarm kaçar</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Security -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Security — Your Key Is Never Ours</h2>
+            <h2 lang="tr">Güvenlik — Anahtarınız Asla Bizde Değil</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-key"></i></div>
+                    <h4 lang="en">You sign, we carry</h4>
+                    <h4 lang="tr">Siz imzalarsınız, biz taşırız</h4>
+                    <p lang="en">Orders are signed by you, in your browser. PUSU
+                        transports the signed message - it never produces it.</p>
+                    <p lang="tr">Emirleri siz imzalarsınız, tarayıcınızda. PUSU
+                        imzalı mesajı taşır, onu asla üretmez.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-safe2"></i></div>
+                    <h4 lang="en">Isolated sub-account</h4>
+                    <h4 lang="tr">İzole sub-account</h4>
+                    <p lang="en">PUSU operates in a separate sub-account - it
+                        cannot touch your main balance.</p>
+                    <p lang="tr">PUSU ayrı bir sub-account'ta çalışır - ana
+                        bakiyenize dokunamaz.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-power"></i></div>
+                    <h4 lang="en">Kill switch</h4>
+                    <h4 lang="tr">Kill switch</h4>
+                    <p lang="en">Revoke the builder approval and every pending
+                        alarm dies instantly.</p>
+                    <p lang="tr">Builder onayını geri çekin, bekleyen tüm alarmlar
+                        anında ölür.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon"><i class="bi bi-percent"></i></div>
+                    <h4 lang="en">Transparent economics</h4>
+                    <h4 lang="tr">Şeffaf ekonomi</h4>
+                    <p lang="en">A 2 bps builder fee on executed trades only,
+                        visible inside the order you sign and cancellable any
+                        time. Setting an alarm is free.</p>
+                    <p lang="tr">Sadece gerçekleşen işlemlerden 2 bps builder
+                        fee, imzaladığınız emrin içinde görünür ve istediğiniz an
+                        iptal edilebilir. Alarm kurmak ücretsiz.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Engineering</h2>
+            <h2 lang="tr">Mühendislik</h2>
+            <p lang="en">
+                PUSU is a Rust workspace split into focused crates - a price
+                feed, an execution engine, an order-signing layer, a node
+                runtime, storage, and a Trunk-built web frontend. The
+                interesting engineering isn't a flashy feature; it's the
+                discipline of reasoning explicitly about trust boundaries and
+                failure modes: what survives a crash, what doesn't, and making
+                that honest to the user instead of hiding it.
+            </p>
+            <p lang="tr">
+                PUSU, odaklı crate'lere ayrılmış bir Rust workspace'i - bir fiyat
+                feed'i, bir execution engine, order-signing katmanı, bir node
+                runtime'ı, storage ve Trunk ile derlenen bir web frontend. İlginç
+                mühendislik gösterişli bir özellik değil; güven sınırları ve
+                failure mode'lar hakkında açıkça akıl yürütme disiplini: bir
+                çökmeden ne sağ çıkar, ne çıkmaz ve bunu gizlemek yerine
+                kullanıcıya dürüstçe göstermek.
+            </p>
+            <div class="ps-note" lang="en">
+                Status: in active development. Built on BULK Builder Codes,
+                Rust 1.93+, MIT-licensed.
+            </div>
+            <div class="ps-note" lang="tr">
+                Durum: aktif geliştirme aşamasında. BULK Builder Codes üzerine
+                kurulu, Rust 1.93+, MIT lisanslı.
+            </div>
+        </section>
+
+        <!-- My Role -->
+        <section data-aos="fade-up">
+            <h2 lang="en">My Role</h2>
+            <h2 lang="tr">Rolüm</h2>
+            <p lang="en">
+                Sole engineer - the product idea, the Rust architecture, the
+                non-custodial signing model, the exchange-native vs watcher-side
+                execution design, and the frontend. PUSU is my main systems-level
+                Rust project and a study in building trustworthy trading
+                infrastructure.
+            </p>
+            <p lang="tr">
+                Tek mühendis - ürün fikri, Rust mimarisi, non-custodial imzalama
+                modeli, borsa-native ve watcher-side çalıştırma tasarımı ve
+                frontend. PUSU, benim başlıca sistem seviyesi Rust projem ve
+                güvenilir trading altyapısı inşa etme üzerine bir çalışma.
+            </p>
+        </section>
+
+        <!-- Links -->
+        <section data-aos="fade-up">
+            <h2 lang="en">Links</h2>
+            <h2 lang="tr">Bağlantılar</h2>
+            <ul>
+                <li><a href="https://github.com/eren-karakus0/pusu" target="_blank">GitHub: eren-karakus0/pusu</a></li>
+                <li><a href="https://bulk.trade" target="_blank">BULK exchange</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="/MyResume-1.0.0/assets/vendor/aos/aos.js"></script>
+    <script src="/MyResume-1.0.0/assets/js/i18n.js"></script>
+
+</body>
+
+</html>
