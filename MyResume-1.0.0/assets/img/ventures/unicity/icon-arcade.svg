@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Unicity Arcade House">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a4d" />
+      <stop offset="100%" stop-color="#ff6f00" />
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30" />
+      <stop offset="46%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="28" flood-color="#ff6f00" flood-opacity="0.45" />
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="240" fill="#060606" />
+  <rect x="80" y="80" width="864" height="864" rx="204" fill="none" stroke="#ff6f00" stroke-opacity="0.10" stroke-width="2" />
+  <g filter="url(#glow)">
+    <rect x="160" y="160" width="704" height="704" rx="176" fill="url(#tile)" />
+  </g>
+  <rect x="160" y="160" width="704" height="704" rx="176" fill="url(#gloss)" />
+  <g fill="#0a0a0a">
+    <circle cx="352" cy="352" r="64" />
+    <circle cx="672" cy="352" r="64" />
+    <circle cx="512" cy="512" r="64" />
+    <circle cx="352" cy="672" r="64" />
+    <circle cx="672" cy="672" r="64" />
+  </g>
+</svg>
